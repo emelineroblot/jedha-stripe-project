@@ -1,0 +1,80 @@
+// ============================================================
+// STRIPE — ERD OLTP (schéma normalisé 3NF)
+// À coller sur https://dbdiagram.io
+// ============================================================
+
+// --- Tables de référence ---
+
+Table countries {
+  country_code varchar(2) [pk]
+  name         varchar    [not null]
+  region       varchar
+}
+
+Table currencies {
+  currency_code varchar(3) [pk]
+  name          varchar    [not null]
+  symbol        varchar(5)
+}
+
+// --- Entités métier ---
+
+Table customers {
+  customer_id  varchar    [pk]
+  email        varchar    [not null, unique]
+  country_code varchar(2) [ref: > countries.country_code]
+  created_at   timestamp  [not null]
+}
+
+Table merchants {
+  merchant_id  varchar    [pk]
+  name         varchar    [not null]
+  country_code varchar(2) [ref: > countries.country_code]
+  category     varchar
+  created_at   timestamp  [not null]
+}
+
+Table payment_methods {
+  payment_method_id varchar  [pk]
+  customer_id       varchar  [ref: > customers.customer_id]
+  type              varchar  [not null]  // card, bank_transfer, wallet
+  brand             varchar              // visa, mastercard, amex
+  last4             char(4)
+  is_default        boolean  [default: false]
+  created_at        timestamp [not null]
+}
+
+// --- Table centrale ---
+
+Table transactions {
+  transaction_id    varchar       [pk]
+  merchant_id       varchar       [ref: > merchants.merchant_id]
+  customer_id       varchar       [ref: > customers.customer_id]
+  payment_method_id varchar       [ref: > payment_methods.payment_method_id]
+  amount            decimal(12,2) [not null]
+  currency_code     varchar(3)    [ref: > currencies.currency_code]
+  status            varchar       [not null]  // successful, failed, refunded, chargeback
+  ip_address        varchar
+  device_type       varchar       // mobile, desktop, tablet
+  created_at        timestamp     [not null]
+}
+
+// --- Tables liées aux transactions ---
+
+Table fraud_indicators {
+  fraud_id       varchar      [pk]
+  transaction_id varchar      [ref: > transactions.transaction_id]
+  anomaly_score  decimal(5,4)
+  risk_level     varchar      // low, medium, high, critical
+  flagged_at     timestamp    [not null]
+  model_version  varchar
+}
+
+Table refunds {
+  refund_id      varchar       [pk]
+  transaction_id varchar       [ref: > transactions.transaction_id]
+  amount         decimal(12,2) [not null]
+  reason         varchar
+  status         varchar       // pending, processed, rejected
+  created_at     timestamp     [not null]
+}

@@ -1,0 +1,19 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Données générées
+data/
+
+# Contexte & Claude
+contexte/
+CLAUDE.md
+.claude/
+memory/
+
+# OS
+.DS_Store
+Thumbs.db

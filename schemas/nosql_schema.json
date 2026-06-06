@@ -1,0 +1,138 @@
+{
+  "collections": {
+
+    "logs": {
+      "description": "Logs techniques : erreurs, accès, audit",
+      "example": {
+        "_id": "log_a1b2c3d4",
+        "type": "error",
+        "severity": "critical",
+        "service": "payment-api",
+        "message": "Timeout on charge attempt",
+        "timestamp": "2024-03-15T14:32:01Z",
+        "metadata": {
+          "transaction_id": "ch_3Mxxx",
+          "merchant_id": "mer_001",
+          "http_status": 504,
+          "latency_ms": 3200
+        },
+        "trace": {
+          "request_id": "req_xyz789",
+          "ip_address": "185.12.44.21",
+          "user_agent": "Mozilla/5.0"
+        },
+        "ttl": "2024-06-15T14:32:01Z"
+      },
+      "indexes": [
+        { "field": "timestamp", "type": "descending" },
+        { "field": "type", "type": "ascending" },
+        { "field": "severity", "type": "ascending" },
+        { "field": "ttl", "type": "TTL", "expireAfterSeconds": 0 }
+      ]
+    },
+
+    "user_sessions": {
+      "description": "Sessions utilisateurs : clickstream, comportement, device",
+      "example": {
+        "_id": "sess_s9k2p1",
+        "customer_id": "cus_001",
+        "session_start": "2024-03-15T10:00:00Z",
+        "session_end": "2024-03-15T10:18:42Z",
+        "duration_seconds": 1122,
+        "device": {
+          "type": "mobile",
+          "os": "iOS 17",
+          "browser": "Safari",
+          "screen_resolution": "390x844"
+        },
+        "geo": {
+          "ip_address": "82.64.12.9",
+          "country_code": "FR",
+          "city": "Paris"
+        },
+        "events": [
+          { "event": "page_view", "page": "/checkout", "timestamp": "2024-03-15T10:00:05Z" },
+          { "event": "click",     "element": "pay_button", "timestamp": "2024-03-15T10:01:22Z" },
+          { "event": "page_view", "page": "/confirmation", "timestamp": "2024-03-15T10:01:35Z" }
+        ],
+        "transaction_id": "ch_3Mxxx"
+      },
+      "indexes": [
+        { "field": "customer_id", "type": "ascending" },
+        { "field": "session_start", "type": "descending" },
+        { "field": "transaction_id", "type": "ascending" },
+        { "field": "device.type", "type": "ascending" }
+      ]
+    },
+
+    "ml_features": {
+      "description": "Features extraites pour les modèles ML (fraud detection, recommandation)",
+      "example": {
+        "_id": "feat_f7g8h9",
+        "transaction_id": "ch_3Mxxx",
+        "customer_id": "cus_001",
+        "merchant_id": "mer_001",
+        "computed_at": "2024-03-15T14:32:02Z",
+        "model_target": "fraud_detection",
+        "features": {
+          "amount_zscore": 2.34,
+          "transactions_last_1h": 3,
+          "transactions_last_24h": 12,
+          "avg_amount_30d": 87.50,
+          "distinct_countries_30d": 2,
+          "night_transaction": false,
+          "velocity_score": 0.78,
+          "device_seen_before": true,
+          "ip_reputation_score": 0.12
+        },
+        "prediction": {
+          "fraud_probability": 0.0342,
+          "risk_level": "low",
+          "model_version": "v2.4.1",
+          "predicted_at": "2024-03-15T14:32:02Z"
+        }
+      },
+      "indexes": [
+        { "field": "transaction_id", "type": "unique" },
+        { "field": "customer_id", "type": "ascending" },
+        { "field": "computed_at", "type": "descending" },
+        { "field": "prediction.risk_level", "type": "ascending" },
+        { "field": "model_target", "type": "ascending" }
+      ]
+    },
+
+    "customer_feedback": {
+      "description": "Feedbacks clients : avis, réponses aux enquêtes de satisfaction",
+      "example": {
+        "_id": "fbk_c4d5e6",
+        "customer_id": "cus_001",
+        "merchant_id": "mer_001",
+        "transaction_id": "ch_3Mxxx",
+        "submitted_at": "2024-03-16T09:12:00Z",
+        "channel": "email_survey",
+        "scores": {
+          "overall": 4,
+          "ease_of_payment": 5,
+          "speed": 3
+        },
+        "nps_score": 8,
+        "text": "Paiement rapide mais confirmation un peu lente.",
+        "language": "fr",
+        "sentiment": {
+          "label": "positive",
+          "score": 0.72,
+          "model_version": "sentiment-v1.2"
+        },
+        "tags": ["checkout", "confirmation", "speed"]
+      },
+      "indexes": [
+        { "field": "customer_id", "type": "ascending" },
+        { "field": "merchant_id", "type": "ascending" },
+        { "field": "submitted_at", "type": "descending" },
+        { "field": "scores.overall", "type": "ascending" },
+        { "field": "sentiment.label", "type": "ascending" },
+        { "field": "tags", "type": "ascending", "multikey": true }
+      ]
+    }
+  }
+}

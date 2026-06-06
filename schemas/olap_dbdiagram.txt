@@ -1,0 +1,103 @@
+// ============================================================
+// STRIPE — STAR SCHEMA OLAP
+// À coller sur https://dbdiagram.io
+// ============================================================
+
+// --- Table de faits centrale ---
+
+Table fact_transactions {
+  transaction_sk    bigint        [pk, increment]  // surrogate key
+  transaction_id    varchar       [not null]        // natural key (OLTP)
+  date_sk           int           [ref: > dim_date.date_sk]
+  merchant_sk       int           [ref: > dim_merchant.merchant_sk]
+  customer_sk       int           [ref: > dim_customer.customer_sk]
+  geography_sk      int           [ref: > dim_geography.geography_sk]
+  payment_method_sk int           [ref: > dim_payment_method.payment_method_sk]
+  amount            decimal(12,2) [not null]
+  amount_usd        decimal(12,2) [not null]  // normalisé pour comparaisons multi-devises
+  is_fraud          boolean       [default: false]
+  is_refunded       boolean       [default: false]
+  anomaly_score     decimal(5,4)
+  loaded_at         timestamp     [not null]  // horodatage ETL
+}
+
+// --- Dimensions ---
+
+Table dim_date {
+  date_sk      int     [pk]
+  full_date    date    [not null, unique]
+  year         int
+  quarter      int     // 1-4
+  month        int     // 1-12
+  month_name   varchar
+  week         int     // 1-53
+  day          int     // 1-31
+  day_of_week  int     // 1=lundi, 7=dimanche
+  is_weekend   boolean
+  is_holiday   boolean
+}
+
+Table dim_merchant {
+  merchant_sk   int     [pk, increment]
+  merchant_id   varchar [not null]  // natural key (OLTP)
+  name          varchar
+  category      varchar
+  country_code  varchar(2)
+  region        varchar
+  scd_start     date    // SCD type 2 : date de début de validité
+  scd_end       date    // SCD type 2 : date de fin (null = actif)
+  is_current    boolean [default: true]
+}
+
+Table dim_customer {
+  customer_sk  int     [pk, increment]
+  customer_id  varchar [not null]  // natural key (OLTP)
+  country_code varchar(2)
+  region       varchar
+  segment      varchar  // low_value, mid_value, high_value
+  scd_start    date
+  scd_end      date
+  is_current   boolean  [default: true]
+}
+
+Table dim_geography {
+  geography_sk int     [pk, increment]
+  country_code varchar(2) [not null]
+  country_name varchar
+  region       varchar
+  timezone     varchar
+}
+
+Table dim_payment_method {
+  payment_method_sk int     [pk, increment]
+  type              varchar [not null]  // card, bank_transfer, wallet
+  brand             varchar             // visa, mastercard, amex
+  is_digital        boolean
+}
+
+// --- Tables de pré-agrégation ---
+
+Table agg_daily_revenue {
+  date_sk           int           [ref: > dim_date.date_sk]
+  merchant_sk       int           [ref: > dim_merchant.merchant_sk]
+  currency_code     varchar(3)
+  total_amount      decimal(14,2)
+  total_amount_usd  decimal(14,2)
+  transaction_count int
+  fraud_count       int
+  refund_count      int
+  indexes {
+    (date_sk, merchant_sk) [pk]
+  }
+}
+
+Table agg_monthly_fraud {
+  year_month       char(7)  // format YYYY-MM
+  geography_sk     int      [ref: > dim_geography.geography_sk]
+  total_flagged    int
+  total_critical   int
+  avg_anomaly_score decimal(5,4)
+  indexes {
+    (year_month, geography_sk) [pk]
+  }
+}

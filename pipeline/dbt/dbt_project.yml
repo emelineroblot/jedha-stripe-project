@@ -1,0 +1,17 @@
+name: stripe_olap
+version: "1.0"
+profile: redshift
+
+model-paths: ["models"]
+snapshot-paths: ["snapshots"]
+
+models:
+  stripe_olap:
+    staging:
+      +materialized: view          # cast / nettoyage, jamais stocké
+    intermediate:
+      +materialized: ephemeral     # CTE injectées dans les marts
+    marts:
+      +materialized: incremental   # fact_transactions, agg_* : seules les nouvelles lignes
+      +dist: merchant_sk
+      +sort: date_sk

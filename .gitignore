@@ -7,7 +7,8 @@ __pycache__/
 .env
 
 # Sorties ML (régénérables)
-ml/output/
+ml/output/mlruns/
+ml/output/model.json
 
 # Contexte & Claude
 contexte/

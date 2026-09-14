@@ -23,89 +23,89 @@ GROUP BY d.year, d.month, g.country_name, pm.type
 ORDER BY g.country_name, pm.type, d.year, d.month;
  year | month |  country_name  | payment_type  | transaction_count | revenue_usd | net_revenue_usd | avg_ticket_usd | cumulative_revenue_usd 
 ------+-------+----------------+---------------+-------------------+-------------+-----------------+----------------+------------------------
- 2025 |    11 | France         | bank_transfer |                 2 |      130.01 |          125.64 |          65.01 |                 130.01
- 2025 |    12 | France         | bank_transfer |                 1 |      203.91 |          197.70 |         203.91 |                 333.92
+ 2025 |    11 | France         | bank_transfer |                 2 |      211.70 |          204.96 |         105.85 |                 211.70
+ 2025 |    12 | France         | bank_transfer |                 1 |       49.44 |           47.71 |          49.44 |                 261.14
  2026 |     2 | France         | bank_transfer |                 1 |       16.77 |           15.98 |          16.77 |                  16.77
- 2026 |     3 | France         | bank_transfer |                 2 |       89.66 |           86.46 |          44.83 |                 106.43
- 2026 |     4 | France         | bank_transfer |                 3 |      390.17 |          377.95 |         130.06 |                 496.60
- 2026 |     5 | France         | bank_transfer |                 2 |      192.80 |          186.61 |          96.40 |                 689.40
- 2026 |     6 | France         | bank_transfer |                 2 |      124.76 |          120.55 |          62.38 |                 814.16
- 2026 |     7 | France         | bank_transfer |                 6 |      400.60 |          387.19 |          66.77 |                1214.76
- 2026 |     8 | France         | bank_transfer |                 2 |      111.56 |          107.73 |          55.78 |                1326.32
- 2026 |     9 | France         | bank_transfer |                 1 |       23.20 |           22.23 |          23.20 |                1349.52
- 2027 |     4 | France         | bank_transfer |                 1 |      149.64 |          145.00 |         149.64 |                 149.64
- 2025 |     9 | France         | card          |                 2 |      153.02 |          147.99 |          76.51 |                 153.02
- 2025 |    11 | France         | card          |                 3 |      285.92 |          218.46 |          95.31 |                 438.94
- 2025 |    12 | France         | card          |                 7 |      734.19 |          574.95 |         104.88 |                1173.13
- 2026 |     1 | France         | card          |                 3 |      294.94 |          285.49 |          98.31 |                 294.94
- 2026 |     2 | France         | card          |                 5 |      511.67 |          388.78 |         102.33 |                 806.61
- 2026 |     3 | France         | card          |                 4 |      217.87 |          210.35 |          54.47 |                1024.48
- 2026 |     4 | France         | card          |                 5 |      308.55 |          298.10 |          61.71 |                1333.03
- 2026 |     5 | France         | card          |                 8 |      851.94 |          824.83 |         106.49 |                2184.97
- 2026 |     6 | France         | card          |                 7 |      479.04 |          435.51 |          68.43 |                2664.01
- 2026 |     7 | France         | card          |                 5 |      303.52 |          293.22 |          60.70 |                2967.53
- 2026 |     8 | France         | card          |                 4 |      283.12 |          273.71 |          70.78 |                3250.65
- 2026 |     9 | France         | card          |                 2 |      135.67 |          131.14 |          67.84 |                3386.32
- 2025 |    10 | France         | wallet        |                 1 |       95.26 |           92.20 |          95.26 |                  95.26
- 2025 |    12 | France         | wallet        |                 2 |       88.27 |           85.11 |          44.14 |                 183.53
+ 2026 |     3 | France         | bank_transfer |                 2 |       87.22 |           84.09 |          43.61 |                 103.99
+ 2026 |     4 | France         | bank_transfer |                 2 |      318.88 |          309.03 |         159.44 |                 422.87
+ 2026 |     5 | France         | bank_transfer |                 2 |      192.80 |          186.61 |          96.40 |                 615.67
+ 2026 |     6 | France         | bank_transfer |                 1 |       28.44 |           27.32 |          28.44 |                 644.11
+ 2026 |     7 | France         | bank_transfer |                 5 |      426.10 |          412.24 |          85.22 |                1070.21
+ 2026 |     8 | France         | bank_transfer |                 1 |       23.20 |           22.23 |          23.20 |                1093.41
+ 2026 |     9 | France         | bank_transfer |                 1 |       23.20 |           22.23 |          23.20 |                1116.61
+ 2025 |     9 | France         | card          |                 2 |      165.30 |          159.91 |          82.65 |                 165.30
+ 2025 |    11 | France         | card          |                 3 |      216.36 |          209.19 |          72.12 |                 381.66
+ 2025 |    12 | France         | card          |                 6 |      622.86 |          603.00 |         103.81 |                1004.52
+ 2026 |     1 | France         | card          |                 2 |      170.34 |          164.80 |          85.17 |                 170.34
+ 2026 |     2 | France         | card          |                 6 |      620.99 |          601.18 |         103.50 |                 791.33
+ 2026 |     3 | France         | card          |                 9 |      680.07 |          657.64 |          75.56 |                1471.40
+ 2026 |     4 | France         | card          |                 8 |      455.48 |          439.88 |          56.94 |                1926.88
+ 2026 |     5 | France         | card          |                 8 |      682.71 |          497.12 |          85.34 |                2609.59
+ 2026 |     6 | France         | card          |                 5 |      239.45 |          231.00 |          47.89 |                2849.04
+ 2026 |     7 | France         | card          |                 7 |      404.67 |          390.84 |          57.81 |                3253.71
+ 2026 |     8 | France         | card          |                 3 |      239.96 |          232.10 |          79.99 |                3493.67
+ 2026 |     9 | France         | card          |                 1 |       33.81 |           32.53 |          33.81 |                3527.48
+ 2025 |    10 | France         | wallet        |                 1 |      204.81 |          198.57 |         204.81 |                 204.81
+ 2025 |    12 | France         | wallet        |                 1 |        2.49 |            2.12 |           2.49 |                 207.30
  2026 |     2 | France         | wallet        |                 1 |      110.87 |          107.35 |         110.87 |                 110.87
- 2026 |     5 | France         | wallet        |                 2 |      205.70 |          199.14 |         102.85 |                 316.57
- 2026 |     7 | France         | wallet        |                 1 |       67.25 |           65.00 |          67.25 |                 383.82
- 2025 |    10 | United Kingdom | bank_transfer |                 1 |      174.42 |          169.06 |         174.42 |                 174.42
- 2025 |    11 | United Kingdom | bank_transfer |                 1 |       56.37 |           54.44 |          56.37 |                 230.79
- 2025 |    12 | United Kingdom | bank_transfer |                 3 |      230.50 |          222.91 |          76.83 |                 461.29
- 2026 |     1 | United Kingdom | bank_transfer |                 2 |       58.43 |           56.13 |          29.22 |                  58.43
- 2026 |     2 | United Kingdom | bank_transfer |                 3 |      193.90 |          187.38 |          64.63 |                 252.33
- 2026 |     3 | United Kingdom | bank_transfer |                 5 |      438.71 |          295.20 |          87.74 |                 691.04
- 2026 |     4 | United Kingdom | bank_transfer |                 4 |      183.77 |          177.24 |          45.94 |                 874.81
- 2026 |     5 | United Kingdom | bank_transfer |                 5 |      421.26 |          407.54 |          84.25 |                1296.07
- 2026 |     6 | United Kingdom | bank_transfer |                 2 |      119.65 |          115.58 |          59.83 |                1415.72
- 2026 |     7 | United Kingdom | bank_transfer |                 1 |       28.62 |           27.49 |          28.62 |                1444.34
- 2026 |     8 | United Kingdom | bank_transfer |                 2 |       62.37 |           59.97 |          31.19 |                1506.71
- 2025 |     9 | United Kingdom | card          |                 4 |      313.55 |          303.27 |          78.39 |                 313.55
- 2025 |    10 | United Kingdom | card          |                 3 |      243.06 |          235.11 |          81.02 |                 556.61
- 2025 |    11 | United Kingdom | card          |                 6 |      403.96 |          390.45 |          67.33 |                 960.57
- 2025 |    12 | United Kingdom | card          |                 2 |      107.52 |           82.75 |          53.76 |                1068.09
- 2026 |     1 | United Kingdom | card          |                 2 |      211.00 |          204.28 |         105.50 |                 211.00
- 2026 |     2 | United Kingdom | card          |                 4 |      223.54 |          215.86 |          55.89 |                 434.54
- 2026 |     3 | United Kingdom | card          |                 6 |      384.87 |          371.91 |          64.15 |                 819.41
- 2026 |     4 | United Kingdom | card          |                 1 |       82.41 |           79.72 |          82.41 |                 901.82
- 2026 |     5 | United Kingdom | card          |                 6 |      535.77 |          518.43 |          89.30 |                1437.59
- 2026 |     6 | United Kingdom | card          |                10 |      586.58 |          566.56 |          58.66 |                2024.17
- 2026 |     7 | United Kingdom | card          |                10 |      750.79 |          726.02 |          75.08 |                2774.96
- 2026 |     8 | United Kingdom | card          |                 3 |      135.82 |          130.98 |          45.27 |                2910.78
- 2026 |     9 | United Kingdom | card          |                 3 |      266.01 |          173.41 |          88.67 |                3176.79
+ 2026 |     5 | France         | wallet        |                 2 |       90.61 |           87.38 |          45.31 |                 201.48
+ 2026 |     7 | France         | wallet        |                 5 |      325.09 |          314.16 |          65.02 |                 526.57
+ 2026 |     8 | France         | wallet        |                 1 |      165.17 |          160.08 |         165.17 |                 691.74
+ 2025 |    10 | United Kingdom | bank_transfer |                 2 |      207.71 |          201.08 |         103.86 |                 207.71
+ 2025 |    11 | United Kingdom | bank_transfer |                 1 |       36.71 |           17.00 |          36.71 |                 244.42
+ 2025 |    12 | United Kingdom | bank_transfer |                 2 |      278.34 |          269.66 |         139.17 |                 522.76
+ 2026 |     1 | United Kingdom | bank_transfer |                 2 |      122.09 |          117.95 |          61.05 |                 122.09
+ 2026 |     2 | United Kingdom | bank_transfer |                 4 |      225.78 |          218.04 |          56.45 |                 347.87
+ 2026 |     3 | United Kingdom | bank_transfer |                 5 |      420.57 |          406.87 |          84.11 |                 768.44
+ 2026 |     4 | United Kingdom | bank_transfer |                 4 |      183.77 |          177.24 |          45.94 |                 952.21
+ 2026 |     5 | United Kingdom | bank_transfer |                 4 |      388.37 |          375.91 |          97.09 |                1340.58
+ 2026 |     6 | United Kingdom | bank_transfer |                 3 |      148.33 |          143.13 |          49.44 |                1488.91
+ 2026 |     7 | United Kingdom | bank_transfer |                 1 |       33.07 |           31.81 |          33.07 |                1521.98
+ 2026 |     8 | United Kingdom | bank_transfer |                 1 |       29.47 |           28.32 |          29.47 |                1551.45
+ 2026 |     9 | United Kingdom | bank_transfer |                 3 |      197.28 |          190.66 |          65.76 |                1748.73
+ 2025 |     9 | United Kingdom | card          |                 4 |      295.00 |          285.25 |          73.75 |                 295.00
+ 2025 |    10 | United Kingdom | card          |                 3 |      209.78 |          202.79 |          69.93 |                 504.78
+ 2025 |    11 | United Kingdom | card          |                 6 |      396.59 |          383.29 |          66.10 |                 901.37
+ 2025 |    12 | United Kingdom | card          |                 1 |      180.73 |          175.19 |         180.73 |                1082.10
+ 2026 |     1 | United Kingdom | card          |                 3 |      280.51 |          271.48 |          93.50 |                 280.51
+ 2026 |     2 | United Kingdom | card          |                 3 |      129.33 |          124.68 |          43.11 |                 409.84
+ 2026 |     3 | United Kingdom | card          |                 5 |      306.87 |          285.02 |          61.37 |                 716.71
+ 2026 |     4 | United Kingdom | card          |                 1 |       82.41 |           79.72 |          82.41 |                 799.12
+ 2026 |     5 | United Kingdom | card          |                 7 |      472.05 |          456.26 |          67.44 |                1271.17
+ 2026 |     6 | United Kingdom | card          |                 9 |      620.34 |          599.65 |          68.93 |                1891.51
+ 2026 |     7 | United Kingdom | card          |                 6 |      280.25 |          270.32 |          46.71 |                2171.76
+ 2026 |     8 | United Kingdom | card          |                 2 |      116.79 |          112.80 |          58.40 |                2288.55
+ 2026 |     9 | United Kingdom | card          |                 3 |      266.01 |          257.39 |          88.67 |                2554.56
  2025 |     9 | United Kingdom | wallet        |                 1 |      125.79 |          121.84 |         125.79 |                 125.79
- 2025 |    10 | United Kingdom | wallet        |                 2 |      160.46 |          155.21 |          80.23 |                 286.25
- 2026 |     2 | United Kingdom | wallet        |                 1 |       47.04 |           10.10 |          47.04 |                  47.04
- 2026 |     4 | United Kingdom | wallet        |                 1 |       93.63 |           90.61 |          93.63 |                 140.67
- 2026 |     5 | United Kingdom | wallet        |                 3 |      231.21 |          223.61 |          77.07 |                 371.88
- 2026 |     6 | United Kingdom | wallet        |                 1 |       69.69 |           67.37 |          69.69 |                 441.57
- 2025 |     9 | United States  | bank_transfer |                 2 |      135.83 |          131.29 |          67.92 |                 135.83
- 2025 |    10 | United States  | bank_transfer |                 1 |       84.36 |           81.61 |          84.36 |                 220.19
- 2025 |    11 | United States  | bank_transfer |                 4 |      480.38 |          465.25 |         120.10 |                 700.57
- 2025 |    12 | United States  | bank_transfer |                 2 |      184.90 |          178.94 |          92.45 |                 885.47
+ 2025 |    10 | United Kingdom | wallet        |                 1 |      107.74 |          104.32 |         107.74 |                 233.53
+ 2026 |     2 | United Kingdom | wallet        |                 1 |       47.04 |           45.38 |          47.04 |                  47.04
+ 2026 |     6 | United Kingdom | wallet        |                 2 |       63.60 |           61.16 |          31.80 |                 110.64
+ 2026 |     7 | United Kingdom | wallet        |                 1 |       23.20 |           22.23 |          23.20 |                 133.84
+ 2026 |     8 | United Kingdom | wallet        |                 1 |       23.20 |           22.23 |          23.20 |                 157.04
+ 2025 |     9 | United States  | bank_transfer |                 1 |       32.68 |           31.43 |          32.68 |                  32.68
+ 2025 |    10 | United States  | bank_transfer |                 1 |       84.36 |           81.61 |          84.36 |                 117.04
+ 2025 |    12 | United States  | bank_transfer |                 1 |       69.09 |           66.79 |          69.09 |                 186.13
  2026 |     1 | United States  | bank_transfer |                 1 |       33.46 |           32.19 |          33.46 |                  33.46
  2026 |     3 | United States  | bank_transfer |                 1 |      165.81 |          160.70 |         165.81 |                 199.27
  2026 |     5 | United States  | bank_transfer |                 1 |       22.83 |           21.87 |          22.83 |                 222.10
- 2026 |     6 | United States  | bank_transfer |                 1 |       34.43 |            7.30 |          34.43 |                 256.53
- 2026 |     7 | United States  | bank_transfer |                 3 |      181.14 |          174.99 |          60.38 |                 437.67
- 2025 |     9 | United States  | card          |                 5 |      345.11 |          333.60 |          69.02 |                 345.11
- 2025 |    10 | United States  | card          |                 4 |      318.26 |          307.82 |          79.57 |                 663.37
- 2025 |    11 | United States  | card          |                 4 |      246.65 |          238.29 |          61.66 |                 910.02
- 2025 |    12 | United States  | card          |                10 |      750.40 |          462.66 |          75.04 |                1660.42
+ 2026 |     6 | United States  | bank_transfer |                 1 |       34.43 |           33.13 |          34.43 |                 256.53
+ 2026 |     7 | United States  | bank_transfer |                 2 |      232.22 |          224.88 |         116.11 |                 488.75
+ 2025 |     9 | United States  | card          |                 5 |      463.45 |          448.51 |          92.69 |                 463.45
+ 2025 |    10 | United States  | card          |                 5 |      213.33 |          205.63 |          42.67 |                 676.78
+ 2025 |    11 | United States  | card          |                 5 |      475.74 |          370.32 |          95.15 |                1152.52
+ 2025 |    12 | United States  | card          |                 9 |      835.95 |          809.01 |          92.88 |                1988.47
  2026 |     1 | United States  | card          |                 7 |      366.26 |          353.55 |          52.32 |                 366.26
- 2026 |     2 | United States  | card          |                10 |      535.05 |          516.53 |          53.51 |                 901.31
- 2026 |     3 | United States  | card          |                 7 |      491.18 |          338.56 |          70.17 |                1392.49
- 2026 |     4 | United States  | card          |                 8 |      748.56 |          724.45 |          93.57 |                2141.05
- 2026 |     5 | United States  | card          |                13 |     1153.34 |         1116.00 |          88.72 |                3294.39
- 2026 |     6 | United States  | card          |                 9 |      795.34 |          769.58 |          88.37 |                4089.73
- 2026 |     7 | United States  | card          |                12 |      728.07 |          580.64 |          60.67 |                4817.80
- 2026 |     8 | United States  | card          |                10 |      772.87 |          747.45 |          77.29 |                5590.67
- 2026 |     9 | United States  | card          |                 4 |      401.90 |          389.05 |         100.48 |                5992.57
- 2025 |    11 | United States  | wallet        |                 1 |       22.17 |           21.23 |          22.17 |                  22.17
- 2026 |     5 | United States  | wallet        |                 2 |      168.98 |          163.48 |          84.49 |                 168.98
- 2026 |     7 | United States  | wallet        |                 1 |       88.24 |           85.38 |          88.24 |                 257.22
+ 2026 |     2 | United States  | card          |                10 |      785.38 |          759.60 |          78.54 |                1151.64
+ 2026 |     3 | United States  | card          |                 8 |      668.92 |          647.12 |          83.62 |                1820.56
+ 2026 |     4 | United States  | card          |                 8 |      727.10 |          562.08 |          90.89 |                2547.66
+ 2026 |     5 | United States  | card          |                13 |      949.88 |          882.48 |          73.07 |                3497.54
+ 2026 |     6 | United States  | card          |                 9 |      846.51 |          819.27 |          94.06 |                4344.05
+ 2026 |     7 | United States  | card          |                12 |      838.58 |          810.66 |          69.88 |                5182.63
+ 2026 |     8 | United States  | card          |                11 |      958.95 |          902.98 |          87.18 |                6141.58
+ 2026 |     9 | United States  | card          |                 6 |      539.23 |          521.80 |          89.87 |                6680.81
+ 2025 |    11 | United States  | wallet        |                 1 |       19.25 |            8.76 |          19.25 |                  19.25
+ 2026 |     5 | United States  | wallet        |                 2 |      106.71 |          103.01 |          53.36 |                 106.71
+ 2026 |     7 | United States  | wallet        |                 1 |       88.24 |           85.38 |          88.24 |                 194.95
 (83 rows)
 
 WITH customer_spending AS (
@@ -118,7 +118,6 @@ WITH customer_spending AS (
     FROM fact_transactions f
     JOIN dim_customer c ON c.customer_sk = f.customer_sk AND c.is_current = true
     WHERE f.status = 'succeeded'
-      AND f.is_fraud_flagged = false
     GROUP BY f.customer_sk, c.region, c.segment
 ),
 deciles AS (
@@ -132,24 +131,41 @@ SELECT
     ROUND(MIN(total_spent_usd), 2)             AS min_spent_usd,
     ROUND(MAX(total_spent_usd), 2)             AS max_spent_usd,
     ROUND(SUM(total_spent_usd), 2)             AS decile_revenue_usd,
-    ROUND(SUM(total_spent_usd) * 100.0 / SUM(SUM(total_spent_usd)) OVER (), 2) AS pct_total_revenue,
-    MIN(segment)                               AS segment_label
+    ROUND(SUM(total_spent_usd) * 100.0 / SUM(SUM(total_spent_usd)) OVER (), 2) AS pct_total_revenue
 FROM deciles
 GROUP BY spending_decile
 ORDER BY spending_decile;
- spending_decile | customer_count | avg_spent_usd | min_spent_usd | max_spent_usd | decile_revenue_usd | pct_total_revenue | segment_label 
------------------+----------------+---------------+---------------+---------------+--------------------+-------------------+---------------
-               1 |             20 |         70.67 |         16.06 |         99.34 |            1413.34 |              0.77 | low_value
-               2 |             20 |        133.85 |        109.50 |        160.86 |            2676.91 |              1.45 | low_value
-               3 |             20 |        191.30 |        164.57 |        214.02 |            3825.98 |              2.08 | low_value
-               4 |             20 |        233.41 |        215.66 |        261.45 |            4668.27 |              2.53 | low_value
-               5 |             19 |        298.97 |        269.82 |        331.62 |            5680.34 |              3.08 | high_value
-               6 |             19 |        353.90 |        335.54 |        376.10 |            6724.11 |              3.65 | mid_value
-               7 |             19 |        415.25 |        376.76 |        453.81 |            7889.79 |              4.28 | mid_value
-               8 |             19 |        507.38 |        458.11 |        552.48 |            9640.27 |              5.23 | high_value
-               9 |             19 |        618.97 |        555.49 |        720.58 |           11760.44 |              6.38 | high_value
-              10 |             19 |       6845.97 |        744.51 |      61977.25 |          130073.39 |             70.56 | high_value
+ spending_decile | customer_count | avg_spent_usd | min_spent_usd | max_spent_usd | decile_revenue_usd | pct_total_revenue 
+-----------------+----------------+---------------+---------------+---------------+--------------------+-------------------
+               1 |             20 |         72.25 |         16.06 |        103.15 |            1444.92 |              1.90
+               2 |             20 |        138.81 |        113.41 |        168.13 |            2776.19 |              3.64
+               3 |             20 |        197.19 |        168.59 |        218.59 |            3943.83 |              5.17
+               4 |             20 |        252.96 |        221.83 |        288.98 |            5059.20 |              6.64
+               5 |             20 |        312.24 |        289.97 |        337.18 |            6244.76 |              8.19
+               6 |             20 |        374.68 |        339.31 |        408.72 |            7493.65 |              9.83
+               7 |             19 |        430.12 |        411.32 |        455.91 |            8172.26 |             10.72
+               8 |             19 |        515.09 |        456.46 |        568.23 |            9786.62 |             12.84
+               9 |             19 |        638.87 |        576.31 |        697.83 |           12138.47 |             15.92
+              10 |             19 |       1009.19 |        720.48 |       2433.35 |           19174.66 |             25.15
 (10 rows)
+
+SELECT
+    c.segment,
+    COUNT(DISTINCT c.customer_sk)                       AS customers,
+    ROUND(SUM(f.amount_usd), 2)                         AS revenue_usd,
+    ROUND(SUM(f.amount_usd) * 100.0 / SUM(SUM(f.amount_usd)) OVER (), 1) AS pct_revenue,
+    ROUND(AVG(f.amount_usd), 2)                         AS avg_ticket_usd
+FROM fact_transactions f
+JOIN dim_customer c ON c.customer_sk = f.customer_sk AND c.is_current = true
+WHERE f.status = 'succeeded'
+GROUP BY c.segment
+ORDER BY revenue_usd DESC;
+  segment   | customers | revenue_usd | pct_revenue | avg_ticket_usd 
+------------+-----------+-------------+-------------+----------------
+ high_value |        39 |    31881.36 |        41.8 |          91.09
+ mid_value  |        78 |    31418.04 |        41.2 |          77.77
+ low_value  |        79 |    12935.16 |        17.0 |          60.44
+(3 rows)
 
 WITH quarterly AS (
     SELECT
@@ -183,43 +199,37 @@ FROM quarterly
 ORDER BY region, year, quarter;
  year | quarter |    region     | total_transactions | fraud_count | dispute_count | fraud_rate_pct | prev_quarter_fraud_rate | fraud_rate_delta | avg_anomaly_score 
 ------+---------+---------------+--------------------+-------------+---------------+----------------+-------------------------+------------------+-------------------
- 2025 |       3 | Africa        |                  3 |           0 |             0 |           0.00 |                         |                  |            0.4958
- 2025 |       4 | Africa        |                 21 |           0 |             2 |           0.00 |                    0.00 |             0.00 |                  
- 2026 |       1 | Africa        |                 23 |           0 |             0 |           0.00 |                    0.00 |             0.00 |                  
- 2026 |       2 | Africa        |                 25 |           0 |             1 |           0.00 |                    0.00 |             0.00 |            0.4815
- 2026 |       3 | Africa        |                 34 |           0 |             1 |           0.00 |                    0.00 |             0.00 |            0.3778
- 2026 |       4 | Africa        |                  1 |           0 |             0 |           0.00 |                    0.00 |             0.00 |            0.4197
- 2025 |       3 | Asia          |                 10 |           0 |             0 |           0.00 |                         |                  |            0.3398
- 2025 |       4 | Asia          |                 38 |           2 |             4 |           5.26 |                    0.00 |             5.26 |            0.6187
- 2026 |       1 | Asia          |                 36 |           0 |             2 |           0.00 |                    5.26 |            -5.26 |            0.3890
- 2026 |       2 | Asia          |                 42 |           0 |             1 |           0.00 |                    0.00 |             0.00 |            0.4040
- 2026 |       3 | Asia          |                 47 |           2 |             1 |           4.26 |                    0.00 |             4.26 |            0.5798
- 2027 |       2 | Asia          |                  1 |           0 |             0 |           0.00 |                    4.26 |            -4.26 |                  
+ 2025 |       3 | Africa        |                  3 |           1 |             1 |          33.33 |                         |                  |            0.6350
+ 2025 |       4 | Africa        |                 21 |           0 |             2 |           0.00 |                   33.33 |           -33.33 |            0.3380
+ 2026 |       1 | Africa        |                 22 |           0 |             2 |           0.00 |                    0.00 |             0.00 |                  
+ 2026 |       2 | Africa        |                 30 |           0 |             1 |           0.00 |                    0.00 |             0.00 |            0.4194
+ 2026 |       3 | Africa        |                 27 |           0 |             0 |           0.00 |                    0.00 |             0.00 |                  
+ 2025 |       3 | Asia          |                 10 |           0 |             0 |           0.00 |                         |                  |                  
+ 2025 |       4 | Asia          |                 44 |           1 |             5 |           2.27 |                    0.00 |             2.27 |            0.5984
+ 2026 |       1 | Asia          |                 38 |           1 |             0 |           2.63 |                    2.27 |             0.36 |            0.5573
+ 2026 |       2 | Asia          |                 40 |           0 |             1 |           0.00 |                    2.63 |            -2.63 |            0.3601
+ 2026 |       3 | Asia          |                 50 |           1 |             0 |           2.00 |                    0.00 |             2.00 |            0.4571
  2025 |       3 | Europe        |                 13 |           0 |             1 |           0.00 |                         |                  |                  
- 2025 |       4 | Europe        |                 75 |           2 |             7 |           2.67 |                    0.00 |             2.67 |            0.5427
- 2026 |       1 | Europe        |                 71 |           2 |             2 |           2.82 |                    2.67 |             0.15 |            0.5211
- 2026 |       2 | Europe        |                104 |           0 |             8 |           0.00 |                    2.82 |            -2.82 |            0.3769
- 2026 |       3 | Europe        |                 84 |           1 |             1 |           1.19 |                    0.00 |             1.19 |            0.5434
- 2027 |       2 | Europe        |                  1 |           0 |             0 |           0.00 |                    1.19 |            -1.19 |                  
- 2025 |       3 | North America |                 11 |           0 |             3 |           0.00 |                         |                  |            0.4698
- 2025 |       4 | North America |                 53 |           1 |             2 |           1.89 |                    0.00 |             1.89 |            0.8268
- 2026 |       1 | North America |                 50 |           0 |             1 |           0.00 |                    1.89 |            -1.89 |            0.4043
- 2026 |       2 | North America |                 53 |           0 |             2 |           0.00 |                    0.00 |             0.00 |            0.3644
- 2026 |       3 | North America |                 53 |           1 |             4 |           1.89 |                    0.00 |             1.89 |            0.6940
- 2026 |       4 | North America |                  1 |           0 |             0 |           0.00 |                    1.89 |            -1.89 |                  
+ 2025 |       4 | Europe        |                 73 |           1 |             3 |           1.37 |                    0.00 |             1.37 |            0.4894
+ 2026 |       1 | Europe        |                 74 |           2 |             9 |           2.70 |                    1.37 |             1.33 |            0.5117
+ 2026 |       2 | Europe        |                106 |           2 |             7 |           1.89 |                    2.70 |            -0.82 |            0.6169
+ 2026 |       3 | Europe        |                 97 |           3 |             3 |           3.09 |                    1.89 |             1.21 |            0.6670
+ 2025 |       3 | North America |                 11 |           3 |             0 |          27.27 |                         |                  |            0.6759
+ 2025 |       4 | North America |                 48 |           1 |             5 |           2.08 |                   27.27 |           -25.19 |            0.6059
+ 2026 |       1 | North America |                 50 |           0 |             2 |           0.00 |                    2.08 |            -2.08 |            0.4048
+ 2026 |       2 | North America |                 56 |           1 |             1 |           1.79 |                    0.00 |             1.79 |            0.5031
+ 2026 |       3 | North America |                 49 |           0 |             1 |           0.00 |                    1.79 |            -1.79 |            0.4494
  2025 |       3 | Oceania       |                  2 |           0 |             0 |           0.00 |                         |                  |                  
- 2025 |       4 | Oceania       |                 13 |           1 |             1 |           7.69 |                    0.00 |             7.69 |            0.4596
- 2026 |       1 | Oceania       |                 17 |           1 |             1 |           5.88 |                    7.69 |            -1.81 |            0.9245
- 2026 |       2 | Oceania       |                 21 |           1 |             1 |           4.76 |                    5.88 |            -1.12 |            0.4364
- 2026 |       3 | Oceania       |                 18 |           0 |             0 |           0.00 |                    4.76 |            -4.76 |            0.3716
- 2027 |       3 | Oceania       |                  1 |           0 |             0 |           0.00 |                    0.00 |             0.00 |                  
+ 2025 |       4 | Oceania       |                 14 |           0 |             0 |           0.00 |                    0.00 |             0.00 |            0.4490
+ 2026 |       1 | Oceania       |                 15 |           1 |             0 |           6.67 |                    0.00 |             6.67 |            0.7227
+ 2026 |       2 | Oceania       |                 19 |           0 |             1 |           0.00 |                    6.67 |            -6.67 |            0.3399
+ 2026 |       3 | Oceania       |                 19 |           0 |             1 |           0.00 |                    0.00 |             0.00 |            0.5013
  2025 |       3 | South America |                  2 |           0 |             0 |           0.00 |                         |                  |                  
- 2025 |       4 | South America |                 38 |           0 |             1 |           0.00 |                    0.00 |             0.00 |            0.5800
- 2026 |       1 | South America |                 19 |           0 |             2 |           0.00 |                    0.00 |             0.00 |            0.3608
- 2026 |       2 | South America |                 27 |           0 |             1 |           0.00 |                    0.00 |             0.00 |            0.4076
- 2026 |       3 | South America |                 28 |           2 |             2 |           7.14 |                    0.00 |             7.14 |            0.8847
- 2027 |       2 | South America |                  1 |           0 |             0 |           0.00 |                    7.14 |            -7.14 |                  
-(36 rows)
+ 2025 |       4 | South America |                 30 |           1 |             3 |           3.33 |                    0.00 |             3.33 |            0.7084
+ 2026 |       1 | South America |                 21 |           0 |             1 |           0.00 |                    3.33 |            -3.33 |                  
+ 2026 |       2 | South America |                 29 |           0 |             0 |           0.00 |                    0.00 |             0.00 |            0.3497
+ 2026 |       3 | South America |                 28 |           1 |             0 |           3.57 |                    0.00 |             3.57 |            0.4947
+(30 rows)
 
 SELECT
     g.region,
@@ -238,24 +248,24 @@ GROUP BY g.region, pm.type, pm.is_digital
 ORDER BY g.region, volume_usd DESC;
     region     | payment_type  | is_digital | transaction_count | volume_usd | failure_rate_pct | refund_rate_pct | fraud_rate_pct | dispute_rate_pct 
 ---------------+---------------+------------+-------------------+------------+------------------+-----------------+----------------+------------------
- Africa        | card          | f          |                82 |    5195.14 |             6.10 |            2.44 |           0.00 |             3.66
- Africa        | wallet        | t          |                18 |     757.56 |             0.00 |            0.00 |           0.00 |             5.56
- Africa        | bank_transfer | f          |                 7 |     414.91 |            28.57 |           28.57 |           0.00 |             0.00
- Asia          | card          | f          |               152 |   10076.73 |             7.24 |            5.26 |           2.63 |             3.95
- Asia          | wallet        | t          |                12 |     933.20 |             0.00 |            0.00 |           0.00 |             8.33
- Asia          | bank_transfer | f          |                10 |     636.48 |             0.00 |           10.00 |           0.00 |            10.00
- Europe        | card          | f          |               262 |   19840.07 |             7.63 |            4.20 |           1.53 |             5.34
- Europe        | bank_transfer | f          |                59 |    4071.87 |             6.78 |            1.69 |           0.00 |             3.39
- Europe        | wallet        | t          |                27 |    1661.55 |            14.81 |            3.70 |           3.70 |            11.11
- North America | wallet        | t          |                27 |   62519.90 |             3.70 |            0.00 |           0.00 |             0.00
- North America | card          | f          |               173 |   11727.67 |             6.36 |            2.89 |           1.16 |             5.78
- North America | bank_transfer | f          |                21 |    1688.41 |             9.52 |            4.76 |           0.00 |             9.52
- Oceania       | card          | f          |                45 |    3906.37 |             8.89 |            2.22 |           6.67 |             0.00
- Oceania       | wallet        | t          |                21 |    2409.71 |             4.76 |            4.76 |           0.00 |            14.29
- Oceania       | bank_transfer | f          |                 6 |     533.09 |            16.67 |            0.00 |           0.00 |             0.00
- South America | card          | f          |                98 |   57384.66 |             7.14 |            1.02 |           2.04 |             6.12
- South America | wallet        | t          |                11 |    1159.18 |             0.00 |            0.00 |           0.00 |             0.00
- South America | bank_transfer | f          |                 6 |     364.57 |             0.00 |           16.67 |           0.00 |             0.00
+ Africa        | card          | f          |                79 |    5310.67 |             7.59 |            5.06 |           1.27 |             6.33
+ Africa        | bank_transfer | f          |                 8 |     710.30 |             0.00 |            0.00 |           0.00 |             0.00
+ Africa        | wallet        | t          |                16 |     651.23 |             6.25 |            6.25 |           0.00 |             6.25
+ Asia          | card          | f          |               155 |   10620.84 |             9.68 |            4.52 |           1.29 |             3.23
+ Asia          | wallet        | t          |                15 |    1008.53 |             0.00 |           13.33 |           0.00 |             6.67
+ Asia          | bank_transfer | f          |                12 |     718.54 |             0.00 |            0.00 |           8.33 |             0.00
+ Europe        | card          | f          |               267 |   19869.24 |             6.37 |            1.50 |           1.87 |             7.12
+ Europe        | bank_transfer | f          |                63 |    3757.53 |            15.87 |            1.59 |           1.59 |             6.35
+ Europe        | wallet        | t          |                33 |    2911.52 |             3.03 |            3.03 |           6.06 |             0.00
+ North America | card          | f          |               170 |   13544.34 |             3.53 |            4.12 |           2.35 |             4.12
+ North America | wallet        | t          |                29 |    2117.88 |             6.90 |            6.90 |           0.00 |             3.45
+ North America | bank_transfer | f          |                15 |     980.94 |            20.00 |            0.00 |           6.67 |             6.67
+ Oceania       | card          | f          |                43 |    3883.11 |             4.65 |            2.33 |           2.33 |             4.65
+ Oceania       | wallet        | t          |                21 |    1903.12 |             4.76 |            0.00 |           0.00 |             0.00
+ Oceania       | bank_transfer | f          |                 5 |     586.41 |             0.00 |            0.00 |           0.00 |             0.00
+ South America | card          | f          |                97 |    6742.86 |             8.25 |            3.09 |           1.03 |             4.12
+ South America | wallet        | t          |                 7 |     464.14 |             0.00 |            0.00 |           0.00 |             0.00
+ South America | bank_transfer | f          |                 6 |     453.36 |            16.67 |            0.00 |          16.67 |             0.00
 (18 rows)
 
 WITH merchant_cohorts AS (
@@ -297,35 +307,35 @@ ORDER BY cohort_ym, months_since_acquisition;
  cohort_month | months_since_acquisition | active_merchants | cohort_size | retention_rate_pct 
 --------------+--------------------------+------------------+-------------+--------------------
        202509 |                        0 |               27 |          27 |              100.0
-       202509 |                        1 |               17 |          27 |               63.0
-       202509 |                        2 |               20 |          27 |               74.1
-       202509 |                        3 |               19 |          27 |               70.4
-       202509 |                        4 |               19 |          27 |               70.4
-       202509 |                        5 |               20 |          27 |               74.1
-       202509 |                        6 |               16 |          27 |               59.3
-       202510 |                        0 |               19 |          19 |              100.0
-       202510 |                        1 |               16 |          19 |               84.2
-       202510 |                        2 |               18 |          19 |               94.7
-       202510 |                        3 |               15 |          19 |               78.9
-       202510 |                        4 |               13 |          19 |               68.4
-       202510 |                        5 |               12 |          19 |               63.2
-       202510 |                        6 |               14 |          19 |               73.7
-       202511 |                        0 |                1 |           1 |              100.0
-       202511 |                        1 |                1 |           1 |              100.0
-       202511 |                        2 |                1 |           1 |              100.0
-       202511 |                        4 |                1 |           1 |              100.0
-       202511 |                        5 |                1 |           1 |              100.0
-       202511 |                        6 |                1 |           1 |              100.0
+       202509 |                        1 |               18 |          27 |               66.7
+       202509 |                        2 |               22 |          27 |               81.5
+       202509 |                        3 |               18 |          27 |               66.7
+       202509 |                        4 |               20 |          27 |               74.1
+       202509 |                        5 |               19 |          27 |               70.4
+       202509 |                        6 |               17 |          27 |               63.0
+       202510 |                        0 |               18 |          18 |              100.0
+       202510 |                        1 |               15 |          18 |               83.3
+       202510 |                        2 |               18 |          18 |              100.0
+       202510 |                        3 |               14 |          18 |               77.8
+       202510 |                        4 |               11 |          18 |               61.1
+       202510 |                        5 |               12 |          18 |               66.7
+       202510 |                        6 |               14 |          18 |               77.8
+       202511 |                        0 |                2 |           2 |              100.0
+       202511 |                        1 |                2 |           2 |              100.0
+       202511 |                        2 |                2 |           2 |              100.0
+       202511 |                        3 |                1 |           2 |               50.0
+       202511 |                        4 |                1 |           2 |               50.0
+       202511 |                        5 |                2 |           2 |              100.0
+       202511 |                        6 |                1 |           2 |               50.0
        202512 |                        0 |                3 |           3 |              100.0
        202512 |                        1 |                2 |           3 |               66.7
-       202512 |                        2 |                2 |           3 |               66.7
+       202512 |                        2 |                1 |           3 |               33.3
        202512 |                        3 |                1 |           3 |               33.3
        202512 |                        4 |                1 |           3 |               33.3
        202512 |                        5 |                2 |           3 |               66.7
        202512 |                        6 |                2 |           3 |               66.7
        202601 |                        0 |                2 |           2 |              100.0
        202601 |                        2 |                1 |           2 |               50.0
-       202601 |                        3 |                1 |           2 |               50.0
        202601 |                        4 |                1 |           2 |               50.0
        202601 |                        5 |                1 |           2 |               50.0
        202601 |                        6 |                1 |           2 |               50.0
@@ -362,27 +372,27 @@ ORDER BY full_date DESC
 LIMIT 21;
  full_date  | day_name  | is_weekend | revenue_usd | revenue_ma7_usd | wow_change_pct | succeeded | failed 
 ------------+-----------+------------+-------------+-----------------+----------------+-----------+--------
- 2027-07-16 | Friday    | f          |      118.04 |        15978.28 |           15.7 |         1 |      0
- 2027-06-26 | Saturday  | t          |    50799.43 |        15975.99 |        23232.5 |         1 |      0
- 2027-05-21 | Friday    | f          |        3.73 |         8750.04 |          -97.4 |         1 |      0
- 2027-04-07 | Wednesday | f          |      149.64 |         8769.75 |           33.5 |         1 |      0
- 2026-12-26 | Saturday  | t          |      108.14 |         8764.38 |           -2.3 |         1 |      0
- 2026-12-02 | Wednesday | f          |    60586.26 |         8764.74 |        29788.1 |         1 |      0
- 2026-09-14 | Monday    | f          |       82.74 |          138.52 |          -66.8 |         1 |      0
- 2026-09-12 | Saturday  | t          |      102.02 |          162.27 |          -60.1 |         1 |      0
- 2026-09-11 | Friday    | f          |      217.72 |          184.24 |          -30.0 |         4 |      2
- 2026-09-10 | Thursday  | f          |      141.74 |          197.56 |          -72.9 |         2 |      0
- 2026-09-09 | Wednesday | f          |      112.05 |          252.04 |          -45.4 |         1 |      0
- 2026-09-08 | Tuesday   | f          |      110.63 |          265.34 |          -45.1 |         3 |      2
- 2026-09-07 | Monday    | f          |      202.71 |          278.32 |          -27.3 |         1 |      0
- 2026-09-06 | Sunday    | t          |      249.02 |          289.21 |            2.2 |         2 |      0
- 2026-09-05 | Saturday  | t          |      255.81 |          288.43 |          -14.9 |         5 |      0
- 2026-09-04 | Friday    | f          |      310.98 |          294.83 |          833.0 |         4 |      0
- 2026-09-03 | Thursday  | f          |      523.05 |          255.17 |          464.9 |         4 |      1
- 2026-09-02 | Wednesday | f          |      205.19 |          193.67 |          140.9 |         4 |      0
- 2026-09-01 | Tuesday   | f          |      201.49 |          176.53 |          -51.9 |         3 |      0
- 2026-08-31 | Monday    | f          |      278.95 |          207.58 |            3.8 |         6 |      1
- 2026-08-30 | Sunday    | t          |      243.56 |          206.11 |          119.1 |         4 |      0
+ 2026-09-14 | Monday    | f          |      614.26 |          289.41 |           39.5 |         5 |      0
+ 2026-09-12 | Saturday  | t          |      160.31 |          264.56 |          -30.9 |         1 |      0
+ 2026-09-11 | Friday    | f          |      494.76 |          274.81 |           90.5 |         6 |      0
+ 2026-09-10 | Thursday  | f          |      101.45 |          241.22 |          -75.1 |         2 |      0
+ 2026-09-09 | Wednesday | f          |      112.05 |          284.95 |          -45.4 |         1 |      0
+ 2026-09-08 | Tuesday   | f          |      340.32 |          298.26 |          107.8 |         5 |      0
+ 2026-09-07 | Monday    | f          |      202.71 |          273.04 |          -53.5 |         1 |      0
+ 2026-09-06 | Sunday    | t          |      440.33 |          306.39 |           80.8 |         5 |      2
+ 2026-09-05 | Saturday  | t          |      232.06 |          278.28 |          -50.4 |         4 |      1
+ 2026-09-04 | Friday    | f          |      259.65 |          312.01 |          679.0 |         3 |      1
+ 2026-09-03 | Thursday  | f          |      407.53 |          279.68 |          253.1 |         5 |      0
+ 2026-09-02 | Wednesday | f          |      205.19 |          237.95 |           53.5 |         4 |      0
+ 2026-09-01 | Tuesday   | f          |      163.79 |          227.73 |          -52.5 |         2 |      1
+ 2026-08-31 | Monday    | f          |      436.16 |          253.61 |          211.0 |         7 |      0
+ 2026-08-30 | Sunday    | t          |      243.56 |          211.33 |          119.1 |         4 |      0
+ 2026-08-29 | Saturday  | t          |      468.19 |          192.42 |         1081.1 |         7 |      0
+ 2026-08-28 | Friday    | f          |       33.33 |          131.20 |          -79.3 |         1 |      0
+ 2026-08-27 | Thursday  | f          |      115.42 |          149.43 |          -69.6 |         3 |      0
+ 2026-08-26 | Wednesday | f          |      133.67 |          187.13 |          -35.9 |         3 |      0
+ 2026-08-25 | Tuesday   | f          |      344.94 |          197.83 |          131.8 |         3 |      1
+ 2026-08-23 | Sunday    | t          |      140.23 |          169.81 |           -8.6 |         2 |      1
 (21 rows)
 
 SELECT
@@ -401,23 +411,23 @@ WHERE f.status = 'succeeded'
 GROUP BY m.name, p.name, p.billing_interval
 ORDER BY net_usd DESC
 LIMIT 15;
-          merchant_name          |  product_name   | billing | sales | gross_usd | net_usd  | refund_rate_pct | dispute_rate_pct 
----------------------------------+-----------------+---------+-------+-----------+----------+-----------------+------------------
- Martin, Rose and Obrien         | Team plan       | year    |    10 |  60948.06 | 59177.57 |             0.0 |             10.0
- Perez Inc                       | Season pass     | year    |     7 |  51000.10 | 49519.00 |             0.0 |              0.0
- Harrell LLC                     | Season pass     | month   |    22 |   2277.97 |  2205.30 |             0.0 |              9.1
- Baker, Mason and White          | Season pass     | month   |    27 |   2193.51 |  2121.77 |             0.0 |              7.4
- Watts, Robinson and Nguyen      | Monthly plan    | month   |    18 |   1458.20 |  1369.71 |             5.6 |              0.0
- Rodriguez, Figueroa and Sanchez | Team plan       | month   |    11 |   1499.08 |  1316.05 |             9.1 |              9.1
- Hickman Ltd                     | Enterprise plan | year    |     7 |   1238.36 |  1200.35 |             0.0 |              0.0
- Ross, Robinson and Bright       | Monthly plan    | month   |    38 |   1229.75 |  1158.86 |             2.6 |              7.9
- Wilkerson-Day                   | Monthly plan    | month   |    39 |   1097.15 |  1005.04 |             5.1 |              5.1
- Rodriguez, Figueroa and Sanchez | Pro plan        | year    |     6 |   1019.76 |   988.38 |             0.0 |              0.0
- Dyer, Potter and Mack           | Starter plan    | month   |    16 |   1019.68 |   985.28 |             0.0 |              0.0
- Adams, Zuniga and Wong          | Family menu     | one-off |     7 |    961.95 |   796.10 |            14.3 |              0.0
- Garcia-James                    | Season pass     | year    |     5 |    791.53 |   767.08 |             0.0 |             20.0
- Abbott-Munoz                    | Skin bundle     | one-off |     5 |    881.10 |   765.95 |            20.0 |              0.0
- Baker and Sons                  | Featured slot   | one-off |     5 |    790.30 |   765.89 |             0.0 |              0.0
+          merchant_name          |    product_name    | billing | sales | gross_usd | net_usd | refund_rate_pct | dispute_rate_pct 
+---------------------------------+--------------------+---------+-------+-----------+---------+-----------------+------------------
+ Harrell LLC                     | Season pass        | month   |    21 |   2176.11 | 2106.69 |             0.0 |              0.0
+ Baker, Mason and White          | Season pass        | month   |    27 |   2197.34 | 1965.02 |            11.1 |              0.0
+ Rodriguez, Figueroa and Sanchez | Team plan          | month   |    11 |   1499.08 | 1452.33 |             0.0 |              9.1
+ Watts, Robinson and Nguyen      | Monthly plan       | month   |    16 |   1299.81 | 1215.84 |             6.3 |              0.0
+ Hickman Ltd                     | Enterprise plan    | year    |     7 |   1238.36 | 1200.35 |             0.0 |              0.0
+ Rodriguez, Figueroa and Sanchez | Pro plan           | year    |     7 |   1189.72 | 1153.11 |             0.0 |              0.0
+ Ross, Robinson and Bright       | Monthly plan       | month   |    37 |   1196.69 | 1126.04 |             2.7 |              2.7
+ Wilkerson-Day                   | Monthly plan       | month   |    42 |   1182.77 | 1107.39 |             2.4 |              7.1
+ Adams, Zuniga and Wong          | Family menu        | one-off |     7 |    961.95 |  931.95 |             0.0 |             14.3
+ Dyer, Potter and Mack           | Starter plan       | month   |    15 |    955.95 |  923.70 |             0.0 |              0.0
+ Gray-Mayo                       | Backpack           | one-off |     6 |    949.53 |  920.19 |             0.0 |             33.3
+ Galloway-Wyatt                  | Monthly membership | year    |     5 |    944.65 |  915.76 |             0.0 |              0.0
+ Dyer, Potter and Mack           | Pro plan           | year    |     7 |    815.78 |  790.02 |             0.0 |             14.3
+ Romero, Gonzalez and Brooks     | Team plan          | year    |     5 |    813.46 |  788.38 |             0.0 |              0.0
+ Garcia-James                    | Season pass        | year    |     5 |    798.83 |  774.17 |             0.0 |              0.0
 (15 rows)
 
 SELECT
@@ -438,27 +448,27 @@ ORDER BY d.year DESC, d.month DESC, sensitive_events DESC;
  year | month |   user_role   | total_events | sensitive_events | exports | gdpr_erasures | failed_logins | distinct_users 
 ------+-------+---------------+--------------+------------------+---------+---------------+---------------+----------------
  2026 |     9 | service       |            3 |                2 |       0 |             2 |             0 |              1
- 2026 |     9 | analyst       |            2 |                1 |       0 |             0 |             0 |              1
+ 2026 |     9 | analyst       |            1 |                1 |       0 |             0 |             0 |              1
  2026 |     9 | admin         |            2 |                0 |       0 |             0 |             0 |              1
- 2026 |     9 | compliance    |            1 |                0 |       0 |             0 |             0 |              1
+ 2026 |     9 | compliance    |            2 |                0 |       0 |             0 |             0 |              1
  2026 |     9 | data_engineer |            1 |                0 |       0 |             0 |             0 |              1
- 2026 |     8 | analyst       |            8 |                2 |       2 |             0 |             2 |              1
- 2026 |     8 | data_engineer |            7 |                2 |       0 |             0 |             1 |              1
+ 2026 |     8 | data_engineer |            9 |                3 |       0 |             0 |             1 |              1
+ 2026 |     8 | analyst       |            8 |                2 |       2 |             0 |             1 |              1
  2026 |     8 | service       |            3 |                1 |       0 |             0 |             0 |              1
- 2026 |     8 | compliance    |            3 |                0 |       0 |             0 |             0 |              1
+ 2026 |     8 | compliance    |            2 |                0 |       0 |             0 |             0 |              1
  2026 |     8 | admin         |            3 |                0 |       0 |             0 |             0 |              1
- 2026 |     8 | readonly      |            2 |                0 |       0 |             0 |             1 |              1
- 2026 |     7 | readonly      |            7 |                5 |       1 |             0 |             2 |              1
+ 2026 |     8 | readonly      |            3 |                0 |       0 |             0 |             1 |              1
+ 2026 |     7 | readonly      |            7 |                4 |       1 |             0 |             2 |              1
+ 2026 |     7 | analyst       |            4 |                3 |       0 |             0 |             0 |              1
  2026 |     7 | admin         |            4 |                2 |       1 |             0 |             0 |              1
  2026 |     7 | compliance    |            5 |                2 |       0 |             1 |             0 |              1
  2026 |     7 | data_engineer |            4 |                1 |       1 |             0 |             0 |              1
- 2026 |     7 | service       |            6 |                1 |       0 |             0 |             1 |              1
- 2026 |     7 | analyst       |            1 |                0 |       0 |             0 |             0 |              1
- 2026 |     6 | analyst       |            4 |                3 |       0 |             0 |             0 |              1
+ 2026 |     7 | service       |            7 |                1 |       0 |             0 |             1 |              1
+ 2026 |     6 | analyst       |            2 |                2 |       0 |             0 |             0 |              1
+ 2026 |     6 | service       |            3 |                2 |       0 |             0 |             0 |              1
  2026 |     6 | data_engineer |            2 |                1 |       0 |             0 |             0 |              1
- 2026 |     6 | service       |            2 |                1 |       0 |             0 |             0 |              1
- 2026 |     6 | admin         |            2 |                0 |       0 |             0 |             0 |              1
  2026 |     6 | readonly      |            1 |                0 |       0 |             0 |             0 |              1
+ 2026 |     6 | admin         |            2 |                0 |       0 |             0 |             0 |              1
 (22 rows)
 
 SELECT
@@ -475,9 +485,9 @@ GROUP BY hist.category, curr.category
 ORDER BY revenue_usd DESC;
  category_at_transaction_time | category_current | transactions | revenue_usd 
 ------------------------------+------------------+--------------+-------------
- e-commerce                   | education        |            3 |      483.01
- e-commerce                   | gaming           |            6 |      213.85
- retail                       | e-commerce       |            1 |      130.65
+ e-commerce                   | education        |            3 |      547.33
+ e-commerce                   | gaming           |            7 |      238.51
+ retail                       | e-commerce       |            1 |      172.47
 (3 rows)
 
 EXPLAIN (COSTS OFF)
@@ -518,23 +528,18 @@ GROUP BY year, month
 ORDER BY year, month;
  year | month | revenue_usd 
 ------+-------+-------------
- 2025 |     9 |     2903.24
- 2025 |    10 |     6112.49
- 2025 |    11 |     6373.33
- 2025 |    12 |     6326.87
- 2026 |     1 |     5630.91
- 2026 |     2 |     5974.71
- 2026 |     3 |     4802.22
- 2026 |     4 |     5161.04
- 2026 |     5 |     7757.70
- 2026 |     6 |     5719.11
- 2026 |     7 |     7947.03
- 2026 |     8 |     6092.03
- 2026 |     9 |     2715.15
- 2026 |    12 |    60694.40
- 2027 |     4 |      149.64
- 2027 |     5 |        3.73
- 2027 |     6 |    50799.43
- 2027 |     7 |      118.04
-(18 rows)
+ 2025 |     9 |     2945.35
+ 2025 |    10 |     5030.89
+ 2025 |    11 |     5825.18
+ 2025 |    12 |     7046.85
+ 2026 |     1 |     5949.01
+ 2026 |     2 |     5636.41
+ 2026 |     3 |     4937.96
+ 2026 |     4 |     4958.67
+ 2026 |     5 |     7325.93
+ 2026 |     6 |     7310.19
+ 2026 |     7 |     9337.39
+ 2026 |     8 |     6196.32
+ 2026 |     9 |     3734.41
+(13 rows)
 

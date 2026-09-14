@@ -32,7 +32,7 @@ def read(name):
     return pd.read_csv(os.path.join(IN_DIR, f"{name}.csv"))
 
 def write(df, name):
-    df.to_csv(os.path.join(OUT_DIR, f"{name}.csv"), index=False)
+    df.to_csv(os.path.join(OUT_DIR, f"{name}.csv"), index=False, lineterminator="\n")
     print(f"  {name:<22}: {len(df):>6} lignes")
 
 def to_dt(series):

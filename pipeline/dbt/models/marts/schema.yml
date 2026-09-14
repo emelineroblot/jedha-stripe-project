@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: fact_transactions
+    description: "Grain : 1 ligne = 1 transaction OLTP. Chargement incrémental idempotent (MERGE sur transaction_id)."
+    tests:
+      - dbt_utils.recency:                     # fraîcheur : des données de moins de 15 min
+          datepart: minute
+          field: loaded_at
+          interval: 15
+    columns:
+      - name: transaction_id
+        tests: [not_null, unique]
+      - name: status
+        tests:
+          - accepted_values: { values: ["succeeded", "failed"] }
+      - name: risk_level
+        tests:
+          - accepted_values: { values: ["low", "medium", "high", "critical"] }
+      - name: merchant_sk
+        tests:
+          - not_null
+          - relationships: { to: ref('dim_merchant'), field: merchant_sk }
+      - name: customer_sk
+        tests:
+          - not_null
+          - relationships: { to: ref('dim_customer'), field: customer_sk }
+      - name: amount_usd
+        tests:
+          - dbt_utils.accepted_range: { min_value: 0, inclusive: true }
+
+  - name: dim_customer
+    columns:
+      - name: email_hash
+        description: "SHA-256 salé. Contrôle de conformité automatisé : aucune valeur ne doit ressembler à un email en clair."
+        tests:
+          - dbt_utils.not_accepted_values: { values: ["%@%"] }

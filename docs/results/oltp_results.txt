@@ -20,16 +20,15 @@ WHERE t.created_at >= NOW() - INTERVAL '90 days'
   AND fi.risk_level IN ('high', 'critical')
 ORDER BY fi.anomaly_score DESC
 LIMIT 20;
-   transaction_id    |       created_at       |  amount  | currency_code |  status   | anomaly_score | risk_level | action_taken |        merchant_name        |     customer_id      | geo_country_code | customer_country | device_type 
----------------------+------------------------+----------+---------------+-----------+---------------+------------+--------------+-----------------------------+----------------------+------------------+------------------+-------------
- ch_f6fa36d7678745df | 2026-07-02 09:02:28+00 |   107.71 | GBP           | failed    |        0.9208 | critical   | block        | Davis and Sons              | cus_55512f1bc3594a8c | BR               | GB               | mobile
- ch_4528e00550e24551 | 2026-08-29 00:38:00+00 |  4521.00 | JPY           | failed    |        0.9013 | critical   | block        | Smith-Bowen                 | cus_cefcdabd84674303 | JP               | FR               | mobile
- ch_03328b2851e1442c | 2026-08-12 07:27:05+00 |   577.73 | BRL           | succeeded |        0.8486 | high       | review       | Wilkerson-Day               | cus_8daa2d606e5b410a | BR               | BR               | mobile
- ch_341e87a491a44139 | 2026-09-11 09:03:55+00 |    71.51 | EUR           | failed    |        0.7930 | high       | review       | Hoffman, Baker and Richards | cus_7b12b2a4b9e14b1a | ES               | DE               | desktop
- ch_53d82f504a0a4499 | 2026-06-30 21:39:37+00 |   120.87 | GBP           | failed    |        0.7487 | high       | review       | Arnold Ltd                  | cus_524150d4e18e4ffe | AU               | JP               | desktop
- ch_a5bc2025d6bc4b2d | 2026-07-27 19:16:40+00 | 85906.39 | NGN           | succeeded |        0.7209 | high       | review       | Harris, Collins and Carney  | cus_30b8509393044c36 | SG               | DE               | mobile
- ch_d2359bff6b79453d | 2026-07-06 07:35:14+00 | 44935.14 | NGN           | succeeded |        0.6940 | high       | review       | Doyle Ltd                   | cus_4552d23c536e4fa7 | US               | CA               | mobile
-(7 rows)
+   transaction_id    |       created_at       | amount | currency_code |  status   | anomaly_score | risk_level | action_taken |        merchant_name        |     customer_id      | geo_country_code | customer_country | device_type 
+---------------------+------------------------+--------+---------------+-----------+---------------+------------+--------------+-----------------------------+----------------------+------------------+------------------+-------------
+ ch_d6a314c2408449a1 | 2026-09-11 09:13:43+00 | 199.09 | EUR           | succeeded |        0.7844 | high       | review       | Hoffman, Baker and Richards | cus_a16340e63b6a497e | ES               | DE               | desktop
+ ch_28a7b1a179344497 | 2026-08-13 11:22:32+00 |  63.28 | GBP           | succeeded |        0.7111 | high       | review       | Mcclure, Ward and Lee       | cus_0611b217207548d6 | JP               | SG               | desktop
+ ch_1a3ffefb9a7f41fc | 2026-06-30 04:50:11+00 | 363.42 | AUD           | succeeded |        0.6809 | high       | review       | Anderson Group              | cus_62c85ad1290e4388 | ES               | ES               | desktop
+ ch_0e5d942bc32a4606 | 2026-09-06 00:10:00+00 |  47.15 | EUR           | succeeded |        0.6367 | high       | review       | Blake and Sons              | cus_0936c339a7fc4396 | BR               | GB               | mobile
+ ch_3ef7dcff66984ffd | 2026-07-18 08:30:28+00 | 382.18 | USD           | succeeded |        0.6154 | high       | review       | Morales-Jones               | cus_a8b38ed4bb00478c | DE               | DE               | desktop
+ ch_7f891194237241d2 | 2026-09-06 00:24:00+00 |  82.29 | EUR           | failed    |        0.6012 | high       | review       | Blake and Sons              | cus_0936c339a7fc4396 | ES               | GB               | desktop
+(6 rows)
 
 SELECT
     m.merchant_id,
@@ -47,18 +46,18 @@ GROUP BY m.merchant_id, m.name, m.category
 HAVING COUNT(*) >= 3
 ORDER BY failure_rate_pct DESC, total_transactions DESC
 LIMIT 10;
-     merchant_id      |       merchant_name       |  category  | total_transactions | failed_count | failure_rate_pct |   top_failure_reason    
-----------------------+---------------------------+------------+--------------------+--------------+------------------+-------------------------
- mer_5e545f22936e434e | Garcia-James              | gaming     |                  3 |            2 |            66.67 | authentication_required
- mer_0a4fa70ccc3f4675 | Baker, Mason and White    | gaming     |                  3 |            1 |            33.33 | card_declined
- mer_d45235e868cc4abb | George Group              | retail     |                  3 |            1 |            33.33 | authentication_required
- mer_2aa81315db7b4610 | Harrell LLC               | gaming     |                  5 |            1 |            20.00 | authentication_required
- mer_21c4ecea89ab4495 | Williams and Sons         | saas       |                  6 |            1 |            16.67 | processing_error
- mer_f1f70b76f04d455e | Wilkerson-Day             | healthcare |                  7 |            1 |            14.29 | card_declined
- mer_8895ca858acb4135 | Flowers, Martin and Kelly | saas       |                  6 |            0 |             0.00 | 
- mer_550fb7c166684fd6 | Martin, Rose and Obrien   | saas       |                  5 |            0 |             0.00 | 
- mer_8072b1efa2754374 | Ross, Robinson and Bright | healthcare |                  4 |            0 |             0.00 | 
- mer_ce91a8b05c5a4f54 | Dyer, Potter and Mack     | saas       |                  4 |            0 |             0.00 | 
+     merchant_id      |       merchant_name       |  category  | total_transactions | failed_count | failure_rate_pct | top_failure_reason 
+----------------------+---------------------------+------------+--------------------+--------------+------------------+--------------------
+ mer_fe0efaa2d6134d2b | Harrell LLC               | gaming     |                  5 |            1 |            20.00 | card_declined
+ mer_55e37e7ae9164337 | Flowers, Martin and Kelly | saas       |                  6 |            1 |            16.67 | card_declined
+ mer_e61e35c1b9244af2 | Blake and Sons            | travel     |                  7 |            1 |            14.29 | insufficient_funds
+ mer_0b2c61759f9543ce | Wilkerson-Day             | healthcare |                  7 |            0 |             0.00 | 
+ mer_55f1915f3b6c4bb4 | Garcia-James              | gaming     |                  6 |            0 |             0.00 | 
+ mer_cb824aa2603149bd | Williams and Sons         | saas       |                  5 |            0 |             0.00 | 
+ mer_cebf4e594d034937 | Dyer, Potter and Mack     | saas       |                  4 |            0 |             0.00 | 
+ mer_db32c3082b104f39 | Ross, Robinson and Bright | healthcare |                  4 |            0 |             0.00 | 
+ mer_4c90125afead4b68 | Martin, Rose and Obrien   | saas       |                  4 |            0 |             0.00 | 
+ mer_e882a3b4ae604fa7 | Blair PLC                 | e-commerce |                  3 |            0 |             0.00 | 
 (10 rows)
 
 SELECT
@@ -82,16 +81,16 @@ ORDER BY total_volume_usd DESC
 LIMIT 10;
      merchant_id      |          merchant_name          |  category  |    country     | transaction_count | total_volume_usd | avg_ticket_usd | currencies 
 ----------------------+---------------------------------+------------+----------------+-------------------+------------------+----------------+------------
- mer_f1f70b76f04d455e | Wilkerson-Day                   | healthcare | Brazil         |                22 |          1065.78 |          48.44 | BRL
- mer_1e3cd1d5a0cb4eea | Gray-Mayo                       | e-commerce | France         |                11 |           941.32 |          85.57 | EUR
- mer_7e93736e98e64b20 | Rodriguez, Figueroa and Sanchez | saas       | United States  |                 6 |           866.27 |         144.38 | USD
- mer_2aa81315db7b4610 | Harrell LLC                     | gaming     | United Kingdom |                 8 |           844.55 |         105.57 | GBP
- mer_5f93d07a309c405a | Watts, Robinson and Nguyen      | healthcare | Germany        |                 9 |           812.95 |          90.33 | EUR
- mer_19bd6853312f4552 | Abbott-Munoz                    | gaming     | Australia      |                 7 |           732.03 |         104.58 | AUD
- mer_0a4fa70ccc3f4675 | Baker, Mason and White          | gaming     | France         |                 8 |           660.22 |          82.53 | EUR
- mer_1cbdcefbad454faa | Hickman Ltd                     | saas       | Canada         |                 5 |           621.99 |         124.40 | CAD
- mer_af71e58200234461 | Galloway-Wyatt                  | education  | Canada         |                 4 |           607.85 |         151.96 | CAD
- mer_3f23ea5c8ee94c93 | Henderson, Ramirez and Lewis    | gaming     | Spain          |                 5 |           584.30 |         116.86 | EUR
+ mer_78864bf1d15a424c | Abbott-Munoz                    | gaming     | Australia      |                11 |          1280.09 |         116.37 | AUD
+ mer_35dc6d67de4945ff | Anderson Group                  | retail     | Australia      |                10 |          1176.40 |         117.64 | AUD
+ mer_ba49cfc9de3a4d34 | Rodriguez, Figueroa and Sanchez | saas       | United States  |                 6 |          1094.09 |         182.35 | USD
+ mer_d6d762d8faa145ce | Morales-Jones                   | education  | United States  |                 8 |          1025.77 |         128.22 | USD
+ mer_55f1915f3b6c4bb4 | Garcia-James                    | gaming     | Germany        |                 9 |           947.68 |         105.30 | EUR
+ mer_ad312e265c3d44b1 | Watts, Robinson and Nguyen      | healthcare | Germany        |                 9 |           842.54 |          93.62 | EUR
+ mer_0b2c61759f9543ce | Wilkerson-Day                   | healthcare | Brazil         |                21 |           840.75 |          40.04 | BRL
+ mer_b1df48d548b7450d | Baker, Mason and White          | gaming     | France         |                10 |           825.12 |          82.51 | EUR
+ mer_55446817044148a5 | Henderson, Ramirez and Lewis    | gaming     | Spain          |                 6 |           823.65 |         137.28 | EUR
+ mer_fe0efaa2d6134d2b | Harrell LLC                     | gaming     | United Kingdom |                 8 |           807.63 |         100.95 | GBP
 (10 rows)
 
 WITH windows AS (
@@ -123,14 +122,14 @@ ORDER BY transactions_in_burst DESC, burst_start DESC
 LIMIT 15;
      customer_id      |     merchant_id      |      burst_start       |       burst_end        | transactions_in_burst | total_amount |                                  transaction_ids                                   
 ----------------------+----------------------+------------------------+------------------------+-----------------------+--------------+------------------------------------------------------------------------------------
- cus_4552d23c536e4fa7 | mer_f0b9dff7acae464d | 2026-07-06 07:35:14+00 | 2026-07-06 08:03:14+00 |                     4 |    209814.88 | ch_d2359bff6b79453d, ch_5c175708a5f742f6, ch_3895253a195d4263, ch_2efa2fc2367d46e6
- cus_a1416a59efda4335 | mer_1e3cd1d5a0cb4eea | 2026-07-03 16:04:52+00 | 2026-07-03 16:45:52+00 |                     3 |       246.58 | ch_a66c2f78e68747c9, ch_1edf796fdb894d21, ch_79a5d02fe3ad40c0
- cus_b7d3a38a24844780 | mer_7b89a89bae4a4bde | 2025-11-03 19:04:24+00 | 2025-11-03 19:19:24+00 |                     3 |      1260.65 | ch_5fde8a85eb5945d5, ch_c112b3ce9ad846d7, ch_c9cf2f5999654f56
- cus_7c704083177843ea | mer_5f93d07a309c405a | 2025-10-09 17:35:17+00 | 2025-10-09 18:04:17+00 |                     3 |       438.51 | ch_b4b07975e8ac4a9b, ch_9865dbcef4fc47a8, ch_b6090025abdb4b88
- cus_8daa2d606e5b410a | mer_f1f70b76f04d455e | 2026-08-12 06:57:05+00 | 2026-08-12 07:27:05+00 |                     2 |       939.99 | ch_4ee4302205bd486d, ch_03328b2851e1442c
- cus_34e88b0df4d14d24 | mer_7b89a89bae4a4bde | 2026-05-26 18:51:37+00 | 2026-05-26 18:54:37+00 |                     2 |      1485.56 | ch_312eb5e1b10a4f7a, ch_30f9a7ff864a42ed
- cus_ee8d8fd09cdf4af6 | mer_344981c0a61c468c | 2026-01-29 22:27:10+00 | 2026-01-29 22:51:10+00 |                     2 |       297.61 | ch_62b7daa4e91b4419, ch_d652aa4a41784493
- cus_f4605b9723414bcd | mer_2aa81315db7b4610 | 2025-10-13 20:10:16+00 | 2025-10-13 20:11:16+00 |                     2 |       128.13 | ch_cf207619792a4923, ch_196e75053ada4c06
+ cus_e075d16f596f4fdb | mer_78864bf1d15a424c | 2026-07-10 06:45:30+00 | 2026-07-10 07:22:30+00 |                     4 |       600.12 | ch_ddc409d1ba5b4efa, ch_efc5807515bc4b5c, ch_e99704d97e734f01, ch_e0f92be316904a06
+ cus_62c85ad1290e4388 | mer_35dc6d67de4945ff | 2026-06-30 04:41:11+00 | 2026-06-30 04:59:11+00 |                     4 |       733.73 | ch_09fda08c97a148de, ch_1a3ffefb9a7f41fc, ch_01ad5a210c05438e, ch_c0ce21548a0547df
+ cus_9a537b39999f4cb9 | mer_db32c3082b104f39 | 2025-12-25 18:34:45+00 | 2025-12-25 19:04:45+00 |                     4 |       737.99 | ch_d8bb03b132d748ff, ch_01d674c6b2354758, ch_d04e32e8ace541ec, ch_4fdb8a45d20e4659
+ cus_0936c339a7fc4396 | mer_e61e35c1b9244af2 | 2026-09-06 00:24:00+00 | 2026-09-06 00:39:00+00 |                     3 |       237.66 | ch_7f891194237241d2, ch_b9d563ef116f4d5d, ch_fb30266cbe47453b
+ cus_a8b38ed4bb00478c | mer_d6d762d8faa145ce | 2026-07-18 08:12:28+00 | 2026-07-18 08:30:28+00 |                     3 |       605.92 | ch_39010c41731a42d5, ch_fedb24c38e78467e, ch_3ef7dcff66984ffd
+ cus_d8708edd93874156 | mer_18bf8f47cd854063 | 2026-01-25 12:57:58+00 | 2026-01-25 13:03:58+00 |                     3 |       257.61 | ch_49804d14e56a4875, ch_d8fe2f6909f04d5f, ch_53676312b0c24f07
+ cus_08649edf0db34faa | mer_55f1915f3b6c4bb4 | 2026-09-14 16:44:44+00 | 2026-09-14 16:55:44+00 |                     2 |       210.47 | ch_39f7558b04154510, ch_e59bec3746194fe4
+ cus_384254c77ef4478e | mer_f157f5f3429f4a9b | 2026-03-27 11:09:57+00 | 2026-03-27 11:10:57+00 |                     2 |       233.80 | ch_9949917d6fb64add, ch_beb286e0cbe34367
 (8 rows)
 
 SELECT
@@ -151,9 +150,8 @@ ORDER BY fraud_flags DESC, max_anomaly_score DESC
 LIMIT 15;
      customer_id      | country_code | distinct_payment_methods | total_transactions | fraud_flags | max_anomaly_score | disputes 
 ----------------------+--------------+--------------------------+--------------------+-------------+-------------------+----------
- cus_30f525f938cc46c6 | US           |                        2 |                  2 |           2 |            0.7794 |        1
- cus_ab7a77dfb2894628 | SG           |                        2 |                  2 |           2 |            0.3408 |        0
-(2 rows)
+ cus_e075d16f596f4fdb | FR           |                        2 |                  2 |           2 |            0.4840 |        1
+(1 row)
 
 SELECT
     pm.fingerprint,
@@ -171,7 +169,7 @@ HAVING COUNT(DISTINCT pm.customer_id) >= 2
 ORDER BY distinct_customers DESC, fraud_flags DESC;
      fingerprint      | brand | distinct_customers |                customer_ids                | transactions | fraud_flags 
 ----------------------+-------+--------------------+--------------------------------------------+--------------+-------------
- c63fd476c3284717b37f | amex  |                  2 | cus_1f5dc2e5ee2646cd, cus_f9102aa79ed84cb3 |            4 |           1
+ 0c26116a50d749b2be6c | amex  |                  2 | cus_caa02bc58d8240ca, cus_d22f11f68e0d43e5 |            4 |           0
 (1 row)
 
 SELECT
@@ -197,16 +195,16 @@ ORDER BY mrr_usd DESC
 LIMIT 10;
      merchant_id      |          merchant_name          | active_subscriptions | past_due | canceled | mrr_usd 
 ----------------------+---------------------------------+----------------------+----------+----------+---------
- mer_2aa81315db7b4610 | Harrell LLC                     |                    2 |        0 |        1 |  202.64
- mer_f1f70b76f04d455e | Wilkerson-Day                   |                    6 |        0 |        0 |  176.07
- mer_0a4fa70ccc3f4675 | Baker, Mason and White          |                    2 |        1 |        1 |  165.99
- mer_8895ca858acb4135 | Flowers, Martin and Kelly       |                    3 |        0 |        1 |  116.57
- mer_ce91a8b05c5a4f54 | Dyer, Potter and Mack           |                    4 |        1 |        1 |  106.35
- mer_8072b1efa2754374 | Ross, Robinson and Bright       |                    3 |        1 |        0 |   98.98
- mer_5f93d07a309c405a | Watts, Robinson and Nguyen      |                    1 |        0 |        1 |   82.74
- mer_21c4ecea89ab4495 | Williams and Sons               |                    6 |        1 |        1 |   81.16
- mer_7e93736e98e64b20 | Rodriguez, Figueroa and Sanchez |                    4 |        1 |        0 |   56.65
- mer_5e545f22936e434e | Garcia-James                    |                    3 |        0 |        1 |   40.74
+ mer_fe0efaa2d6134d2b | Harrell LLC                     |                    2 |        0 |        1 |  202.64
+ mer_0b2c61759f9543ce | Wilkerson-Day                   |                    6 |        0 |        0 |  176.07
+ mer_b1df48d548b7450d | Baker, Mason and White          |                    2 |        1 |        1 |  165.99
+ mer_55e37e7ae9164337 | Flowers, Martin and Kelly       |                    3 |        0 |        1 |  116.57
+ mer_cebf4e594d034937 | Dyer, Potter and Mack           |                    4 |        1 |        1 |  106.35
+ mer_db32c3082b104f39 | Ross, Robinson and Bright       |                    3 |        1 |        0 |   98.98
+ mer_ad312e265c3d44b1 | Watts, Robinson and Nguyen      |                    1 |        0 |        1 |   82.74
+ mer_cb824aa2603149bd | Williams and Sons               |                    6 |        1 |        1 |   81.16
+ mer_ba49cfc9de3a4d34 | Rodriguez, Figueroa and Sanchez |                    4 |        1 |        0 |   56.65
+ mer_55f1915f3b6c4bb4 | Garcia-James                    |                    3 |        0 |        1 |   40.74
 (10 rows)
 
 SELECT
@@ -224,13 +222,14 @@ GROUP BY a.user_role, a.event_type, a.table_name
 ORDER BY events DESC;
    user_role   |  event_type  |   table_name    | events | distinct_users |       last_event       
 ---------------+--------------+-----------------+--------+----------------+------------------------
- analyst       | EXPORT       | transactions    |      1 |              1 | 2026-08-21 10:01:02+00
- analyst       | LOGIN_FAILED |                 |      1 |              1 | 2026-08-27 23:29:07+00
- analyst       | UPDATE       | customers       |      1 |              1 | 2026-09-08 09:21:21+00
- data_engineer | SELECT       | payment_methods |      1 |              1 | 2026-08-21 13:32:36+00
- service       | ERASURE      | payment_methods |      1 |              1 | 2026-09-06 16:16:05+00
- service       | ERASURE      | refunds         |      1 |              1 | 2026-09-12 14:49:47+00
-(6 rows)
+ analyst       | EXPORT       | transactions    |      1 |              1 | 2026-08-21 10:10:50+00
+ analyst       | LOGIN_FAILED |                 |      1 |              1 | 2026-08-27 23:38:55+00
+ analyst       | UPDATE       | customers       |      1 |              1 | 2026-09-08 09:31:09+00
+ data_engineer | SELECT       | payment_methods |      1 |              1 | 2026-08-21 13:42:24+00
+ data_engineer | UPDATE       | payment_methods |      1 |              1 | 2026-08-21 20:50:21+00
+ service       | ERASURE      | payment_methods |      1 |              1 | 2026-09-06 16:25:53+00
+ service       | ERASURE      | refunds         |      1 |              1 | 2026-09-12 14:59:35+00
+(7 rows)
 
 BEGIN ISOLATION LEVEL REPEATABLE READ;
 WITH target AS (
@@ -254,7 +253,7 @@ WHERE a.refunded + ROUND(t.amount * 0.5, 2) <= t.amount      -- garde-fou métie
 RETURNING refund_id, transaction_id, amount;
       refund_id       |   transaction_id    | amount 
 ----------------------+---------------------+--------
- re_demo_f876aed650dd | ch_da6cab98c0b64d33 |  59.02
+ re_demo_de1f5ad8d61e | ch_e59bec3746194fe4 |  22.97
 (1 row)
 
 INSERT INTO audit_logs (audit_id, event_type, table_name, user_id, user_role, created_at)

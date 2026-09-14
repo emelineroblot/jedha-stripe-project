@@ -1,0 +1,31 @@
+{
+  "name": "stripe-oltp-cdc",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "${secrets:oltp/host}",
+    "database.port": "5432",
+    "database.user": "${secrets:oltp/debezium_user}",
+    "database.password": "${secrets:oltp/debezium_password}",
+    "database.dbname": "stripe_oltp",
+    "plugin.name": "pgoutput",
+    "slot.name": "debezium_stripe",
+    "publication.name": "stripe_cdc",
+    "table.include.list": "public.transactions,public.refunds,public.disputes,public.subscriptions,public.merchants,public.customers,public.fraud_indicators,public.exchange_rates",
+    "column.exclude.list": "public.customers.email,public.transactions.ip_address",
+    "topic.prefix": "stripe",
+    "snapshot.mode": "initial",
+    "tombstones.on.delete": "true",
+    "heartbeat.interval.ms": "10000",
+    "key.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "key.converter.schema.registry.url": "http://schema-registry:8081",
+    "value.converter.schema.registry.url": "http://schema-registry:8081",
+    "transforms": "route",
+    "transforms.route.type": "org.apache.kafka.connect.transforms.RegexRouter",
+    "transforms.route.regex": "stripe\\.public\\.(.*)",
+    "transforms.route.replacement": "stripe.$1",
+    "errors.tolerance": "all",
+    "errors.deadletterqueue.topic.name": "stripe.dlq",
+    "errors.deadletterqueue.context.headers.enable": "true"
+  }
+}

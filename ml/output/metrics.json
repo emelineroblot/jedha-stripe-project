@@ -1,0 +1,64 @@
+{
+  "n_train": 728,
+  "n_test": 313,
+  "fraud_rate": 0.0855,
+  "auc_pr": 0.4325,
+  "auc_roc": 0.7817,
+  "recall_at_precision_0.8": 0.1481,
+  "policy": [
+    {
+      "action": "block",
+      "n": 6,
+      "frauds": 4,
+      "precision_pct": 66.7
+    },
+    {
+      "action": "review",
+      "n": 19,
+      "frauds": 7,
+      "precision_pct": 36.8
+    },
+    {
+      "action": "challenge_3ds",
+      "n": 27,
+      "frauds": 4,
+      "precision_pct": 14.8
+    },
+    {
+      "action": "allow",
+      "n": 261,
+      "frauds": 12,
+      "precision_pct": 4.6
+    }
+  ],
+  "example_top_shap": {
+    "fraud_probability": 0.964,
+    "top_shap": [
+      {
+        "feature": "distinct_countries_30d",
+        "value": 2.001
+      },
+      {
+        "feature": "geo_mismatch",
+        "value": 0.612
+      },
+      {
+        "feature": "ip_reputation_score",
+        "value": 0.476
+      }
+    ]
+  },
+  "global_importance": {
+    "ip_reputation_score": 0.8917999863624573,
+    "amount_zscore": 0.7182000279426575,
+    "avg_amount_30d": 0.4796999990940094,
+    "distinct_countries_30d": 0.42579999566078186,
+    "device_seen_before": 0.3458999991416931,
+    "geo_mismatch": 0.13189999759197235,
+    "transactions_last_1h": 0.1160999983549118,
+    "night_transaction": 0.10809999704360962,
+    "transactions_last_24h": 0.0142000000923872,
+    "shared_card_fingerprint": 0.0024999999441206455,
+    "velocity_score": 0.0
+  }
+}

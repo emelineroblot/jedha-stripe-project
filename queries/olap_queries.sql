@@ -50,7 +50,6 @@ WITH customer_spending AS (
     FROM fact_transactions f
     JOIN dim_customer c ON c.customer_sk = f.customer_sk AND c.is_current = true
     WHERE f.status = 'succeeded'
-      AND f.is_fraud_flagged = false
     GROUP BY f.customer_sk, c.region, c.segment
 ),
 deciles AS (
@@ -64,11 +63,24 @@ SELECT
     ROUND(MIN(total_spent_usd), 2)             AS min_spent_usd,
     ROUND(MAX(total_spent_usd), 2)             AS max_spent_usd,
     ROUND(SUM(total_spent_usd), 2)             AS decile_revenue_usd,
-    ROUND(SUM(total_spent_usd) * 100.0 / SUM(SUM(total_spent_usd)) OVER (), 2) AS pct_total_revenue,
-    MIN(segment)                               AS segment_label
+    ROUND(SUM(total_spent_usd) * 100.0 / SUM(SUM(total_spent_usd)) OVER (), 2) AS pct_total_revenue
 FROM deciles
 GROUP BY spending_decile
 ORDER BY spending_decile;
+
+-- Le segment persisté dans dim_customer (calculé par dbt sur ces mêmes déciles :
+-- 1-4 low_value, 5-8 mid_value, 9-10 high_value) sert ensuite à toutes les analyses
+SELECT
+    c.segment,
+    COUNT(DISTINCT c.customer_sk)                       AS customers,
+    ROUND(SUM(f.amount_usd), 2)                         AS revenue_usd,
+    ROUND(SUM(f.amount_usd) * 100.0 / SUM(SUM(f.amount_usd)) OVER (), 1) AS pct_revenue,
+    ROUND(AVG(f.amount_usd), 2)                         AS avg_ticket_usd
+FROM fact_transactions f
+JOIN dim_customer c ON c.customer_sk = f.customer_sk AND c.is_current = true
+WHERE f.status = 'succeeded'
+GROUP BY c.segment
+ORDER BY revenue_usd DESC;
 
 
 -- ────────────────────────────────────────────────────────────

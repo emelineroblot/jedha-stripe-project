@@ -15,17 +15,6 @@ Q1 — Logs critiques par service (30 j)
 }
 {
   count: 2,
-  max_latency_ms: 4409,
-  service: 'checkout-web',
-  severity: 'error',
-  avg_latency_ms: 3333,
-  sample_messages: [
-    'Upstream 5xx from issuer',
-    'DB connection pool exhausted'
-  ]
-}
-{
-  count: 2,
   max_latency_ms: 4094,
   service: 'fraud-service',
   severity: 'critical',
@@ -36,22 +25,13 @@ Q1 — Logs critiques par service (30 j)
   ]
 }
 {
-  count: 1,
-  max_latency_ms: 1598,
-  service: 'payment-api',
-  severity: 'error',
-  avg_latency_ms: 1598,
-  sample_messages: [
-    'Upstream 5xx from issuer'
-  ]
-}
-{
-  count: 1,
-  max_latency_ms: 2650,
+  count: 2,
+  max_latency_ms: 4409,
   service: 'checkout-web',
-  severity: 'critical',
-  avg_latency_ms: 2650,
+  severity: 'error',
+  avg_latency_ms: 3333,
   sample_messages: [
+    'Upstream 5xx from issuer',
     'DB connection pool exhausted'
   ]
 }
@@ -67,6 +47,16 @@ Q1 — Logs critiques par service (30 j)
 }
 {
   count: 1,
+  max_latency_ms: 1598,
+  service: 'payment-api',
+  severity: 'error',
+  avg_latency_ms: 1598,
+  sample_messages: [
+    'Upstream 5xx from issuer'
+  ]
+}
+{
+  count: 1,
   max_latency_ms: 2795,
   service: 'fraud-service',
   severity: 'error',
@@ -75,129 +65,139 @@ Q1 — Logs critiques par service (30 j)
     'Timeout on charge attempt'
   ]
 }
+{
+  count: 1,
+  max_latency_ms: 2650,
+  service: 'checkout-web',
+  severity: 'critical',
+  avg_latency_ms: 2650,
+  sample_messages: [
+    'DB connection pool exhausted'
+  ]
+}
 
 ──────────────────────────────────────────────────────────────────────
 Q2 — Sessions suspectes (bots, clics répétés au checkout)
 ──────────────────────────────────────────────────────────────────────
 {
-  _id: 'sess_a850bb7770',
-  customer_id: 'cus_2e948b220ffa44f0',
-  session_start: ISODate('2026-06-29T02:29:06.000Z'),
+  _id: 'sess_1e5c097c14',
+  customer_id: 'cus_79c25517a5c64fd8',
+  session_start: ISODate('2026-06-29T02:38:54.000Z'),
   duration_seconds: 467,
   event_count: 17,
   pay_clicks: 12,
   device: 'tablet',
   country: 'FR',
-  ip: '192.133.148.0'
+  ip: '2.165.89.0'
 }
 {
-  _id: 'sess_fa6af18510',
-  customer_id: 'cus_c2e9d05165e64e86',
-  session_start: ISODate('2026-08-25T18:24:40.000Z'),
+  _id: 'sess_08f54092aa',
+  customer_id: 'cus_70ec6428db774ac2',
+  session_start: ISODate('2026-08-25T18:34:28.000Z'),
   duration_seconds: 592,
   event_count: 17,
   pay_clicks: 12,
   device: 'tablet',
   country: 'BR',
-  ip: '221.242.178.0'
+  ip: '211.44.218.0'
 }
 {
-  _id: 'sess_4b54d5ac3e',
-  customer_id: 'cus_f521d3a02a7d43ae',
-  session_start: ISODate('2026-09-04T01:05:22.000Z'),
+  _id: 'sess_729b4f51dd',
+  customer_id: 'cus_0936c339a7fc4396',
+  session_start: ISODate('2026-09-04T01:15:10.000Z'),
   duration_seconds: 476,
   event_count: 17,
   pay_clicks: 12,
   device: 'tablet',
   country: 'GB',
-  ip: '102.203.58.0'
+  ip: '149.50.154.0'
 }
 {
-  _id: 'sess_d8d9e3fdd0',
-  customer_id: 'cus_5ac362103da0480a',
-  session_start: ISODate('2026-07-22T16:00:23.000Z'),
+  _id: 'sess_3f9e60b941',
+  customer_id: 'cus_49e41398bbb34a17',
+  session_start: ISODate('2026-07-22T16:10:11.000Z'),
   duration_seconds: 516,
   event_count: 16,
   pay_clicks: 11,
   device: 'tablet',
   country: 'ES',
-  ip: '139.69.101.0'
+  ip: '217.6.129.0'
 }
 {
-  _id: 'sess_cfecd9c64e',
-  customer_id: 'cus_f7dc37c573ed4326',
-  session_start: ISODate('2026-05-07T13:45:52.000Z'),
+  _id: 'sess_4aac4153b7',
+  customer_id: 'cus_88cc5375e2a34d8a',
+  session_start: ISODate('2026-05-07T13:55:40.000Z'),
   duration_seconds: 487,
   event_count: 15,
   pay_clicks: 10,
   device: 'mobile',
   country: 'US',
-  ip: '37.149.50.0'
+  ip: '44.48.16.0'
 }
 {
-  _id: 'sess_bbcaeee181',
-  customer_id: 'cus_34e88b0df4d14d24',
-  session_start: ISODate('2026-04-14T08:15:43.000Z'),
+  _id: 'sess_e3c3eee12e',
+  customer_id: 'cus_420b937dbb424eaa',
+  session_start: ISODate('2026-04-14T08:25:31.000Z'),
   duration_seconds: 271,
   event_count: 15,
   pay_clicks: 10,
   device: 'tablet',
   country: 'GB',
-  ip: '91.91.100.0'
+  ip: '88.164.32.0'
 }
 {
-  _id: 'sess_cfa6948a94',
-  customer_id: 'cus_f4bd081651ea4d28',
-  session_start: ISODate('2026-06-22T11:58:34.000Z'),
+  _id: 'sess_123ae270f7',
+  customer_id: 'cus_26aa3acb5878458c',
+  session_start: ISODate('2026-06-22T12:08:22.000Z'),
   duration_seconds: 403,
   event_count: 15,
   pay_clicks: 10,
   device: 'mobile',
   country: 'US',
-  ip: '170.67.211.0'
+  ip: '216.229.197.0'
 }
 {
-  _id: 'sess_2bb817dedc',
-  customer_id: 'cus_5e7e5a529a614071',
-  session_start: ISODate('2026-08-04T07:28:52.000Z'),
+  _id: 'sess_9b6fb8b36f',
+  customer_id: 'cus_207bacee96b349f6',
+  session_start: ISODate('2026-08-04T07:38:40.000Z'),
   duration_seconds: 457,
   event_count: 14,
   pay_clicks: 9,
   device: 'desktop',
   country: 'AU',
-  ip: '189.17.37.0'
+  ip: '193.182.1.0'
 }
 {
-  _id: 'sess_27c159260c',
-  customer_id: 'cus_2c3daa5f26c047af',
-  session_start: ISODate('2026-07-01T20:25:03.000Z'),
+  _id: 'sess_1a716839e1',
+  customer_id: 'cus_85e7251bdab744cd',
+  session_start: ISODate('2026-07-01T20:34:51.000Z'),
   duration_seconds: 442,
   event_count: 14,
   pay_clicks: 9,
   device: 'desktop',
   country: 'FR',
-  ip: '154.255.112.0'
+  ip: '129.25.15.0'
 }
 {
-  _id: 'sess_8b5e8ba654',
-  customer_id: 'cus_91f1cd1224594833',
-  session_start: ISODate('2026-06-07T11:14:22.000Z'),
+  _id: 'sess_e37973a2c2',
+  customer_id: 'cus_ebc55f15bd8a4885',
+  session_start: ISODate('2026-06-07T11:24:10.000Z'),
   duration_seconds: 502,
   event_count: 14,
   pay_clicks: 9,
   device: 'desktop',
   country: 'GB',
-  ip: '163.145.158.0'
+  ip: '157.192.38.0'
 }
 
 ──────────────────────────────────────────────────────────────────────
 Q3 — Transactions à haut risque + facteurs explicatifs (SHAP)
 ──────────────────────────────────────────────────────────────────────
 {
-  transaction_id: 'ch_341e87a491a44139',
-  customer_id: 'cus_7b12b2a4b9e14b1a',
-  computed_at: ISODate('2026-09-11T09:03:55.000Z'),
-  fraud_probability: 0.793,
+  transaction_id: 'ch_d6a314c2408449a1',
+  customer_id: 'cus_a16340e63b6a497e',
+  computed_at: ISODate('2026-09-11T09:13:43.000Z'),
+  fraud_probability: 0.7844,
   risk_level: 'high',
   action_taken: 'review',
   model_version: 'fraud-xgb-v2.4.1',
@@ -208,6 +208,87 @@ Q3 — Transactions à haut risque + facteurs explicatifs (SHAP)
     },
     {
       feature: 'ip_reputation_score',
+      value: 0.291
+    },
+    {
+      feature: 'amount_zscore',
+      value: 0.179
+    }
+  ],
+  geo_mismatch: true,
+  velocity_1h: 0,
+  ip_reputation: 0.728,
+  label: null
+}
+{
+  transaction_id: 'ch_7f891194237241d2',
+  customer_id: 'cus_0936c339a7fc4396',
+  computed_at: ISODate('2026-09-06T00:24:00.000Z'),
+  fraud_probability: 0.6012,
+  risk_level: 'high',
+  action_taken: 'review',
+  model_version: 'fraud-xgb-v2.4.1',
+  top_factors: [
+    {
+      feature: 'geo_mismatch',
+      value: 0.31
+    },
+    {
+      feature: 'ip_reputation_score',
+      value: 0.31
+    },
+    {
+      feature: 'velocity_score',
+      value: 0.12
+    }
+  ],
+  geo_mismatch: true,
+  velocity_1h: 2,
+  ip_reputation: 0.775,
+  label: false
+}
+{
+  transaction_id: 'ch_0e5d942bc32a4606',
+  customer_id: 'cus_0936c339a7fc4396',
+  computed_at: ISODate('2026-09-06T00:10:00.000Z'),
+  fraud_probability: 0.6367,
+  risk_level: 'high',
+  action_taken: 'review',
+  model_version: 'fraud-xgb-v2.4.1',
+  top_factors: [
+    {
+      feature: 'geo_mismatch',
+      value: 0.31
+    },
+    {
+      feature: 'ip_reputation_score',
+      value: 0.107
+    },
+    {
+      feature: 'night_transaction',
+      value: 0.09
+    }
+  ],
+  geo_mismatch: true,
+  velocity_1h: 1,
+  ip_reputation: 0.267,
+  label: null
+}
+{
+  transaction_id: 'ch_28a7b1a179344497',
+  customer_id: 'cus_0611b217207548d6',
+  computed_at: ISODate('2026-08-13T11:22:32.000Z'),
+  fraud_probability: 0.7111,
+  risk_level: 'high',
+  action_taken: 'review',
+  model_version: 'fraud-xgb-v2.4.1',
+  top_factors: [
+    {
+      feature: 'ip_reputation_score',
+      value: 0.362
+    },
+    {
+      feature: 'geo_mismatch',
       value: 0.31
     },
     {
@@ -217,241 +298,106 @@ Q3 — Transactions à haut risque + facteurs explicatifs (SHAP)
   ],
   geo_mismatch: true,
   velocity_1h: 0,
-  ip_reputation: 0.775,
-  label: null
+  ip_reputation: 0.906,
+  label: true
 }
 {
-  transaction_id: 'ch_4528e00550e24551',
-  customer_id: 'cus_cefcdabd84674303',
-  computed_at: ISODate('2026-08-29T00:38:00.000Z'),
-  fraud_probability: 0.9013,
-  risk_level: 'critical',
-  action_taken: 'block',
-  model_version: 'fraud-xgb-v2.4.1',
-  top_factors: [
-    {
-      feature: 'geo_mismatch',
-      value: 0.31
-    },
-    {
-      feature: 'night_transaction',
-      value: 0.09
-    },
-    {
-      feature: 'ip_reputation_score',
-      value: 0.013
-    }
-  ],
-  geo_mismatch: true,
-  velocity_1h: 0,
-  ip_reputation: 0.032,
-  label: false
-}
-{
-  transaction_id: 'ch_03328b2851e1442c',
-  customer_id: 'cus_8daa2d606e5b410a',
-  computed_at: ISODate('2026-08-12T07:27:05.000Z'),
-  fraud_probability: 0.8486,
+  transaction_id: 'ch_3ef7dcff66984ffd',
+  customer_id: 'cus_a8b38ed4bb00478c',
+  computed_at: ISODate('2026-07-18T08:30:28.000Z'),
+  fraud_probability: 0.6154,
   risk_level: 'high',
   action_taken: 'review',
   model_version: 'fraud-xgb-v2.4.1',
   top_factors: [
     {
-      feature: 'shared_card_fingerprint',
-      value: 0.25
+      feature: 'amount_zscore',
+      value: 0.403
     },
     {
       feature: 'velocity_score',
-      value: 0.18
+      value: 0.24
     },
     {
       feature: 'ip_reputation_score',
-      value: 0.089
+      value: 0.105
     }
   ],
   geo_mismatch: false,
-  velocity_1h: 3,
-  ip_reputation: 0.223,
-  label: null
+  velocity_1h: 4,
+  ip_reputation: 0.263,
+  label: true
 }
 {
-  transaction_id: 'ch_a5bc2025d6bc4b2d',
-  customer_id: 'cus_30b8509393044c36',
-  computed_at: ISODate('2026-07-27T19:16:40.000Z'),
-  fraud_probability: 0.7209,
+  transaction_id: 'ch_1a3ffefb9a7f41fc',
+  customer_id: 'cus_62c85ad1290e4388',
+  computed_at: ISODate('2026-06-30T04:50:11.000Z'),
+  fraud_probability: 0.6809,
   risk_level: 'high',
   action_taken: 'review',
   model_version: 'fraud-xgb-v2.4.1',
   top_factors: [
-    {
-      feature: 'geo_mismatch',
-      value: 0.31
-    },
-    {
-      feature: 'shared_card_fingerprint',
-      value: 0.25
-    },
-    {
-      feature: 'amount_zscore',
-      value: 0.121
-    }
-  ],
-  geo_mismatch: true,
-  velocity_1h: 0,
-  ip_reputation: 0.105,
-  label: true
-}
-{
-  transaction_id: 'ch_d2359bff6b79453d',
-  customer_id: 'cus_4552d23c536e4fa7',
-  computed_at: ISODate('2026-07-06T07:35:14.000Z'),
-  fraud_probability: 0.694,
-  risk_level: 'high',
-  action_taken: 'review',
-  model_version: 'fraud-xgb-v2.4.1',
-  top_factors: [
-    {
-      feature: 'geo_mismatch',
-      value: 0.31
-    },
-    {
-      feature: 'velocity_score',
-      value: 0.18
-    },
-    {
-      feature: 'ip_reputation_score',
-      value: 0.041
-    }
-  ],
-  geo_mismatch: true,
-  velocity_1h: 3,
-  ip_reputation: 0.102,
-  label: true
-}
-{
-  transaction_id: 'ch_f6fa36d7678745df',
-  customer_id: 'cus_55512f1bc3594a8c',
-  computed_at: ISODate('2026-07-02T09:02:28.000Z'),
-  fraud_probability: 0.9208,
-  risk_level: 'critical',
-  action_taken: 'block',
-  model_version: 'fraud-xgb-v2.4.1',
-  top_factors: [
-    {
-      feature: 'geo_mismatch',
-      value: 0.31
-    },
     {
       feature: 'ip_reputation_score',
       value: 0.257
     },
     {
       feature: 'amount_zscore',
-      value: 0.058
+      value: 0.213
+    },
+    {
+      feature: 'velocity_score',
+      value: 0.18
     }
   ],
-  geo_mismatch: true,
-  velocity_1h: 0,
+  geo_mismatch: false,
+  velocity_1h: 3,
   ip_reputation: 0.642,
   label: true
 }
 {
-  transaction_id: 'ch_53d82f504a0a4499',
-  customer_id: 'cus_524150d4e18e4ffe',
-  computed_at: ISODate('2026-06-30T21:39:37.000Z'),
-  fraud_probability: 0.7487,
+  transaction_id: 'ch_d0f908b82345469c',
+  customer_id: 'cus_9af594dfb7824aa9',
+  computed_at: ISODate('2026-06-12T13:36:46.000Z'),
+  fraud_probability: 0.6374,
   risk_level: 'high',
   action_taken: 'review',
   model_version: 'fraud-xgb-v2.4.1',
   top_factors: [
-    {
-      feature: 'geo_mismatch',
-      value: 0.31
-    },
-    {
-      feature: 'ip_reputation_score',
-      value: 0.092
-    },
     {
       feature: 'amount_zscore',
-      value: 0.082
-    }
-  ],
-  geo_mismatch: true,
-  velocity_1h: 0,
-  ip_reputation: 0.229,
-  label: null
-}
-{
-  transaction_id: 'ch_01570f2969484547',
-  customer_id: 'cus_30f525f938cc46c6',
-  computed_at: ISODate('2026-01-15T00:54:31.000Z'),
-  fraud_probability: 0.7794,
-  risk_level: 'high',
-  action_taken: 'review',
-  model_version: 'fraud-xgb-v2.4.1',
-  top_factors: [
+      value: 0.612
+    },
     {
       feature: 'geo_mismatch',
-      value: 0.31
+      value: 0.02
     },
     {
       feature: 'ip_reputation_score',
-      value: 0.146
-    },
-    {
-      feature: 'night_transaction',
-      value: 0.09
+      value: 0.014
     }
   ],
-  geo_mismatch: true,
+  geo_mismatch: false,
   velocity_1h: 0,
-  ip_reputation: 0.364,
+  ip_reputation: 0.035,
   label: false
 }
 {
-  transaction_id: 'ch_0eb56944540041ab',
-  customer_id: 'cus_30b8509393044c36',
-  computed_at: ISODate('2026-01-13T03:18:33.000Z'),
-  fraud_probability: 0.9245,
-  risk_level: 'critical',
-  action_taken: 'block',
-  model_version: 'fraud-xgb-v2.4.1',
-  top_factors: [
-    {
-      feature: 'geo_mismatch',
-      value: 0.31
-    },
-    {
-      feature: 'shared_card_fingerprint',
-      value: 0.25
-    },
-    {
-      feature: 'amount_zscore',
-      value: 0.101
-    }
-  ],
-  geo_mismatch: true,
-  velocity_1h: 0,
-  ip_reputation: 0.089,
-  label: true
-}
-{
-  transaction_id: 'ch_0d9f4680c49b4491',
-  customer_id: 'cus_e77f9c2d85894045',
-  computed_at: ISODate('2026-01-07T20:17:05.000Z'),
-  fraud_probability: 0.6263,
+  transaction_id: 'ch_c2def9172f894f33',
+  customer_id: 'cus_57566ec9bd434ab2',
+  computed_at: ISODate('2026-05-31T08:47:41.000Z'),
+  fraud_probability: 0.7865,
   risk_level: 'high',
   action_taken: 'review',
   model_version: 'fraud-xgb-v2.4.1',
   top_factors: [
     {
-      feature: 'geo_mismatch',
-      value: 0.31
+      feature: 'ip_reputation_score',
+      value: 0.374
     },
     {
-      feature: 'ip_reputation_score',
-      value: 0.057
+      feature: 'geo_mismatch',
+      value: 0.31
     },
     {
       feature: 'shared_card_fingerprint',
@@ -460,7 +406,61 @@ Q3 — Transactions à haut risque + facteurs explicatifs (SHAP)
   ],
   geo_mismatch: true,
   velocity_1h: 0,
-  ip_reputation: 0.143,
+  ip_reputation: 0.935,
+  label: true
+}
+{
+  transaction_id: 'ch_767cfe0599f04400',
+  customer_id: 'cus_a7bacfa62066493b',
+  computed_at: ISODate('2026-02-04T04:12:21.000Z'),
+  fraud_probability: 0.9399,
+  risk_level: 'critical',
+  action_taken: 'block',
+  model_version: 'fraud-xgb-v2.4.1',
+  top_factors: [
+    {
+      feature: 'ip_reputation_score',
+      value: 0.35
+    },
+    {
+      feature: 'geo_mismatch',
+      value: 0.31
+    },
+    {
+      feature: 'night_transaction',
+      value: 0.09
+    }
+  ],
+  geo_mismatch: true,
+  velocity_1h: 0,
+  ip_reputation: 0.876,
+  label: true
+}
+{
+  transaction_id: 'ch_6a0343d85d144a75',
+  customer_id: 'cus_667156fe0e0e4077',
+  computed_at: ISODate('2026-01-27T17:42:22.000Z'),
+  fraud_probability: 0.8144,
+  risk_level: 'high',
+  action_taken: 'review',
+  model_version: 'fraud-xgb-v2.4.1',
+  top_factors: [
+    {
+      feature: 'ip_reputation_score',
+      value: 0.39
+    },
+    {
+      feature: 'geo_mismatch',
+      value: 0.31
+    },
+    {
+      feature: 'shared_card_fingerprint',
+      value: 0.01
+    }
+  ],
+  geo_mismatch: true,
+  velocity_1h: 0,
+  ip_reputation: 0.976,
   label: true
 }
 
@@ -468,18 +468,18 @@ Q3 — Transactions à haut risque + facteurs explicatifs (SHAP)
 Q4 — Feedbacks négatifs par pays + top tags
 ──────────────────────────────────────────────────────────────────────
 {
-  negative_feedbacks: 17,
-  country: 'NG',
-  avg_score: 1.71,
-  avg_nps: 3.4,
+  negative_feedbacks: 19,
+  country: 'US',
+  avg_score: 1.61,
+  avg_nps: 2.7,
   top_tags: [
     {
-      tag: 'checkout',
-      count: 6
+      tag: 'speed',
+      count: 7
     },
     {
-      tag: 'speed',
-      count: 4
+      tag: 'checkout',
+      count: 5
     },
     {
       tag: 'declined',
@@ -488,37 +488,37 @@ Q4 — Feedbacks négatifs par pays + top tags
   ]
 }
 {
+  negative_feedbacks: 15,
+  country: 'FR',
+  avg_score: 1.81,
+  avg_nps: 4.2,
+  top_tags: [
+    {
+      tag: 'checkout',
+      count: 4
+    },
+    {
+      tag: 'declined',
+      count: 4
+    },
+    {
+      tag: 'speed',
+      count: 4
+    }
+  ]
+}
+{
   negative_feedbacks: 13,
-  country: 'DE',
-  avg_score: 1.52,
-  avg_nps: 1.7,
+  country: 'SG',
+  avg_score: 1.44,
+  avg_nps: 2.2,
   top_tags: [
     {
       tag: 'declined',
       count: 5
     },
     {
-      tag: 'speed',
-      count: 4
-    },
-    {
       tag: 'support',
-      count: 2
-    }
-  ]
-}
-{
-  negative_feedbacks: 13,
-  country: 'CA',
-  avg_score: 1.46,
-  avg_nps: 1.1,
-  top_tags: [
-    {
-      tag: 'support',
-      count: 4
-    },
-    {
-      tag: 'declined',
       count: 3
     },
     {
@@ -528,34 +528,14 @@ Q4 — Feedbacks négatifs par pays + top tags
   ]
 }
 {
-  negative_feedbacks: 12,
+  negative_feedbacks: 10,
   country: 'BR',
-  avg_score: 2,
-  avg_nps: 4.6,
+  avg_score: 1.38,
+  avg_nps: 1.6,
   top_tags: [
     {
       tag: 'support',
       count: 4
-    },
-    {
-      tag: 'checkout',
-      count: 4
-    },
-    {
-      tag: 'speed',
-      count: 2
-    }
-  ]
-}
-{
-  negative_feedbacks: 8,
-  country: 'FR',
-  avg_score: 2,
-  avg_nps: 4.6,
-  top_tags: [
-    {
-      tag: 'speed',
-      count: 2
     },
     {
       tag: 'declined',
@@ -563,102 +543,126 @@ Q4 — Feedbacks négatifs par pays + top tags
     },
     {
       tag: 'checkout',
-      count: 2
-    }
-  ]
-}
-{
-  negative_feedbacks: 8,
-  country: 'AU',
-  avg_score: 1.54,
-  avg_nps: 2.3,
-  top_tags: [
-    {
-      tag: 'support',
-      count: 3
-    },
-    {
-      tag: 'checkout',
-      count: 2
-    },
-    {
-      tag: 'speed',
       count: 2
     }
   ]
 }
 {
   negative_feedbacks: 6,
-  country: 'SG',
-  avg_score: 2,
-  avg_nps: 3.7,
+  country: 'JP',
+  avg_score: 1.75,
+  avg_nps: 2.2,
   top_tags: [
+    {
+      tag: 'speed',
+      count: 2
+    },
     {
       tag: 'checkout',
       count: 2
     },
     {
-      tag: 'declined',
-      count: 2
+      tag: 'support',
+      count: 1
+    }
+  ]
+}
+{
+  negative_feedbacks: 6,
+  country: 'NG',
+  avg_score: 1.89,
+  avg_nps: 3.1,
+  top_tags: [
+    {
+      tag: 'checkout',
+      count: 3
     },
     {
       tag: 'support',
       count: 2
+    },
+    {
+      tag: 'declined',
+      count: 1
     }
   ]
 }
 {
   negative_feedbacks: 6,
   country: 'GB',
-  avg_score: 1,
-  avg_nps: 1,
+  avg_score: 2,
+  avg_nps: 3.6,
   top_tags: [
+    {
+      tag: 'support',
+      count: 2
+    },
     {
       tag: 'declined',
       count: 2
     },
     {
-      tag: 'speed',
-      count: 2
-    },
-    {
-      tag: 'support',
+      tag: 'checkout',
       count: 1
     }
   ]
 }
 {
-  negative_feedbacks: 3,
-  country: 'JP',
-  avg_score: 1,
-  avg_nps: 0,
+  negative_feedbacks: 5,
+  country: 'DE',
+  avg_score: 1.56,
+  avg_nps: 2.1,
   top_tags: [
     {
-      tag: 'support',
-      count: 1
-    },
-    {
       tag: 'checkout',
+      count: 3
+    },
+    {
+      tag: 'speed',
       count: 1
     },
     {
-      tag: 'declined',
+      tag: 'support',
       count: 1
     }
   ]
 }
 {
   negative_feedbacks: 2,
-  country: 'US',
-  avg_score: 1,
-  avg_nps: 2,
+  country: 'ES',
+  avg_score: 2,
+  avg_nps: 5,
   top_tags: [
     {
       tag: 'checkout',
       count: 1
     },
     {
-      tag: 'speed',
+      tag: 'support',
+      count: 1
+    }
+  ]
+}
+{
+  negative_feedbacks: 1,
+  country: 'AU',
+  avg_score: 2,
+  avg_nps: 2,
+  top_tags: [
+    {
+      tag: 'declined',
+      count: 1
+    }
+  ]
+}
+{
+  negative_feedbacks: 1,
+  country: 'CA',
+  avg_score: 1,
+  avg_nps: 0,
+  top_tags: [
+    {
+      tag: 'checkout',
       count: 1
     }
   ]
@@ -669,42 +673,42 @@ Q5 — Latence P50 / P95 par service (7 j)
 ──────────────────────────────────────────────────────────────────────
 {
   requests: 1,
-  max_ms: 149,
+  max_ms: 254,
   service: 'auth-service',
-  p50_ms: 149,
-  p95_ms: 149,
+  p50_ms: 254,
+  p95_ms: 254,
   error_rate_pct: 0
 }
 {
   requests: 1,
-  max_ms: 145,
+  max_ms: 142,
   service: 'webhook-service',
-  p50_ms: 145,
-  p95_ms: 145,
+  p50_ms: 142,
+  p95_ms: 142,
+  error_rate_pct: 0
+}
+{
+  requests: 1,
+  max_ms: 125,
+  service: 'fraud-service',
+  p50_ms: 125,
+  p95_ms: 125,
+  error_rate_pct: 0
+}
+{
+  requests: 1,
+  max_ms: 119,
+  service: 'checkout-web',
+  p50_ms: 119,
+  p95_ms: 119,
   error_rate_pct: 0
 }
 {
   requests: 3,
-  max_ms: 144,
-  service: 'payment-api',
-  p50_ms: 80,
-  p95_ms: 144,
-  error_rate_pct: 0
-}
-{
-  requests: 1,
   max_ms: 117,
-  service: 'fraud-service',
-  p50_ms: 117,
+  service: 'payment-api',
+  p50_ms: 75,
   p95_ms: 117,
-  error_rate_pct: 0
-}
-{
-  requests: 1,
-  max_ms: 49,
-  service: 'checkout-web',
-  p50_ms: 49,
-  p95_ms: 49,
   error_rate_pct: 0
 }
 
@@ -713,36 +717,36 @@ Q6 — Performance du modèle sur les transactions labellisées
 ──────────────────────────────────────────────────────────────────────
 {
   risk_level: 'critical',
-  labeled: 4,
-  confirmed_frauds: 3,
-  precision_pct: 75,
-  avg_probability: 0.901
+  labeled: 1,
+  confirmed_frauds: 1,
+  precision_pct: 100,
+  avg_probability: 0.94
 }
 {
   risk_level: 'high',
-  labeled: 9,
-  confirmed_frauds: 5,
-  precision_pct: 55.6,
-  avg_probability: 0.702
+  labeled: 15,
+  confirmed_frauds: 9,
+  precision_pct: 60,
+  avg_probability: 0.708
 }
 {
   risk_level: 'medium',
-  labeled: 44,
-  confirmed_frauds: 11,
-  precision_pct: 25,
-  avg_probability: 0.424
+  labeled: 28,
+  confirmed_frauds: 5,
+  precision_pct: 17.9,
+  avg_probability: 0.44
 }
 {
   risk_level: 'low',
-  labeled: 557,
-  confirmed_frauds: 24,
-  precision_pct: 4.3,
+  labeled: 561,
+  confirmed_frauds: 29,
+  precision_pct: 5.2,
   avg_probability: 0.065
 }
 {
-  confirmed_frauds: 43,
-  caught: 8,
-  recall_pct: 18.6
+  confirmed_frauds: 44,
+  caught: 10,
+  recall_pct: 22.7
 }
 
 ──────────────────────────────────────────────────────────────────────
@@ -752,7 +756,7 @@ Q7 — Entonnoir de conversion par device ($facet)
   funnel: [
     {
       page: '/',
-      sessions: 250
+      sessions: 251
     },
     {
       page: '/products',
@@ -760,42 +764,42 @@ Q7 — Entonnoir de conversion par device ($facet)
     },
     {
       page: '/product/42',
-      sessions: 222
+      sessions: 219
     },
     {
       page: '/cart',
-      sessions: 207
+      sessions: 203
     },
     {
       page: '/checkout',
-      sessions: 179
+      sessions: 176
     },
     {
       page: '/confirmation',
-      sessions: 155
+      sessions: 152
     }
   ],
   by_device: [
     {
-      sessions: 106,
-      converted: 79,
+      sessions: 112,
+      converted: 82,
       device: 'mobile',
-      conversion_pct: 74.5,
-      avg_duration_s: 283
+      conversion_pct: 73.2,
+      avg_duration_s: 269
     },
     {
-      sessions: 102,
-      converted: 63,
+      sessions: 95,
+      converted: 53,
       device: 'desktop',
-      conversion_pct: 61.8,
-      avg_duration_s: 255
+      conversion_pct: 55.8,
+      avg_duration_s: 252
     },
     {
-      sessions: 42,
-      converted: 13,
+      sessions: 44,
+      converted: 17,
       device: 'tablet',
-      conversion_pct: 31,
-      avg_duration_s: 250
+      conversion_pct: 38.6,
+      avg_duration_s: 260
     }
   ]
 }
@@ -804,69 +808,69 @@ Q7 — Entonnoir de conversion par device ($facet)
 Q8 — Recommandations enrichies du NPS merchant ($lookup)
 ──────────────────────────────────────────────────────────────────────
 {
-  merchant_id: 'mer_7a444a3f5b8f4c52',
+  merchant_id: 'mer_d78fac318a5c4d38',
   model_version: 'personalization-v1.3',
-  feedbacks: 1,
-  avg_nps: 1,
-  best_recommendation: {
-    segment: 'high_value',
-    suggested_method: 'bank_transfer',
-    confidence: 0.87
-  }
-}
-{
-  merchant_id: 'mer_1cbdcefbad454faa',
-  model_version: 'personalization-v1.3',
-  feedbacks: 1,
-  avg_nps: 1,
-  best_recommendation: {
-    segment: 'high_value',
-    suggested_method: 'wallet',
-    confidence: 0.6
-  }
-}
-{
-  merchant_id: 'mer_f925664d5df34a6d',
-  model_version: 'personalization-v1.3',
-  feedbacks: 1,
-  avg_nps: 1,
-  best_recommendation: {
-    segment: 'high_value',
-    suggested_method: 'bank_transfer',
-    confidence: 0.8
-  }
-}
-{
-  merchant_id: 'mer_120e7772e09540f6',
-  model_version: 'personalization-v1.3',
-  feedbacks: 1,
+  feedbacks: 2,
   avg_nps: 3,
   best_recommendation: {
     segment: 'high_value',
     suggested_method: 'bank_transfer',
-    confidence: 0.88
+    confidence: 0.94
   }
 }
 {
-  merchant_id: 'mer_344981c0a61c468c',
+  merchant_id: 'mer_db263a9d7c8b46bb',
   model_version: 'personalization-v1.3',
-  feedbacks: 4,
-  avg_nps: 3.5,
+  feedbacks: 2,
+  avg_nps: 3,
+  best_recommendation: {
+    segment: 'high_value',
+    suggested_method: 'card',
+    confidence: 0.62
+  }
+}
+{
+  merchant_id: 'mer_1894cb2f8dc64283',
+  model_version: 'personalization-v1.3',
+  feedbacks: 3,
+  avg_nps: 4,
   best_recommendation: {
     segment: 'high_value',
     suggested_method: 'bank_transfer',
-    confidence: 0.68
+    confidence: 0.63
+  }
+}
+{
+  merchant_id: 'mer_db79ddbafdd74a7b',
+  model_version: 'personalization-v1.3',
+  feedbacks: 1,
+  avg_nps: 4,
+  best_recommendation: {
+    segment: 'high_value',
+    suggested_method: 'card',
+    confidence: 0.85
+  }
+}
+{
+  merchant_id: 'mer_e882a3b4ae604fa7',
+  model_version: 'personalization-v1.3',
+  feedbacks: 1,
+  avg_nps: 4,
+  best_recommendation: {
+    segment: 'high_value',
+    suggested_method: 'wallet',
+    confidence: 0.75
   }
 }
 
 ──────────────────────────────────────────────────────────────────────
 Q9 — Transaction multi-documents (ml_features + fraud_alerts)
 ──────────────────────────────────────────────────────────────────────
-  écritures atomiques OK pour ch_demo_a9deb325
+  écritures atomiques OK pour ch_demo_8f8881bf
 {
-  transaction_id: 'ch_demo_a9deb325',
+  transaction_id: 'ch_demo_8f8881bf',
   level: 'critical',
-  created_at: ISODate('2026-09-14T16:23:25.221Z'),
+  created_at: ISODate('2026-09-14T16:34:01.325Z'),
   acknowledged: false
 }
 
@@ -877,7 +881,7 @@ Q10 — explain() : index { prediction.risk_level, computed_at }
   stage: 'LIMIT',
   input_stage: 'FETCH',
   index_used: 'prediction.risk_level_1_computed_at_-1',
-  docs_examined: 4,
-  keys_examined: 4,
-  returned: 4
+  docs_examined: 3,
+  keys_examined: 3,
+  returned: 3
 }

@@ -302,7 +302,8 @@ for _ in range(N_SUBSCRIPTIONS):
     # Dernière période en cours
     elapsed_periods = max(0, (DATE_END - created).days // period_days)
     period_start = created + timedelta(days=elapsed_periods * period_days)
-    canceled_at = rand_dt(created + timedelta(days=period_days), DATE_END) if status == "canceled" else None
+    cancel_from = min(created + timedelta(days=period_days), DATE_END - timedelta(days=1))
+    canceled_at = rand_dt(cancel_from, DATE_END) if status == "canceled" else None
     subscriptions.append({
         "subscription_id":      stripe_id("sub"),
         "customer_id":          random.choice(customer_ids),
@@ -734,10 +735,10 @@ for _ in range(N_LOGS):
 # ─── Export ──────────────────────────────────────────────────────────────────
 
 def to_csv(df: pd.DataFrame, name: str):
-    df.to_csv(os.path.join(OUTPUT_DIR, f"{name}.csv"), index=False)
+    df.to_csv(os.path.join(OUTPUT_DIR, f"{name}.csv"), index=False, lineterminator="\n")
 
 def to_json(docs: list, name: str):
-    with open(os.path.join(MONGO_DIR, f"{name}.json"), "w", encoding="utf-8") as f:
+    with open(os.path.join(MONGO_DIR, f"{name}.json"), "w", encoding="utf-8", newline="\n") as f:
         json.dump(docs, f, ensure_ascii=False, indent=1)
 
 to_csv(df_countries,       "countries")

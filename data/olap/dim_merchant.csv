@@ -1,54 +1,54 @@
 merchant_sk,merchant_id,name,category,mcc,country_code,region,status,scd_start,scd_end,is_current
-1,mer_7e93736e98e64b20,"Rodriguez, Figueroa and Sanchez",saas,5734,US,North America,active,2023-05-07,,True
-2,mer_f0b9dff7acae464d,Doyle Ltd,marketplace,5999,NG,Africa,active,2023-09-04,,True
-3,mer_3fa16d366dec4e99,"Mcclain, Miller and Henderson",retail,5311,AU,Oceania,active,2023-08-11,,True
-4,mer_9d3421d554dc438e,Davis and Sons,e-commerce,5399,GB,Europe,active,2023-08-22,,True
-5,mer_d4421512fc7a4fc4,"Guzman, Hoffman and Baldwin",e-commerce,5399,GB,Europe,active,2025-08-17,,True
-6,mer_00d78483913940ef,"Gardner, Robinson and Lawrence",retail,5311,GB,Europe,active,2025-01-09,,True
-7,mer_ec160387614f4930,Blake and Sons,travel,4722,ES,Europe,active,2023-04-08,,True
-8,mer_3f23ea5c8ee94c93,"Henderson, Ramirez and Lewis",gaming,7994,ES,Europe,active,2024-06-03,,True
-9,mer_5e545f22936e434e,Garcia-James,gaming,7994,DE,Europe,active,2023-09-04,,True
-10,mer_19bd6853312f4552,Abbott-Munoz,gaming,7994,AU,Oceania,active,2024-09-13,,True
-11,mer_8702e6d2745d41d2,Blair PLC,e-commerce,5399,JP,Asia,active,2025-03-12,,True
-12,mer_81638688e412411d,Dudley Group,healthcare,8099,JP,Asia,active,2023-07-30,,True
-13,mer_7a444a3f5b8f4c52,Arnold Ltd,gaming,7994,GB,Europe,active,2025-09-11,,True
-14,mer_f925664d5df34a6d,"Mcclure, Ward and Lee",retail,5399,GB,Europe,active,2026-01-19,2026-03-18,False
-15,mer_f925664d5df34a6d,"Mcclure, Ward and Lee",e-commerce,5399,GB,Europe,active,2026-03-18,,True
-16,mer_21c4ecea89ab4495,Williams and Sons,saas,5734,DE,Europe,active,2024-03-25,,True
-17,mer_af71e58200234461,Galloway-Wyatt,e-commerce,8299,CA,North America,active,2025-12-11,2026-03-18,False
-18,mer_af71e58200234461,Galloway-Wyatt,education,8299,CA,North America,active,2026-03-18,,True
-19,mer_e0d1a749ad61471c,James Group,gaming,7994,NG,Africa,active,2024-02-18,,True
-20,mer_8895ca858acb4135,"Flowers, Martin and Kelly",saas,5734,NG,Africa,active,2025-10-30,,True
-21,mer_0c3bb8af99e5490b,"Adams, Zuniga and Wong",food_delivery,5812,SG,Asia,active,2023-12-08,,True
-22,mer_120e7772e09540f6,"Reid, Ferguson and Sanchez",retail,5311,NG,Africa,active,2024-03-04,,True
-23,mer_1e3cd1d5a0cb4eea,Gray-Mayo,e-commerce,5399,FR,Europe,active,2024-03-19,,True
-24,mer_5f93d07a309c405a,"Watts, Robinson and Nguyen",healthcare,8099,DE,Europe,active,2024-05-18,,True
-25,mer_9e465d37d8034ac3,Perez Inc,e-commerce,7994,NG,Africa,active,2024-02-22,2026-03-18,False
-26,mer_9e465d37d8034ac3,Perez Inc,gaming,7994,NG,Africa,active,2026-03-18,,True
-27,mer_344981c0a61c468c,Morales-Jones,education,8299,US,North America,active,2023-11-06,,True
-28,mer_8769e8b94ae44434,"Walter, Edwards and Rios",retail,5311,US,North America,active,2025-07-13,,True
-29,mer_f1f70b76f04d455e,Wilkerson-Day,healthcare,8099,BR,South America,active,2025-09-21,,True
-30,mer_c3dbd714778645eb,Baker and Sons,marketplace,5999,SG,Asia,active,2025-05-29,,True
-31,mer_c3d9b388706549af,"Hoffman, Baker and Richards",e-commerce,5399,ES,Europe,active,2023-09-16,,True
-32,mer_8072b1efa2754374,"Ross, Robinson and Bright",healthcare,8099,DE,Europe,active,2025-10-11,,True
-33,mer_712d0b25b5a4449e,"Snyder, Campos and Callahan",education,8299,US,North America,closed,2025-06-28,,True
-34,mer_286a8b59d38446ad,Burton Ltd,e-commerce,5399,DE,Europe,active,2026-02-18,,True
-35,mer_f92f9ed46a0d4590,Carlson-Cruz,retail,5311,NG,Africa,active,2024-05-17,,True
-36,mer_bb80e4a76cb5476d,"Ferrell, Rice and Maddox",travel,4722,ES,Europe,active,2025-02-02,,True
-37,mer_6be36d157b834cde,Frazier Inc,travel,4722,ES,Europe,active,2025-05-15,,True
-38,mer_ce91a8b05c5a4f54,"Dyer, Potter and Mack",saas,5734,US,North America,active,2025-11-25,,True
-39,mer_e48867e28f9b4b8d,Rodriguez-Graham,retail,5311,GB,Europe,active,2025-10-30,,True
-40,mer_847f1ee422664fb2,Smith-Bowen,marketplace,5999,JP,Asia,active,2025-07-14,,True
-41,mer_0a4fa70ccc3f4675,"Baker, Mason and White",gaming,7994,FR,Europe,active,2025-04-26,,True
-42,mer_2aa81315db7b4610,Harrell LLC,gaming,7994,GB,Europe,active,2024-07-19,,True
-43,mer_e9d33473c7e54b84,"Romero, Gonzalez and Brooks",saas,5734,SG,Asia,active,2023-08-09,,True
-44,mer_c8dfde11697345b6,Ryan PLC,retail,5311,ES,Europe,active,2023-10-11,,True
-45,mer_d45235e868cc4abb,George Group,retail,5311,US,North America,active,2023-12-11,,True
-46,mer_80d7fa91a7d14a1b,Rodriguez LLC,healthcare,8099,JP,Asia,active,2024-02-21,,True
-47,mer_7b89a89bae4a4bde,Allen-Allen,food_delivery,5812,BR,South America,closed,2024-07-25,,True
-48,mer_772c9525389c4ebc,"Arroyo, Miller and Tucker",gaming,7994,JP,Asia,active,2025-02-07,,True
-49,mer_c626d90d1ca64aa6,Spence PLC,food_delivery,5812,DE,Europe,active,2024-03-12,,True
-50,mer_e45e0907a2fa44e2,Anderson Group,retail,5311,AU,Oceania,active,2024-03-21,,True
-51,mer_550fb7c166684fd6,"Martin, Rose and Obrien",saas,5734,NG,Africa,active,2026-04-02,,True
-52,mer_1cbdcefbad454faa,Hickman Ltd,saas,5734,CA,North America,active,2023-05-17,,True
-53,mer_05819d65f1a84a57,"Harris, Collins and Carney",food_delivery,5812,NG,Africa,active,2024-06-04,,True
+1,mer_ba49cfc9de3a4d34,"Rodriguez, Figueroa and Sanchez",saas,5734,US,North America,active,2023-05-07,,True
+2,mer_dbdcfcb3e3f34611,Doyle Ltd,marketplace,5999,NG,Africa,active,2023-09-04,,True
+3,mer_afd24151bb66484a,"Mcclain, Miller and Henderson",retail,5311,AU,Oceania,active,2023-08-11,,True
+4,mer_d98baf6fb1da413b,Davis and Sons,e-commerce,5399,GB,Europe,active,2023-08-22,,True
+5,mer_25177b9e72a64ca5,"Guzman, Hoffman and Baldwin",e-commerce,5399,GB,Europe,active,2025-08-17,,True
+6,mer_f157f5f3429f4a9b,"Gardner, Robinson and Lawrence",retail,5311,GB,Europe,active,2025-01-09,,True
+7,mer_e61e35c1b9244af2,Blake and Sons,travel,4722,ES,Europe,active,2023-04-08,,True
+8,mer_55446817044148a5,"Henderson, Ramirez and Lewis",gaming,7994,ES,Europe,active,2024-06-03,,True
+9,mer_55f1915f3b6c4bb4,Garcia-James,gaming,7994,DE,Europe,active,2023-09-04,,True
+10,mer_78864bf1d15a424c,Abbott-Munoz,gaming,7994,AU,Oceania,active,2024-09-14,,True
+11,mer_e882a3b4ae604fa7,Blair PLC,e-commerce,5399,JP,Asia,active,2025-03-12,,True
+12,mer_9c2c40d0fb084265,Dudley Group,healthcare,8099,JP,Asia,active,2023-07-30,,True
+13,mer_5a02a7c23ec5450d,Arnold Ltd,gaming,7994,GB,Europe,active,2025-09-11,,True
+14,mer_3bb8b17fd98a4003,"Mcclure, Ward and Lee",retail,5399,GB,Europe,active,2026-01-19,2026-03-18,False
+15,mer_3bb8b17fd98a4003,"Mcclure, Ward and Lee",e-commerce,5399,GB,Europe,active,2026-03-18,,True
+16,mer_cb824aa2603149bd,Williams and Sons,saas,5734,DE,Europe,active,2024-03-25,,True
+17,mer_d78fac318a5c4d38,Galloway-Wyatt,e-commerce,8299,CA,North America,active,2025-12-11,2026-03-18,False
+18,mer_d78fac318a5c4d38,Galloway-Wyatt,education,8299,CA,North America,active,2026-03-18,,True
+19,mer_1894cb2f8dc64283,James Group,gaming,7994,NG,Africa,active,2024-02-18,,True
+20,mer_55e37e7ae9164337,"Flowers, Martin and Kelly",saas,5734,NG,Africa,active,2025-10-30,,True
+21,mer_e6e2d647fa064dd5,"Adams, Zuniga and Wong",food_delivery,5812,SG,Asia,active,2023-12-08,,True
+22,mer_22999035ece34bd5,"Reid, Ferguson and Sanchez",retail,5311,NG,Africa,active,2024-03-04,,True
+23,mer_6f423b52770143d3,Gray-Mayo,e-commerce,5399,FR,Europe,active,2024-03-19,,True
+24,mer_ad312e265c3d44b1,"Watts, Robinson and Nguyen",healthcare,8099,DE,Europe,active,2024-05-18,,True
+25,mer_1e47a07064d3446b,Perez Inc,e-commerce,7994,NG,Africa,active,2024-02-22,2026-03-18,False
+26,mer_1e47a07064d3446b,Perez Inc,gaming,7994,NG,Africa,active,2026-03-18,,True
+27,mer_d6d762d8faa145ce,Morales-Jones,education,8299,US,North America,active,2023-11-06,,True
+28,mer_bd88cdf01c734a8c,"Walter, Edwards and Rios",retail,5311,US,North America,active,2025-07-13,,True
+29,mer_0b2c61759f9543ce,Wilkerson-Day,healthcare,8099,BR,South America,active,2025-09-21,,True
+30,mer_020752b6169d46aa,Baker and Sons,marketplace,5999,SG,Asia,active,2025-05-29,,True
+31,mer_18bf8f47cd854063,"Hoffman, Baker and Richards",e-commerce,5399,ES,Europe,active,2023-09-16,,True
+32,mer_db32c3082b104f39,"Ross, Robinson and Bright",healthcare,8099,DE,Europe,active,2025-10-11,,True
+33,mer_c95ed1a912af4366,"Snyder, Campos and Callahan",education,8299,US,North America,closed,2025-06-28,,True
+34,mer_11e9eca5ea2f413a,Burton Ltd,e-commerce,5399,DE,Europe,active,2026-02-18,,True
+35,mer_fde89907b83842dd,Carlson-Cruz,retail,5311,NG,Africa,active,2024-05-17,,True
+36,mer_a76a41058c39445c,"Ferrell, Rice and Maddox",travel,4722,ES,Europe,active,2025-02-02,,True
+37,mer_b82ed8c952ee46af,Frazier Inc,travel,4722,ES,Europe,active,2025-05-15,,True
+38,mer_cebf4e594d034937,"Dyer, Potter and Mack",saas,5734,US,North America,active,2025-11-25,,True
+39,mer_db79ddbafdd74a7b,Rodriguez-Graham,retail,5311,GB,Europe,active,2025-10-30,,True
+40,mer_0ff11db1fd2a4838,Smith-Bowen,marketplace,5999,JP,Asia,active,2025-07-14,,True
+41,mer_b1df48d548b7450d,"Baker, Mason and White",gaming,7994,FR,Europe,active,2025-04-26,,True
+42,mer_fe0efaa2d6134d2b,Harrell LLC,gaming,7994,GB,Europe,active,2024-07-19,,True
+43,mer_138f0371099a4972,"Romero, Gonzalez and Brooks",saas,5734,SG,Asia,active,2023-08-09,,True
+44,mer_f63766602b9e4a59,Ryan PLC,retail,5311,ES,Europe,active,2023-10-11,,True
+45,mer_10dd374c134b4d8c,George Group,retail,5311,US,North America,active,2023-12-11,,True
+46,mer_2cfe9913335c43db,Rodriguez LLC,healthcare,8099,JP,Asia,active,2024-02-21,,True
+47,mer_d2e268f90cb641b6,Allen-Allen,food_delivery,5812,BR,South America,closed,2024-07-25,,True
+48,mer_05e522eff5214359,"Arroyo, Miller and Tucker",gaming,7994,JP,Asia,active,2025-02-07,,True
+49,mer_a9a9d402ede44650,Spence PLC,food_delivery,5812,DE,Europe,active,2024-03-12,,True
+50,mer_35dc6d67de4945ff,Anderson Group,retail,5311,AU,Oceania,active,2024-03-21,,True
+51,mer_4c90125afead4b68,"Martin, Rose and Obrien",saas,5734,NG,Africa,active,2026-04-02,,True
+52,mer_db263a9d7c8b46bb,Hickman Ltd,saas,5734,CA,North America,active,2023-05-17,,True
+53,mer_b1527a8008644003,"Harris, Collins and Carney",food_delivery,5812,NG,Africa,active,2024-06-04,,True

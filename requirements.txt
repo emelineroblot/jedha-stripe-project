@@ -8,3 +8,6 @@ scikit-learn>=1.5
 xgboost>=2.1
 shap>=0.46
 matplotlib>=3.9
+
+# Registry local (optionnel)
+mlflow>=2.15

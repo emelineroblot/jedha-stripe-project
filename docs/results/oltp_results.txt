@@ -1,0 +1,281 @@
+SELECT
+    t.transaction_id,
+    t.created_at,
+    t.amount,
+    t.currency_code,
+    t.status,
+    fi.anomaly_score,
+    fi.risk_level,
+    fi.action_taken,
+    m.name                                       AS merchant_name,
+    t.customer_id,
+    t.geo_country_code,
+    c.country_code                               AS customer_country,
+    t.device_type
+FROM transactions t
+JOIN fraud_indicators fi ON fi.transaction_id = t.transaction_id
+JOIN merchants        m  ON m.merchant_id      = t.merchant_id
+JOIN customers        c  ON c.customer_id      = t.customer_id
+WHERE t.created_at >= NOW() - INTERVAL '90 days'
+  AND fi.risk_level IN ('high', 'critical')
+ORDER BY fi.anomaly_score DESC
+LIMIT 20;
+   transaction_id    |       created_at       |  amount  | currency_code |  status   | anomaly_score | risk_level | action_taken |        merchant_name        |     customer_id      | geo_country_code | customer_country | device_type 
+---------------------+------------------------+----------+---------------+-----------+---------------+------------+--------------+-----------------------------+----------------------+------------------+------------------+-------------
+ ch_f6fa36d7678745df | 2026-07-02 09:02:28+00 |   107.71 | GBP           | failed    |        0.9208 | critical   | block        | Davis and Sons              | cus_55512f1bc3594a8c | BR               | GB               | mobile
+ ch_4528e00550e24551 | 2026-08-29 00:38:00+00 |  4521.00 | JPY           | failed    |        0.9013 | critical   | block        | Smith-Bowen                 | cus_cefcdabd84674303 | JP               | FR               | mobile
+ ch_03328b2851e1442c | 2026-08-12 07:27:05+00 |   577.73 | BRL           | succeeded |        0.8486 | high       | review       | Wilkerson-Day               | cus_8daa2d606e5b410a | BR               | BR               | mobile
+ ch_341e87a491a44139 | 2026-09-11 09:03:55+00 |    71.51 | EUR           | failed    |        0.7930 | high       | review       | Hoffman, Baker and Richards | cus_7b12b2a4b9e14b1a | ES               | DE               | desktop
+ ch_53d82f504a0a4499 | 2026-06-30 21:39:37+00 |   120.87 | GBP           | failed    |        0.7487 | high       | review       | Arnold Ltd                  | cus_524150d4e18e4ffe | AU               | JP               | desktop
+ ch_a5bc2025d6bc4b2d | 2026-07-27 19:16:40+00 | 85906.39 | NGN           | succeeded |        0.7209 | high       | review       | Harris, Collins and Carney  | cus_30b8509393044c36 | SG               | DE               | mobile
+ ch_d2359bff6b79453d | 2026-07-06 07:35:14+00 | 44935.14 | NGN           | succeeded |        0.6940 | high       | review       | Doyle Ltd                   | cus_4552d23c536e4fa7 | US               | CA               | mobile
+(7 rows)
+
+SELECT
+    m.merchant_id,
+    m.name                                                       AS merchant_name,
+    m.category,
+    COUNT(*)                                                     AS total_transactions,
+    COUNT(*) FILTER (WHERE t.status = 'failed')                  AS failed_count,
+    ROUND(COUNT(*) FILTER (WHERE t.status = 'failed') * 100.0
+          / NULLIF(COUNT(*), 0), 2)                              AS failure_rate_pct,
+    MODE() WITHIN GROUP (ORDER BY t.failure_reason)              AS top_failure_reason
+FROM transactions t
+JOIN merchants m ON m.merchant_id = t.merchant_id
+WHERE t.created_at >= NOW() - INTERVAL '30 days'
+GROUP BY m.merchant_id, m.name, m.category
+HAVING COUNT(*) >= 3
+ORDER BY failure_rate_pct DESC, total_transactions DESC
+LIMIT 10;
+     merchant_id      |       merchant_name       |  category  | total_transactions | failed_count | failure_rate_pct |   top_failure_reason    
+----------------------+---------------------------+------------+--------------------+--------------+------------------+-------------------------
+ mer_5e545f22936e434e | Garcia-James              | gaming     |                  3 |            2 |            66.67 | authentication_required
+ mer_0a4fa70ccc3f4675 | Baker, Mason and White    | gaming     |                  3 |            1 |            33.33 | card_declined
+ mer_d45235e868cc4abb | George Group              | retail     |                  3 |            1 |            33.33 | authentication_required
+ mer_2aa81315db7b4610 | Harrell LLC               | gaming     |                  5 |            1 |            20.00 | authentication_required
+ mer_21c4ecea89ab4495 | Williams and Sons         | saas       |                  6 |            1 |            16.67 | processing_error
+ mer_f1f70b76f04d455e | Wilkerson-Day             | healthcare |                  7 |            1 |            14.29 | card_declined
+ mer_8895ca858acb4135 | Flowers, Martin and Kelly | saas       |                  6 |            0 |             0.00 | 
+ mer_550fb7c166684fd6 | Martin, Rose and Obrien   | saas       |                  5 |            0 |             0.00 | 
+ mer_8072b1efa2754374 | Ross, Robinson and Bright | healthcare |                  4 |            0 |             0.00 | 
+ mer_ce91a8b05c5a4f54 | Dyer, Potter and Mack     | saas       |                  4 |            0 |             0.00 | 
+(10 rows)
+
+SELECT
+    m.merchant_id,
+    m.name                                                  AS merchant_name,
+    m.category,
+    co.name                                                 AS country,
+    COUNT(t.transaction_id)                                 AS transaction_count,
+    ROUND(SUM(t.amount * er.rate_to_usd), 2)                AS total_volume_usd,
+    ROUND(AVG(t.amount * er.rate_to_usd), 2)                AS avg_ticket_usd,
+    STRING_AGG(DISTINCT t.currency_code, ', ')              AS currencies
+FROM transactions t
+JOIN merchants      m  ON m.merchant_id   = t.merchant_id
+JOIN countries      co ON co.country_code = m.country_code
+JOIN exchange_rates er ON er.currency_code = t.currency_code
+                      AND er.rate_date     = t.created_at::date
+WHERE t.status      = 'succeeded'
+  AND t.created_at >= NOW() - INTERVAL '90 days'
+GROUP BY m.merchant_id, m.name, m.category, co.name
+ORDER BY total_volume_usd DESC
+LIMIT 10;
+     merchant_id      |          merchant_name          |  category  |    country     | transaction_count | total_volume_usd | avg_ticket_usd | currencies 
+----------------------+---------------------------------+------------+----------------+-------------------+------------------+----------------+------------
+ mer_f1f70b76f04d455e | Wilkerson-Day                   | healthcare | Brazil         |                22 |          1065.78 |          48.44 | BRL
+ mer_1e3cd1d5a0cb4eea | Gray-Mayo                       | e-commerce | France         |                11 |           941.32 |          85.57 | EUR
+ mer_7e93736e98e64b20 | Rodriguez, Figueroa and Sanchez | saas       | United States  |                 6 |           866.27 |         144.38 | USD
+ mer_2aa81315db7b4610 | Harrell LLC                     | gaming     | United Kingdom |                 8 |           844.55 |         105.57 | GBP
+ mer_5f93d07a309c405a | Watts, Robinson and Nguyen      | healthcare | Germany        |                 9 |           812.95 |          90.33 | EUR
+ mer_19bd6853312f4552 | Abbott-Munoz                    | gaming     | Australia      |                 7 |           732.03 |         104.58 | AUD
+ mer_0a4fa70ccc3f4675 | Baker, Mason and White          | gaming     | France         |                 8 |           660.22 |          82.53 | EUR
+ mer_1cbdcefbad454faa | Hickman Ltd                     | saas       | Canada         |                 5 |           621.99 |         124.40 | CAD
+ mer_af71e58200234461 | Galloway-Wyatt                  | education  | Canada         |                 4 |           607.85 |         151.96 | CAD
+ mer_3f23ea5c8ee94c93 | Henderson, Ramirez and Lewis    | gaming     | Spain          |                 5 |           584.30 |         116.86 | EUR
+(10 rows)
+
+WITH windows AS (
+    SELECT
+        t.transaction_id,
+        t.customer_id,
+        t.merchant_id,
+        t.amount,
+        t.created_at,
+        COUNT(*) OVER (
+            PARTITION BY t.customer_id, t.merchant_id
+            ORDER BY t.created_at
+            RANGE BETWEEN INTERVAL '1 hour' PRECEDING AND CURRENT ROW
+        ) AS tx_in_last_hour
+    FROM transactions t
+)
+SELECT
+    customer_id,
+    merchant_id,
+    MIN(created_at)                         AS burst_start,
+    MAX(created_at)                         AS burst_end,
+    COUNT(*)                                AS transactions_in_burst,
+    ROUND(SUM(amount), 2)                   AS total_amount,
+    STRING_AGG(transaction_id, ', ')        AS transaction_ids
+FROM windows
+WHERE tx_in_last_hour >= 3
+GROUP BY customer_id, merchant_id
+ORDER BY transactions_in_burst DESC, burst_start DESC
+LIMIT 15;
+     customer_id      |     merchant_id      |      burst_start       |       burst_end        | transactions_in_burst | total_amount |                                  transaction_ids                                   
+----------------------+----------------------+------------------------+------------------------+-----------------------+--------------+------------------------------------------------------------------------------------
+ cus_4552d23c536e4fa7 | mer_f0b9dff7acae464d | 2026-07-06 07:35:14+00 | 2026-07-06 08:03:14+00 |                     4 |    209814.88 | ch_d2359bff6b79453d, ch_5c175708a5f742f6, ch_3895253a195d4263, ch_2efa2fc2367d46e6
+ cus_a1416a59efda4335 | mer_1e3cd1d5a0cb4eea | 2026-07-03 16:04:52+00 | 2026-07-03 16:45:52+00 |                     3 |       246.58 | ch_a66c2f78e68747c9, ch_1edf796fdb894d21, ch_79a5d02fe3ad40c0
+ cus_b7d3a38a24844780 | mer_7b89a89bae4a4bde | 2025-11-03 19:04:24+00 | 2025-11-03 19:19:24+00 |                     3 |      1260.65 | ch_5fde8a85eb5945d5, ch_c112b3ce9ad846d7, ch_c9cf2f5999654f56
+ cus_7c704083177843ea | mer_5f93d07a309c405a | 2025-10-09 17:35:17+00 | 2025-10-09 18:04:17+00 |                     3 |       438.51 | ch_b4b07975e8ac4a9b, ch_9865dbcef4fc47a8, ch_b6090025abdb4b88
+ cus_8daa2d606e5b410a | mer_f1f70b76f04d455e | 2026-08-12 06:57:05+00 | 2026-08-12 07:27:05+00 |                     2 |       939.99 | ch_4ee4302205bd486d, ch_03328b2851e1442c
+ cus_34e88b0df4d14d24 | mer_7b89a89bae4a4bde | 2026-05-26 18:51:37+00 | 2026-05-26 18:54:37+00 |                     2 |      1485.56 | ch_312eb5e1b10a4f7a, ch_30f9a7ff864a42ed
+ cus_ee8d8fd09cdf4af6 | mer_344981c0a61c468c | 2026-01-29 22:27:10+00 | 2026-01-29 22:51:10+00 |                     2 |       297.61 | ch_62b7daa4e91b4419, ch_d652aa4a41784493
+ cus_f4605b9723414bcd | mer_2aa81315db7b4610 | 2025-10-13 20:10:16+00 | 2025-10-13 20:11:16+00 |                     2 |       128.13 | ch_cf207619792a4923, ch_196e75053ada4c06
+(8 rows)
+
+SELECT
+    c.customer_id,
+    c.country_code,
+    COUNT(DISTINCT t.payment_method_id)     AS distinct_payment_methods,
+    COUNT(DISTINCT t.transaction_id)        AS total_transactions,
+    COUNT(DISTINCT fi.fraud_id)             AS fraud_flags,
+    MAX(fi.anomaly_score)                   AS max_anomaly_score,
+    COUNT(DISTINCT d.dispute_id)            AS disputes
+FROM customers c
+JOIN transactions      t  ON t.customer_id     = c.customer_id
+JOIN fraud_indicators  fi ON fi.transaction_id = t.transaction_id
+LEFT JOIN disputes     d  ON d.transaction_id  = t.transaction_id
+GROUP BY c.customer_id, c.country_code
+HAVING COUNT(DISTINCT t.payment_method_id) >= 2
+ORDER BY fraud_flags DESC, max_anomaly_score DESC
+LIMIT 15;
+     customer_id      | country_code | distinct_payment_methods | total_transactions | fraud_flags | max_anomaly_score | disputes 
+----------------------+--------------+--------------------------+--------------------+-------------+-------------------+----------
+ cus_30f525f938cc46c6 | US           |                        2 |                  2 |           2 |            0.7794 |        1
+ cus_ab7a77dfb2894628 | SG           |                        2 |                  2 |           2 |            0.3408 |        0
+(2 rows)
+
+SELECT
+    pm.fingerprint,
+    pm.brand,
+    COUNT(DISTINCT pm.customer_id)                  AS distinct_customers,
+    STRING_AGG(DISTINCT pm.customer_id, ', ')       AS customer_ids,
+    COUNT(t.transaction_id)                         AS transactions,
+    COUNT(fi.fraud_id)                              AS fraud_flags
+FROM payment_methods pm
+LEFT JOIN transactions     t  ON t.payment_method_id = pm.payment_method_id
+LEFT JOIN fraud_indicators fi ON fi.transaction_id   = t.transaction_id
+WHERE pm.fingerprint IS NOT NULL
+GROUP BY pm.fingerprint, pm.brand
+HAVING COUNT(DISTINCT pm.customer_id) >= 2
+ORDER BY distinct_customers DESC, fraud_flags DESC;
+     fingerprint      | brand | distinct_customers |                customer_ids                | transactions | fraud_flags 
+----------------------+-------+--------------------+--------------------------------------------+--------------+-------------
+ c63fd476c3284717b37f | amex  |                  2 | cus_1f5dc2e5ee2646cd, cus_f9102aa79ed84cb3 |            4 |           1
+(1 row)
+
+SELECT
+    m.merchant_id,
+    m.name                                                          AS merchant_name,
+    COUNT(*) FILTER (WHERE s.status = 'active')                     AS active_subscriptions,
+    COUNT(*) FILTER (WHERE s.status = 'past_due')                   AS past_due,
+    COUNT(*) FILTER (WHERE s.status = 'canceled')                   AS canceled,
+    ROUND(SUM(
+        CASE WHEN s.status = 'active' THEN
+            p.unit_price * er.rate_to_usd
+            / CASE p.billing_interval WHEN 'year' THEN 12 ELSE 1 END
+        ELSE 0 END
+    ), 2)                                                           AS mrr_usd
+FROM subscriptions s
+JOIN products  p ON p.product_id  = s.product_id
+JOIN merchants m ON m.merchant_id = s.merchant_id
+JOIN exchange_rates er ON er.currency_code = p.currency_code
+                      AND er.rate_date = (SELECT MAX(rate_date) FROM exchange_rates)
+GROUP BY m.merchant_id, m.name
+HAVING COUNT(*) FILTER (WHERE s.status = 'active') > 0
+ORDER BY mrr_usd DESC
+LIMIT 10;
+     merchant_id      |          merchant_name          | active_subscriptions | past_due | canceled | mrr_usd 
+----------------------+---------------------------------+----------------------+----------+----------+---------
+ mer_2aa81315db7b4610 | Harrell LLC                     |                    2 |        0 |        1 |  202.64
+ mer_f1f70b76f04d455e | Wilkerson-Day                   |                    6 |        0 |        0 |  176.07
+ mer_0a4fa70ccc3f4675 | Baker, Mason and White          |                    2 |        1 |        1 |  165.99
+ mer_8895ca858acb4135 | Flowers, Martin and Kelly       |                    3 |        0 |        1 |  116.57
+ mer_ce91a8b05c5a4f54 | Dyer, Potter and Mack           |                    4 |        1 |        1 |  106.35
+ mer_8072b1efa2754374 | Ross, Robinson and Bright       |                    3 |        1 |        0 |   98.98
+ mer_5f93d07a309c405a | Watts, Robinson and Nguyen      |                    1 |        0 |        1 |   82.74
+ mer_21c4ecea89ab4495 | Williams and Sons               |                    6 |        1 |        1 |   81.16
+ mer_7e93736e98e64b20 | Rodriguez, Figueroa and Sanchez |                    4 |        1 |        0 |   56.65
+ mer_5e545f22936e434e | Garcia-James                    |                    3 |        0 |        1 |   40.74
+(10 rows)
+
+SELECT
+    a.user_role,
+    a.event_type,
+    a.table_name,
+    COUNT(*)                                        AS events,
+    COUNT(DISTINCT a.user_id)                       AS distinct_users,
+    MAX(a.created_at)                               AS last_event
+FROM audit_logs a
+WHERE a.created_at >= NOW() - INTERVAL '30 days'
+  AND (a.table_name IN ('payment_methods', 'customers')
+       OR a.event_type IN ('EXPORT', 'ERASURE', 'LOGIN_FAILED'))
+GROUP BY a.user_role, a.event_type, a.table_name
+ORDER BY events DESC;
+   user_role   |  event_type  |   table_name    | events | distinct_users |       last_event       
+---------------+--------------+-----------------+--------+----------------+------------------------
+ analyst       | EXPORT       | transactions    |      1 |              1 | 2026-08-21 10:01:02+00
+ analyst       | LOGIN_FAILED |                 |      1 |              1 | 2026-08-27 23:29:07+00
+ analyst       | UPDATE       | customers       |      1 |              1 | 2026-09-08 09:21:21+00
+ data_engineer | SELECT       | payment_methods |      1 |              1 | 2026-08-21 13:32:36+00
+ service       | ERASURE      | payment_methods |      1 |              1 | 2026-09-06 16:16:05+00
+ service       | ERASURE      | refunds         |      1 |              1 | 2026-09-12 14:49:47+00
+(6 rows)
+
+BEGIN ISOLATION LEVEL REPEATABLE READ;
+WITH target AS (
+    SELECT transaction_id, amount, currency_code
+    FROM transactions
+    WHERE status = 'succeeded'
+    ORDER BY created_at DESC
+    LIMIT 1
+    FOR UPDATE
+),
+already_refunded AS (
+    SELECT COALESCE(SUM(r.amount), 0) AS refunded
+    FROM refunds r JOIN target t ON t.transaction_id = r.transaction_id
+    WHERE r.status = 'succeeded'
+)
+INSERT INTO refunds (refund_id, transaction_id, amount, reason, status, created_at)
+SELECT 're_demo_' || substr(md5(random()::text), 1, 12), t.transaction_id,
+       ROUND(t.amount * 0.5, 2), 'requested_by_customer', 'succeeded', NOW()
+FROM target t, already_refunded a
+WHERE a.refunded + ROUND(t.amount * 0.5, 2) <= t.amount      -- garde-fou métier
+RETURNING refund_id, transaction_id, amount;
+      refund_id       |   transaction_id    | amount 
+----------------------+---------------------+--------
+ re_demo_f876aed650dd | ch_da6cab98c0b64d33 |  59.02
+(1 row)
+
+INSERT INTO audit_logs (audit_id, event_type, table_name, user_id, user_role, created_at)
+VALUES ('aud_demo_' || substr(md5(random()::text), 1, 12), 'INSERT', 'refunds', 'svc_refund_api', 'service', NOW());
+ROLLBACK;
+EXPLAIN (COSTS OFF)
+SELECT transaction_id, merchant_id, failure_reason
+FROM transactions
+WHERE status = 'failed'
+  AND created_at >= NOW() - INTERVAL '30 days';
+                                              QUERY PLAN                                               
+-------------------------------------------------------------------------------------------------------
+ Append
+   Subplans Removed: 13
+   ->  Seq Scan on transactions_2026_08 transactions_1
+         Filter: (((status)::text = 'failed'::text) AND (created_at >= (now() - '30 days'::interval)))
+   ->  Seq Scan on transactions_2026_09 transactions_2
+         Filter: (((status)::text = 'failed'::text) AND (created_at >= (now() - '30 days'::interval)))
+   ->  Seq Scan on transactions_2026_10 transactions_3
+         Filter: (((status)::text = 'failed'::text) AND (created_at >= (now() - '30 days'::interval)))
+   ->  Seq Scan on transactions_default transactions_4
+         Filter: (((status)::text = 'failed'::text) AND (created_at >= (now() - '30 days'::interval)))
+(10 rows)
+

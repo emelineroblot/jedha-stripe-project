@@ -261,6 +261,7 @@ for cus_id in customer_ids:
             "created_at":        iso(rand_dt(DATE_START - timedelta(days=600), DATE_START)),
         })
 df_payment_methods = pd.DataFrame(payment_methods)
+df_payment_methods[["exp_month", "exp_year"]] = df_payment_methods[["exp_month", "exp_year"]].astype("Int64")  # entiers nullables → pas de "7.0"
 pm_by_customer = df_payment_methods.groupby("customer_id")["payment_method_id"].apply(list).to_dict()
 pm_by_id = {p["payment_method_id"]: p for p in payment_methods}
 
@@ -415,7 +416,7 @@ for tx in transactions:
     true_fraud = random.random() < sigmoid(logit)
 
     # Prédiction du modèle : même information, bruit différent → détection imparfaite
-    fraud_probability = round(sigmoid(logit + np.random.normal(0, 0.9)), 4)
+    fraud_probability = round(sigmoid(logit + np.random.normal(0, 0.45)), 4)
     risk_level = ("critical" if fraud_probability >= 0.85 else "high" if fraud_probability >= 0.6
                   else "medium" if fraud_probability >= 0.3 else "low")
     action = {"low": "allow", "medium": "challenge_3ds", "high": "review", "critical": "block"}[risk_level]
@@ -568,6 +569,9 @@ for tx in transactions:
         label = {"is_fraud": True, "source": "chargeback", "labeled_at": mdate(datetime.fromisoformat(d["resolved_at"].replace("Z", "+00:00")))}
     elif d and d["status"] == "won":
         label = {"is_fraud": False, "source": "dispute_won", "labeled_at": mdate(datetime.fromisoformat(d["resolved_at"].replace("Z", "+00:00")))}
+    elif tx["_action"] in ("review", "block") and random.random() < 0.7:
+        # File de revue manuelle : les analystes labellisent les transactions bloquées / revues
+        label = {"is_fraud": bool(tx["_true_fraud"]), "source": "analyst_review", "labeled_at": mdate(tx["_created_dt"] + timedelta(days=random.randint(1, 5)))}
     elif age_days > 120 and tx["status"] == "succeeded":
         label = {"is_fraud": False, "source": "matured_no_dispute", "labeled_at": mdate(tx["_created_dt"] + timedelta(days=120))}
     else:

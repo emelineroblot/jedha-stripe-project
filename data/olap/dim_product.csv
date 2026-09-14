@@ -1,151 +1,151 @@
 product_sk,product_id,merchant_id,name,billing_interval,unit_price,currency_code
-1,prod_b730b9cdca274f53,mer_53fc4bf47a544c93,Pro plan,year,169.96,USD
-2,prod_a34f5e24e0e447dc,mer_53fc4bf47a544c93,Enterprise plan,month,141.81,USD
-3,prod_b6eb9a1c73284042,mer_53fc4bf47a544c93,Team plan,month,136.28,USD
-4,prod_ae8aa7f4461e4f17,mer_80e24f4873304aa1,Premium listing,,34750.36,NGN
-5,prod_7acc62d3d5484e54,mer_80e24f4873304aa1,Listing fee,,24992.08,NGN
-6,prod_c01643f304e74cac,mer_80e24f4873304aa1,Featured slot,,66494.26,NGN
-7,prod_c899ec500f6b46c5,mer_4b52b544519b44e6,Watch,,201.32,AUD
-8,prod_d65f1d43cb014231,mer_4b52b544519b44e6,Perfume,,243.09,AUD
-9,prod_e72bf673f94b45d5,mer_4b52b544519b44e6,Shoes,,97.72,AUD
-10,prod_dda2d4bf9b224204,mer_d4187d6245004cf2,Lamp,,66.39,GBP
-11,prod_9ceb2589cff2451c,mer_d4187d6245004cf2,Sneakers,,13.52,GBP
-12,prod_3a67f38107064107,mer_d4187d6245004cf2,Headphones,,60.28,GBP
-13,prod_d6c452d005e648ee,mer_bf0eddce6b4b46a6,Backpack,,112.37,GBP
-14,prod_d5ea3229ae3b4f76,mer_bf0eddce6b4b46a6,Sneakers,,57.51,GBP
-15,prod_7195180d97254237,mer_bf0eddce6b4b46a6,Headphones,,99.02,GBP
-16,prod_b4e7107661944236,mer_512cb16d29bd4e47,Perfume,,67.86,GBP
-17,prod_5f0b15a522f647d2,mer_512cb16d29bd4e47,Watch,,87.15,GBP
-18,prod_ca064590728a4a8d,mer_512cb16d29bd4e47,Jacket,,31.96,GBP
-19,prod_9d643444ffdb45ee,mer_bf716d6ea0504523,Car rental,,88.62,EUR
-20,prod_25b7747e15974eda,mer_bf716d6ea0504523,Flight,,42.12,EUR
-21,prod_d726b8d78364469a,mer_bf716d6ea0504523,Insurance,,77.06,EUR
-22,prod_92672c016e0b46ef,mer_9624680262314e47,Skin bundle,,15.7,EUR
-23,prod_c32617128ce349cc,mer_9624680262314e47,Gold pack,,136.25,EUR
-24,prod_f734869f024847ea,mer_9624680262314e47,Season pass,year,118.04,EUR
-25,prod_9189b0a6628046d1,mer_3e81cf7509e54028,Gold pack,,104.83,EUR
-26,prod_e8839ec4d929475a,mer_3e81cf7509e54028,Season pass,year,149.64,EUR
-27,prod_3d38b9c16bdb42cd,mer_3e81cf7509e54028,Skin bundle,,44.67,EUR
-28,prod_adaaeb8765e14ccf,mer_1091ee5f18ba4ece,Skin bundle,,262.32,AUD
-29,prod_73bab3f7bf444bd4,mer_1091ee5f18ba4ece,Season pass,year,205.25,AUD
-30,prod_b81328e7df8f4bf2,mer_1091ee5f18ba4ece,Gold pack,,123.44,AUD
-31,prod_cb96104c59c543c8,mer_db555fe8c80c451f,Headphones,,14894.0,JPY
-32,prod_c9cf2375541449b6,mer_db555fe8c80c451f,T-shirt,,4245.0,JPY
-33,prod_dd45fb8387ad4052,mer_db555fe8c80c451f,Sneakers,,5584.0,JPY
-34,prod_5c8b79988e8a4e06,mer_69d122586e1741d2,Consultation,,6609.0,JPY
-35,prod_5c01c9f6d82f44a4,mer_69d122586e1741d2,Monthly plan,year,6987.0,JPY
-36,prod_070e568bc6414fb5,mer_69d122586e1741d2,Lab test,,4481.0,JPY
-37,prod_3984fa2232424df3,mer_f95610e459bd45f3,Skin bundle,,120.87,GBP
-38,prod_1cd9301315b74bf6,mer_f95610e459bd45f3,Season pass,year,65.29,GBP
-39,prod_e813dc73ad974b33,mer_f95610e459bd45f3,Gold pack,,88.22,GBP
-40,prod_aa8688cc32e1485c,mer_063a663b60c0414b,Sneakers,,53.61,GBP
-41,prod_ef7ed3a043b04cd0,mer_063a663b60c0414b,Lamp,,6.73,GBP
-42,prod_47eddb1e27414c8e,mer_063a663b60c0414b,Headphones,,85.13,GBP
-43,prod_fff83d1a66584af5,mer_6c49fd00b15545db,Pro plan,year,3.73,EUR
-44,prod_7999eb0830bb4ffa,mer_6c49fd00b15545db,Enterprise plan,year,82.08,EUR
-45,prod_331d08e79a9944c1,mer_6c49fd00b15545db,Starter plan,month,26.85,EUR
-46,prod_2ae65a136d084f17,mer_af106aa3bbdf4ef9,Monthly membership,year,239.24,CAD
-47,prod_81f24a91c1194643,mer_af106aa3bbdf4ef9,Course,,174.68,CAD
-48,prod_18ffe27f893e4221,mer_af106aa3bbdf4ef9,Bootcamp,,126.35,CAD
-49,prod_a7deaffc0edc4df1,mer_578efd7a28274837,Season pass,year,73433.4,NGN
-50,prod_38f244d98d2a4994,mer_578efd7a28274837,Skin bundle,,25957.89,NGN
-51,prod_752980c5f28e4961,mer_578efd7a28274837,Gold pack,,57228.29,NGN
-52,prod_c632489489b24294,mer_ff031e6116d746db,Starter plan,month,49495.73,NGN
-53,prod_b42a51a3bde64516,mer_ff031e6116d746db,Team plan,month,50940.45,NGN
-54,prod_1748f3507906420b,mer_ff031e6116d746db,Enterprise plan,month,73627.95,NGN
-55,prod_0e4d78e9e5744207,mer_bddad3cee5964abf,Family menu,,177.61,SGD
-56,prod_28636cdef5c6404e,mer_bddad3cee5964abf,Dessert,,148.77,SGD
-57,prod_c734e52f56a84c24,mer_bddad3cee5964abf,Meal,,22.43,SGD
-58,prod_1e5235e9512e42c9,mer_57330edc10754359,Perfume,,23398.96,NGN
-59,prod_4b8359ae56ba421a,mer_57330edc10754359,Jacket,,42239.05,NGN
-60,prod_d0e6d24f9d084c50,mer_57330edc10754359,Shoes,,47100.88,NGN
-61,prod_87e16f453d564ec2,mer_0f53cdef81354cdf,Headphones,,36.97,EUR
-62,prod_e4a3823003124292,mer_0f53cdef81354cdf,T-shirt,,187.5,EUR
-63,prod_607063a61c974020,mer_0f53cdef81354cdf,Backpack,,149.45,EUR
-64,prod_21fa326634a848de,mer_aa68cd2a8b344ed7,Lab test,,110.59,EUR
-65,prod_1f1759b3b0cc4505,mer_aa68cd2a8b344ed7,Consultation,,88.06,EUR
-66,prod_8f1596c7e9df44b1,mer_aa68cd2a8b344ed7,Monthly plan,month,75.98,EUR
-67,prod_e4b03ebe1ffa4591,mer_bf7ab8170f194cc0,Skin bundle,,23581.83,NGN
-68,prod_3f0f95dfafe5424c,mer_bf7ab8170f194cc0,Gold pack,,46743.31,NGN
-69,prod_e5a7d53d644f4387,mer_bf7ab8170f194cc0,Season pass,year,50799.43,NGN
-70,prod_7672c8ee64774f96,mer_8952f7faafcc47fc,Bootcamp,,36.02,USD
-71,prod_427be0b5279649fe,mer_8952f7faafcc47fc,Monthly membership,month,110.87,USD
-72,prod_6c0c9e04c5494cc0,mer_8952f7faafcc47fc,Course,,87.63,USD
-73,prod_f71d51649f244bfe,mer_25724a2d140d4c6a,Shoes,,4.38,USD
-74,prod_91c72fe0aebe4166,mer_25724a2d140d4c6a,Watch,,54.13,USD
-75,prod_c40b0009f5f9459d,mer_25724a2d140d4c6a,Perfume,,75.35,USD
-76,prod_17cbd25ccc834817,mer_61623b505ea94996,Lab test,,874.73,BRL
-77,prod_249313e7f22a48f5,mer_61623b505ea94996,Consultation,,575.22,BRL
-78,prod_768ed7cff7244c67,mer_61623b505ea94996,Monthly plan,month,149.52,BRL
-79,prod_f37316e26acd4426,mer_166bd017558a43b6,Premium listing,,161.59,SGD
-80,prod_5f851ef5213f4024,mer_166bd017558a43b6,Listing fee,,29.43,SGD
-81,prod_f82461eda61d4569,mer_166bd017558a43b6,Featured slot,,200.37,SGD
-82,prod_0714d696bb994d0b,mer_fd2a65826b664962,Sneakers,,64.98,EUR
-83,prod_d46b5baddcd5432f,mer_fd2a65826b664962,Lamp,,81.02,EUR
-84,prod_bfc551df5cb94ff4,mer_fd2a65826b664962,Headphones,,141.35,EUR
-85,prod_8d5f60813a48472e,mer_80adb9f291eb4fd9,Monthly plan,month,30.3,EUR
-86,prod_fb1fd64f036743aa,mer_80adb9f291eb4fd9,Consultation,,25.62,EUR
-87,prod_f2fa45ea3d4341d1,mer_80adb9f291eb4fd9,Lab test,,60.2,EUR
-88,prod_9f2d23fbe0cf4007,mer_6097f0e275454a85,Monthly membership,year,144.32,USD
-89,prod_d5544336880d4a8d,mer_6097f0e275454a85,Bootcamp,,22.83,USD
-90,prod_d0c396b6f28b4431,mer_6097f0e275454a85,Course,,39.53,USD
-91,prod_5e9f12bff4c0499a,mer_3229a4a0792d44ea,T-shirt,,65.83,EUR
-92,prod_e07eba4e1db84249,mer_3229a4a0792d44ea,Lamp,,108.45,EUR
-93,prod_1e0766730c4b46d1,mer_3229a4a0792d44ea,Headphones,,136.01,EUR
-94,prod_2671dfe44ad04c78,mer_8f2cdd915a974d0b,Shoes,,34578.87,NGN
-95,prod_99f420883978457d,mer_8f2cdd915a974d0b,Perfume,,35742.9,NGN
-96,prod_f6e9274755a8451f,mer_8f2cdd915a974d0b,Watch,,70962.77,NGN
-97,prod_286edf650d674400,mer_9febaea0c9144182,Car rental,,5.54,EUR
-98,prod_4af2bf5290b645cc,mer_9febaea0c9144182,Insurance,,68.49,EUR
-99,prod_dc471e2d89b54f62,mer_9febaea0c9144182,Flight,,93.09,EUR
-100,prod_b28e5a9eb46f429f,mer_3a874c5564d34500,Insurance,,104.09,EUR
-101,prod_173f219b019a4e8e,mer_3a874c5564d34500,Flight,,63.33,EUR
-102,prod_6b21320ad99f4d39,mer_3a874c5564d34500,Car rental,,86.46,EUR
-103,prod_0cd5ec03daa241dc,mer_4a64764684a24551,Team plan,month,23.2,USD
-104,prod_27b03a9f53494a49,mer_4a64764684a24551,Starter plan,month,63.73,USD
-105,prod_fcd4fdb3a4fe4694,mer_4a64764684a24551,Pro plan,year,116.54,USD
-106,prod_77726fc2f7ae469c,mer_ba07582fb1444885,Perfume,,38.16,GBP
-107,prod_82f4f9cb2bee42ac,mer_ba07582fb1444885,Jacket,,77.21,GBP
-108,prod_caf2e2aa3ea349db,mer_ba07582fb1444885,Watch,,91.76,GBP
-109,prod_e283aa5768874d59,mer_40d906296b72477a,Featured slot,,7873.0,JPY
-110,prod_83041e9e1cbf4a8d,mer_40d906296b72477a,Premium listing,,10310.0,JPY
-111,prod_903ded11716442b1,mer_40d906296b72477a,Listing fee,,4927.0,JPY
-112,prod_9e74d1f823574fdb,mer_1537a64ce98c40ca,Season pass,month,76.22,EUR
-113,prod_4f60135009c54ed1,mer_1537a64ce98c40ca,Skin bundle,,110.93,EUR
-114,prod_97aa98e4b6664b56,mer_1537a64ce98c40ca,Gold pack,,91.67,EUR
-115,prod_6dcbb5cdd4af4f5b,mer_a409b77d66414fdf,Gold pack,,53.01,GBP
-116,prod_cbb98ccb4bf54a8f,mer_a409b77d66414fdf,Season pass,month,83.41,GBP
-117,prod_c896b3fa1cf54f79,mer_a409b77d66414fdf,Skin bundle,,101.8,GBP
-118,prod_0ef4c7c48d04407f,mer_05f606ae34d448b0,Pro plan,year,3.25,SGD
-119,prod_4def82a0d4e84083,mer_05f606ae34d448b0,Team plan,year,205.34,SGD
-120,prod_b6639786553a44e5,mer_05f606ae34d448b0,Enterprise plan,year,108.14,SGD
-121,prod_68cef87246754396,mer_3955028270134fa3,Jacket,,103.08,EUR
-122,prod_435540f7b065472c,mer_3955028270134fa3,Shoes,,135.88,EUR
-123,prod_5310dda8201847e2,mer_3955028270134fa3,Watch,,26.7,EUR
-124,prod_4c812082774542ec,mer_e2d550086d6d4c8e,Perfume,,61.3,USD
-125,prod_5bf5c89ef26542e8,mer_e2d550086d6d4c8e,Shoes,,81.29,USD
-126,prod_f84483e3af6549ce,mer_e2d550086d6d4c8e,Jacket,,57.77,USD
-127,prod_7137a86e74564d49,mer_2bbe2da533fa44b8,Lab test,,17741.0,JPY
-128,prod_b7bfc01bbce44b04,mer_2bbe2da533fa44b8,Monthly plan,year,5430.0,JPY
-129,prod_566e909b50c24aee,mer_2bbe2da533fa44b8,Consultation,,6861.0,JPY
-130,prod_796a5e60ec7e4f0c,mer_d51e82250f3d4136,Family menu,,495.99,BRL
-131,prod_68b2fe52d67c4e11,mer_d51e82250f3d4136,Drink,,179.52,BRL
-132,prod_6866710955934cfa,mer_d51e82250f3d4136,Dessert,,360.97,BRL
-133,prod_b6d062b1a6a14480,mer_6f17655d551e45e3,Gold pack,,11008.0,JPY
-134,prod_a029595b164b4d15,mer_6f17655d551e45e3,Season pass,month,7919.0,JPY
-135,prod_2d4cb4775fc94cb8,mer_6f17655d551e45e3,Skin bundle,,9056.0,JPY
-136,prod_22e4a8a65acd4ff8,mer_8bda0f9b02df4c4a,Drink,,62.5,EUR
-137,prod_7abd3b865f334690,mer_8bda0f9b02df4c4a,Meal,,20.64,EUR
-138,prod_212ad6fa1ab646df,mer_8bda0f9b02df4c4a,Dessert,,98.67,EUR
-139,prod_9533d53468374565,mer_92e60268752e48a5,Perfume,,262.85,AUD
-140,prod_68d7e37caa7e4ce3,mer_92e60268752e48a5,Jacket,,141.29,AUD
-141,prod_0b6e706bf5fe4b62,mer_92e60268752e48a5,Watch,,155.77,AUD
-142,prod_ce05d5883d834d05,mer_4bcb431bd43c49cf,Team plan,year,60586.26,NGN
-143,prod_112b2a3092e8455d,mer_4bcb431bd43c49cf,Starter plan,month,16440.06,NGN
-144,prod_2a0318cdfeba4fe9,mer_4bcb431bd43c49cf,Pro plan,year,83306.58,NGN
-145,prod_e5e67f0166444896,mer_470b128eb4c647c2,Pro plan,month,132.14,CAD
-146,prod_fe880cf82a074c3e,mer_470b128eb4c647c2,Enterprise plan,year,217.91,CAD
-147,prod_fba43640e982425e,mer_470b128eb4c647c2,Starter plan,month,76.02,CAD
-148,prod_a0d5f1a8035d4ea7,mer_e0cd013d1ed84db5,Drink,,85906.39,NGN
-149,prod_f9c8abe4b9f243f9,mer_e0cd013d1ed84db5,Meal,,62441.0,NGN
-150,prod_df9e4c0c183f4604,mer_e0cd013d1ed84db5,Dessert,,57443.4,NGN
+1,prod_9641c9b113f5440c,mer_7e93736e98e64b20,Pro plan,year,169.96,USD
+2,prod_afc1d0ada6df4633,mer_7e93736e98e64b20,Enterprise plan,month,141.81,USD
+3,prod_120668fae49b45d4,mer_7e93736e98e64b20,Team plan,month,136.28,USD
+4,prod_c4096ac52a264bee,mer_f0b9dff7acae464d,Premium listing,,34750.36,NGN
+5,prod_1dd5d354636147a5,mer_f0b9dff7acae464d,Listing fee,,24992.08,NGN
+6,prod_f9d7f3df3396426c,mer_f0b9dff7acae464d,Featured slot,,66494.26,NGN
+7,prod_2f7709173a81456b,mer_3fa16d366dec4e99,Watch,,201.32,AUD
+8,prod_3c356fc6722b47e0,mer_3fa16d366dec4e99,Perfume,,243.09,AUD
+9,prod_708f22fb37134612,mer_3fa16d366dec4e99,Shoes,,97.72,AUD
+10,prod_545879248e4a4962,mer_9d3421d554dc438e,Lamp,,66.39,GBP
+11,prod_8a72491fca634127,mer_9d3421d554dc438e,Sneakers,,13.52,GBP
+12,prod_3bb092ec01094b1d,mer_9d3421d554dc438e,Headphones,,60.28,GBP
+13,prod_0400dd4ee1e54636,mer_d4421512fc7a4fc4,Backpack,,112.37,GBP
+14,prod_144d735e07a44dda,mer_d4421512fc7a4fc4,Sneakers,,57.51,GBP
+15,prod_59c91b8b042146a2,mer_d4421512fc7a4fc4,Headphones,,99.02,GBP
+16,prod_695db32a7ed94890,mer_00d78483913940ef,Perfume,,67.86,GBP
+17,prod_ac60a6109bc14456,mer_00d78483913940ef,Watch,,87.15,GBP
+18,prod_57b4f66b02b64564,mer_00d78483913940ef,Jacket,,31.96,GBP
+19,prod_f845545bd2904ed4,mer_ec160387614f4930,Car rental,,88.62,EUR
+20,prod_cc40e82c694f4405,mer_ec160387614f4930,Flight,,42.12,EUR
+21,prod_23d114fdb2c34865,mer_ec160387614f4930,Insurance,,77.06,EUR
+22,prod_1cd03b8f32a54539,mer_3f23ea5c8ee94c93,Skin bundle,,15.7,EUR
+23,prod_761c73900322467f,mer_3f23ea5c8ee94c93,Gold pack,,136.25,EUR
+24,prod_908e04daabcc48d2,mer_3f23ea5c8ee94c93,Season pass,year,118.04,EUR
+25,prod_54bad247a6ab4221,mer_5e545f22936e434e,Gold pack,,104.83,EUR
+26,prod_5bedce21ed6045a9,mer_5e545f22936e434e,Season pass,year,149.64,EUR
+27,prod_5569bfcb869d4c9e,mer_5e545f22936e434e,Skin bundle,,44.67,EUR
+28,prod_bc4c9717a42646df,mer_19bd6853312f4552,Skin bundle,,262.32,AUD
+29,prod_0043d7f5e85d45a7,mer_19bd6853312f4552,Season pass,year,205.25,AUD
+30,prod_ffda0ee4d1d6404d,mer_19bd6853312f4552,Gold pack,,123.44,AUD
+31,prod_268c40f5207e46fb,mer_8702e6d2745d41d2,Headphones,,14894.0,JPY
+32,prod_8d1d84e27819400f,mer_8702e6d2745d41d2,T-shirt,,4245.0,JPY
+33,prod_573354220cb7410b,mer_8702e6d2745d41d2,Sneakers,,5584.0,JPY
+34,prod_a6aa46c9db704a04,mer_81638688e412411d,Consultation,,6609.0,JPY
+35,prod_439d8b5cc5f74385,mer_81638688e412411d,Monthly plan,year,6987.0,JPY
+36,prod_76d2ecf96b734430,mer_81638688e412411d,Lab test,,4481.0,JPY
+37,prod_7e3ff77abf6f4336,mer_7a444a3f5b8f4c52,Skin bundle,,120.87,GBP
+38,prod_57063df4de6844ae,mer_7a444a3f5b8f4c52,Season pass,year,65.29,GBP
+39,prod_47bc81b62a154d49,mer_7a444a3f5b8f4c52,Gold pack,,88.22,GBP
+40,prod_90617acf52e14b4d,mer_f925664d5df34a6d,Sneakers,,53.61,GBP
+41,prod_f452611284274307,mer_f925664d5df34a6d,Lamp,,6.73,GBP
+42,prod_db09fb4d6875498c,mer_f925664d5df34a6d,Headphones,,85.13,GBP
+43,prod_7dc78faf962b4819,mer_21c4ecea89ab4495,Pro plan,year,3.73,EUR
+44,prod_fecc71f8ba044ba7,mer_21c4ecea89ab4495,Enterprise plan,year,82.08,EUR
+45,prod_60417ce8fb22408e,mer_21c4ecea89ab4495,Starter plan,month,26.85,EUR
+46,prod_2ea76fc544da4313,mer_af71e58200234461,Monthly membership,year,239.24,CAD
+47,prod_166291651d814fb3,mer_af71e58200234461,Course,,174.68,CAD
+48,prod_b3d367762cc94ead,mer_af71e58200234461,Bootcamp,,126.35,CAD
+49,prod_8bcfd65e162b419d,mer_e0d1a749ad61471c,Season pass,year,73433.4,NGN
+50,prod_115815b97a6d4151,mer_e0d1a749ad61471c,Skin bundle,,25957.89,NGN
+51,prod_8e8750518da3402b,mer_e0d1a749ad61471c,Gold pack,,57228.29,NGN
+52,prod_aef1776acf5b401d,mer_8895ca858acb4135,Starter plan,month,49495.73,NGN
+53,prod_5013cf2dafc542d4,mer_8895ca858acb4135,Team plan,month,50940.45,NGN
+54,prod_a737ffcd56464247,mer_8895ca858acb4135,Enterprise plan,month,73627.95,NGN
+55,prod_5429aee2f07a433a,mer_0c3bb8af99e5490b,Family menu,,177.61,SGD
+56,prod_97853f98292444f9,mer_0c3bb8af99e5490b,Dessert,,148.77,SGD
+57,prod_9cfceca21f294e8b,mer_0c3bb8af99e5490b,Meal,,22.43,SGD
+58,prod_a8ff92734888431e,mer_120e7772e09540f6,Perfume,,23398.96,NGN
+59,prod_6559fc83f5624af5,mer_120e7772e09540f6,Jacket,,42239.05,NGN
+60,prod_9d4accba91fc4b63,mer_120e7772e09540f6,Shoes,,47100.88,NGN
+61,prod_841bd87784ac416a,mer_1e3cd1d5a0cb4eea,Headphones,,36.97,EUR
+62,prod_413565f8a60f4697,mer_1e3cd1d5a0cb4eea,T-shirt,,187.5,EUR
+63,prod_9a4261ad4dd347ed,mer_1e3cd1d5a0cb4eea,Backpack,,149.45,EUR
+64,prod_a07d08f0f0dd4546,mer_5f93d07a309c405a,Lab test,,110.59,EUR
+65,prod_dea5ac46c9004f30,mer_5f93d07a309c405a,Consultation,,88.06,EUR
+66,prod_8e331461455a4fa3,mer_5f93d07a309c405a,Monthly plan,month,75.98,EUR
+67,prod_71945bdd55b14657,mer_9e465d37d8034ac3,Skin bundle,,23581.83,NGN
+68,prod_28453868b77b4da3,mer_9e465d37d8034ac3,Gold pack,,46743.31,NGN
+69,prod_f19c024b84ef4c9e,mer_9e465d37d8034ac3,Season pass,year,50799.43,NGN
+70,prod_65089b0249304b0b,mer_344981c0a61c468c,Bootcamp,,36.02,USD
+71,prod_531fc118c0544c9b,mer_344981c0a61c468c,Monthly membership,month,110.87,USD
+72,prod_d784bbfac67a465f,mer_344981c0a61c468c,Course,,87.63,USD
+73,prod_83ec792880fb4126,mer_8769e8b94ae44434,Shoes,,4.38,USD
+74,prod_7047400b87d94495,mer_8769e8b94ae44434,Watch,,54.13,USD
+75,prod_0e72a67d5f5746e6,mer_8769e8b94ae44434,Perfume,,75.35,USD
+76,prod_d56f56aa0ea84e98,mer_f1f70b76f04d455e,Lab test,,874.73,BRL
+77,prod_e9eecde7f13b4cff,mer_f1f70b76f04d455e,Consultation,,575.22,BRL
+78,prod_6d90d949e7664ddf,mer_f1f70b76f04d455e,Monthly plan,month,149.52,BRL
+79,prod_a07eb2c65ca14cd8,mer_c3dbd714778645eb,Premium listing,,161.59,SGD
+80,prod_5ae203287d824614,mer_c3dbd714778645eb,Listing fee,,29.43,SGD
+81,prod_b67e9a6efdeb40aa,mer_c3dbd714778645eb,Featured slot,,200.37,SGD
+82,prod_cb8b9b6f69c24300,mer_c3d9b388706549af,Sneakers,,64.98,EUR
+83,prod_6b345943c8c94006,mer_c3d9b388706549af,Lamp,,81.02,EUR
+84,prod_e69a763fb2624ad9,mer_c3d9b388706549af,Headphones,,141.35,EUR
+85,prod_cd20963ecaec4805,mer_8072b1efa2754374,Monthly plan,month,30.3,EUR
+86,prod_66e9f33fe8e74fc3,mer_8072b1efa2754374,Consultation,,25.62,EUR
+87,prod_e0646f03957d4520,mer_8072b1efa2754374,Lab test,,60.2,EUR
+88,prod_c94d72115ff64505,mer_712d0b25b5a4449e,Monthly membership,year,144.32,USD
+89,prod_8c98054dcb8a4997,mer_712d0b25b5a4449e,Bootcamp,,22.83,USD
+90,prod_ecef5a687ef24f18,mer_712d0b25b5a4449e,Course,,39.53,USD
+91,prod_dbd3d22f98bd4dfc,mer_286a8b59d38446ad,T-shirt,,65.83,EUR
+92,prod_f9953153b5ee438e,mer_286a8b59d38446ad,Lamp,,108.45,EUR
+93,prod_a4fb7082c72e4d32,mer_286a8b59d38446ad,Headphones,,136.01,EUR
+94,prod_845de7f1433e40c2,mer_f92f9ed46a0d4590,Shoes,,34578.87,NGN
+95,prod_dfdfcf4b0d19461c,mer_f92f9ed46a0d4590,Perfume,,35742.9,NGN
+96,prod_920e8a56d2c5434f,mer_f92f9ed46a0d4590,Watch,,70962.77,NGN
+97,prod_decfc685b5424d3a,mer_bb80e4a76cb5476d,Car rental,,5.54,EUR
+98,prod_98ae19dc5ee54379,mer_bb80e4a76cb5476d,Insurance,,68.49,EUR
+99,prod_dfc994ef42bc4a64,mer_bb80e4a76cb5476d,Flight,,93.09,EUR
+100,prod_a9c09cf9b6b34e5f,mer_6be36d157b834cde,Insurance,,104.09,EUR
+101,prod_513d0f8c8d054c66,mer_6be36d157b834cde,Flight,,63.33,EUR
+102,prod_5a92301985344b47,mer_6be36d157b834cde,Car rental,,86.46,EUR
+103,prod_f7705f80fa0b4188,mer_ce91a8b05c5a4f54,Team plan,month,23.2,USD
+104,prod_8e3e41ee105e43a9,mer_ce91a8b05c5a4f54,Starter plan,month,63.73,USD
+105,prod_66aeaaef6f104c9a,mer_ce91a8b05c5a4f54,Pro plan,year,116.54,USD
+106,prod_78abd96ade8043ac,mer_e48867e28f9b4b8d,Perfume,,38.16,GBP
+107,prod_02acee0e76c44ddd,mer_e48867e28f9b4b8d,Jacket,,77.21,GBP
+108,prod_e9fd18cb8e0f4de1,mer_e48867e28f9b4b8d,Watch,,91.76,GBP
+109,prod_298c94de42a4491a,mer_847f1ee422664fb2,Featured slot,,7873.0,JPY
+110,prod_b739ec2a5f074579,mer_847f1ee422664fb2,Premium listing,,10310.0,JPY
+111,prod_2eb1f2d012414199,mer_847f1ee422664fb2,Listing fee,,4927.0,JPY
+112,prod_cc3e0f965a1b4f31,mer_0a4fa70ccc3f4675,Season pass,month,76.22,EUR
+113,prod_349df99f8aaa4e75,mer_0a4fa70ccc3f4675,Skin bundle,,110.93,EUR
+114,prod_d3ec1c1bd71c49ba,mer_0a4fa70ccc3f4675,Gold pack,,91.67,EUR
+115,prod_3d468b767ccc4d38,mer_2aa81315db7b4610,Gold pack,,53.01,GBP
+116,prod_46e01a27f34b4685,mer_2aa81315db7b4610,Season pass,month,83.41,GBP
+117,prod_3ad40009e18346de,mer_2aa81315db7b4610,Skin bundle,,101.8,GBP
+118,prod_c95a6cc3a0f34a27,mer_e9d33473c7e54b84,Pro plan,year,3.25,SGD
+119,prod_e04c5dd6f8874c81,mer_e9d33473c7e54b84,Team plan,year,205.34,SGD
+120,prod_f1b507d8812048bc,mer_e9d33473c7e54b84,Enterprise plan,year,108.14,SGD
+121,prod_bd184ebf470d4689,mer_c8dfde11697345b6,Jacket,,103.08,EUR
+122,prod_b0421e5956204cdc,mer_c8dfde11697345b6,Shoes,,135.88,EUR
+123,prod_7b91f4ed8b8e4090,mer_c8dfde11697345b6,Watch,,26.7,EUR
+124,prod_ff56fd7a47f6434d,mer_d45235e868cc4abb,Perfume,,61.3,USD
+125,prod_7eb957eb6cc24e67,mer_d45235e868cc4abb,Shoes,,81.29,USD
+126,prod_21f78d181b5f44d9,mer_d45235e868cc4abb,Jacket,,57.77,USD
+127,prod_01f29e7442ca465d,mer_80d7fa91a7d14a1b,Lab test,,17741.0,JPY
+128,prod_41f4cdd48cba485a,mer_80d7fa91a7d14a1b,Monthly plan,year,5430.0,JPY
+129,prod_1e93d5851b1a4441,mer_80d7fa91a7d14a1b,Consultation,,6861.0,JPY
+130,prod_5a3a9f2241544a1e,mer_7b89a89bae4a4bde,Family menu,,495.99,BRL
+131,prod_1fe94bb00db345b8,mer_7b89a89bae4a4bde,Drink,,179.52,BRL
+132,prod_8f24dc5d18874cb9,mer_7b89a89bae4a4bde,Dessert,,360.97,BRL
+133,prod_570a561591294937,mer_772c9525389c4ebc,Gold pack,,11008.0,JPY
+134,prod_cebcda4763794728,mer_772c9525389c4ebc,Season pass,month,7919.0,JPY
+135,prod_acc953b152a24be2,mer_772c9525389c4ebc,Skin bundle,,9056.0,JPY
+136,prod_5952d7d4404144d1,mer_c626d90d1ca64aa6,Drink,,62.5,EUR
+137,prod_f6f58c3a659c4250,mer_c626d90d1ca64aa6,Meal,,20.64,EUR
+138,prod_34c07f00b1b54cb4,mer_c626d90d1ca64aa6,Dessert,,98.67,EUR
+139,prod_9ebb8271d4ae4695,mer_e45e0907a2fa44e2,Perfume,,262.85,AUD
+140,prod_592319ae6d4649a5,mer_e45e0907a2fa44e2,Jacket,,141.29,AUD
+141,prod_570b74b132574083,mer_e45e0907a2fa44e2,Watch,,155.77,AUD
+142,prod_5b8b9744a53b4701,mer_550fb7c166684fd6,Team plan,year,60586.26,NGN
+143,prod_e595029d573f4d98,mer_550fb7c166684fd6,Starter plan,month,16440.06,NGN
+144,prod_8070d9ea87b54bf3,mer_550fb7c166684fd6,Pro plan,year,83306.58,NGN
+145,prod_007bbf4ccdd14b2b,mer_1cbdcefbad454faa,Pro plan,month,132.14,CAD
+146,prod_4eb15ef0aaeb4fbc,mer_1cbdcefbad454faa,Enterprise plan,year,217.91,CAD
+147,prod_32079995dce94f1c,mer_1cbdcefbad454faa,Starter plan,month,76.02,CAD
+148,prod_7d1e0e5d87334dd5,mer_05819d65f1a84a57,Drink,,85906.39,NGN
+149,prod_38806e2eede04961,mer_05819d65f1a84a57,Meal,,62441.0,NGN
+150,prod_2376d9ec2927411d,mer_05819d65f1a84a57,Dessert,,57443.4,NGN

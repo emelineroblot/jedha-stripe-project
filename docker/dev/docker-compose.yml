@@ -1,0 +1,43 @@
+# Stack de démo locale — Stripe business case
+# PostgreSQL joue OLTP (stripe_oltp) et simule l'OLAP (stripe_olap, cible prod = Redshift)
+# MongoDB 7 en replica set mono-nœud (transactions multi-documents + change streams)
+#
+#   docker compose -f docker/dev/docker-compose.yml up -d
+#   bash scripts/demo.sh
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: stripe-postgres
+    environment:
+      POSTGRES_USER: stripe
+      POSTGRES_PASSWORD: stripe
+      POSTGRES_DB: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d:ro
+      - ../../data:/data:ro
+      - ../../sql:/sql:ro
+      - ../../queries:/queries:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U stripe -d postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  mongo:
+    image: mongo:7
+    container_name: stripe-mongo
+    command: ["--replSet", "rs0", "--bind_ip_all"]
+    ports:
+      - "27018:27017"
+    volumes:
+      - ../../data/mongo:/data/import:ro
+      - ../../scripts:/scripts:ro
+      - ../../queries:/queries:ro
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.runCommand({ ping: 1 }).ok"]
+      interval: 5s
+      timeout: 3s
+      retries: 20

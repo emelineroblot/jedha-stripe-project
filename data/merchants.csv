@@ -1,0 +1,51 @@
+merchant_id,name,country_code,category,mcc,status,created_at,updated_at
+mer_53fc4bf47a544c93,"Rodriguez, Figueroa and Sanchez",US,saas,5734,active,2023-05-07T12:05:07Z,2023-05-07T12:05:07Z
+mer_80e24f4873304aa1,Doyle Ltd,NG,marketplace,5999,active,2023-09-04T20:54:50Z,2023-09-04T20:54:50Z
+mer_4b52b544519b44e6,"Mcclain, Miller and Henderson",AU,retail,5311,active,2023-08-11T16:55:53Z,2023-08-11T16:55:53Z
+mer_d4187d6245004cf2,Davis and Sons,GB,e-commerce,5399,active,2023-08-22T04:49:43Z,2023-08-22T04:49:43Z
+mer_bf0eddce6b4b46a6,"Guzman, Hoffman and Baldwin",GB,e-commerce,5399,active,2025-08-17T12:20:58Z,2025-08-17T12:20:58Z
+mer_512cb16d29bd4e47,"Gardner, Robinson and Lawrence",GB,retail,5311,active,2025-01-09T08:26:58Z,2025-01-09T08:26:58Z
+mer_bf716d6ea0504523,Blake and Sons,ES,travel,4722,active,2023-04-08T17:54:29Z,2023-04-08T17:54:29Z
+mer_9624680262314e47,"Henderson, Ramirez and Lewis",ES,gaming,7994,active,2024-06-03T07:24:41Z,2024-06-03T07:24:41Z
+mer_3e81cf7509e54028,Garcia-James,DE,gaming,7994,active,2023-09-04T10:17:32Z,2023-09-04T10:17:32Z
+mer_1091ee5f18ba4ece,Abbott-Munoz,AU,gaming,7994,active,2024-09-13T23:12:56Z,2024-09-13T23:12:56Z
+mer_db555fe8c80c451f,Blair PLC,JP,e-commerce,5399,active,2025-03-12T08:13:04Z,2025-03-12T08:13:04Z
+mer_69d122586e1741d2,Dudley Group,JP,healthcare,8099,active,2023-07-30T01:30:04Z,2023-07-30T01:30:04Z
+mer_f95610e459bd45f3,Arnold Ltd,GB,gaming,7994,active,2025-09-11T12:51:54Z,2025-09-11T12:51:54Z
+mer_063a663b60c0414b,"Mcclure, Ward and Lee",GB,e-commerce,5399,active,2026-01-19T21:18:01Z,2026-01-19T21:18:01Z
+mer_6c49fd00b15545db,Williams and Sons,DE,saas,5734,active,2024-03-25T06:41:24Z,2024-03-25T06:41:24Z
+mer_af106aa3bbdf4ef9,Galloway-Wyatt,CA,education,8299,active,2025-12-11T03:39:02Z,2025-12-11T03:39:02Z
+mer_578efd7a28274837,James Group,NG,gaming,7994,active,2024-02-18T02:36:18Z,2024-02-18T02:36:18Z
+mer_ff031e6116d746db,"Flowers, Martin and Kelly",NG,saas,5734,active,2025-10-30T21:40:00Z,2025-10-30T21:40:00Z
+mer_bddad3cee5964abf,"Adams, Zuniga and Wong",SG,food_delivery,5812,active,2023-12-08T11:42:12Z,2023-12-08T11:42:12Z
+mer_57330edc10754359,"Reid, Ferguson and Sanchez",NG,retail,5311,active,2024-03-04T19:27:50Z,2024-03-04T19:27:50Z
+mer_0f53cdef81354cdf,Gray-Mayo,FR,e-commerce,5399,active,2024-03-19T11:08:52Z,2024-03-19T11:08:52Z
+mer_aa68cd2a8b344ed7,"Watts, Robinson and Nguyen",DE,healthcare,8099,active,2024-05-18T13:43:13Z,2024-05-18T13:43:13Z
+mer_bf7ab8170f194cc0,Perez Inc,NG,gaming,7994,active,2024-02-22T22:54:32Z,2024-02-22T22:54:32Z
+mer_8952f7faafcc47fc,Morales-Jones,US,education,8299,active,2023-11-06T14:15:21Z,2023-11-06T14:15:21Z
+mer_25724a2d140d4c6a,"Walter, Edwards and Rios",US,retail,5311,active,2025-07-13T22:08:48Z,2025-07-13T22:08:48Z
+mer_61623b505ea94996,Wilkerson-Day,BR,healthcare,8099,active,2025-09-21T03:18:04Z,2025-09-21T03:18:04Z
+mer_166bd017558a43b6,Baker and Sons,SG,marketplace,5999,active,2025-05-29T04:08:02Z,2025-05-29T04:08:02Z
+mer_fd2a65826b664962,"Hoffman, Baker and Richards",ES,e-commerce,5399,active,2023-09-15T23:37:58Z,2023-09-15T23:37:58Z
+mer_80adb9f291eb4fd9,"Ross, Robinson and Bright",DE,healthcare,8099,active,2025-10-11T03:21:26Z,2025-10-11T03:21:26Z
+mer_6097f0e275454a85,"Snyder, Campos and Callahan",US,education,8299,closed,2025-06-28T14:25:46Z,2025-06-28T14:25:46Z
+mer_3229a4a0792d44ea,Burton Ltd,DE,e-commerce,5399,active,2026-02-18T10:25:14Z,2026-02-18T10:25:14Z
+mer_8f2cdd915a974d0b,Carlson-Cruz,NG,retail,5311,active,2024-05-17T03:34:51Z,2024-05-17T03:34:51Z
+mer_9febaea0c9144182,"Ferrell, Rice and Maddox",ES,travel,4722,active,2025-02-02T00:50:25Z,2025-02-02T00:50:25Z
+mer_3a874c5564d34500,Frazier Inc,ES,travel,4722,active,2025-05-15T06:49:11Z,2025-05-15T06:49:11Z
+mer_4a64764684a24551,"Dyer, Potter and Mack",US,saas,5734,active,2025-11-25T00:29:52Z,2025-11-25T00:29:52Z
+mer_ba07582fb1444885,Rodriguez-Graham,GB,retail,5311,active,2025-10-30T15:40:19Z,2025-10-30T15:40:19Z
+mer_40d906296b72477a,Smith-Bowen,JP,marketplace,5999,active,2025-07-14T13:07:28Z,2025-07-14T13:07:28Z
+mer_1537a64ce98c40ca,"Baker, Mason and White",FR,gaming,7994,active,2025-04-26T16:09:29Z,2025-04-26T16:09:29Z
+mer_a409b77d66414fdf,Harrell LLC,GB,gaming,7994,active,2024-07-19T08:34:28Z,2024-07-19T08:34:28Z
+mer_05f606ae34d448b0,"Romero, Gonzalez and Brooks",SG,saas,5734,active,2023-08-09T17:00:32Z,2023-08-09T17:00:32Z
+mer_3955028270134fa3,Ryan PLC,ES,retail,5311,active,2023-10-11T00:18:31Z,2023-10-11T00:18:31Z
+mer_e2d550086d6d4c8e,George Group,US,retail,5311,active,2023-12-11T03:59:46Z,2023-12-11T03:59:46Z
+mer_2bbe2da533fa44b8,Rodriguez LLC,JP,healthcare,8099,active,2024-02-21T16:01:34Z,2024-02-21T16:01:34Z
+mer_d51e82250f3d4136,Allen-Allen,BR,food_delivery,5812,closed,2024-07-25T21:14:33Z,2024-07-25T21:14:33Z
+mer_6f17655d551e45e3,"Arroyo, Miller and Tucker",JP,gaming,7994,active,2025-02-07T05:10:18Z,2025-02-07T05:10:18Z
+mer_8bda0f9b02df4c4a,Spence PLC,DE,food_delivery,5812,active,2024-03-12T16:56:27Z,2024-03-12T16:56:27Z
+mer_92e60268752e48a5,Anderson Group,AU,retail,5311,active,2024-03-21T02:54:57Z,2024-03-21T02:54:57Z
+mer_4bcb431bd43c49cf,"Martin, Rose and Obrien",NG,saas,5734,active,2026-04-02T05:50:24Z,2026-04-02T05:50:24Z
+mer_470b128eb4c647c2,Hickman Ltd,CA,saas,5734,active,2023-05-17T10:46:36Z,2023-05-17T10:46:36Z
+mer_e0cd013d1ed84db5,"Harris, Collins and Carney",NG,food_delivery,5812,active,2024-06-04T06:00:06Z,2024-06-04T06:00:06Z

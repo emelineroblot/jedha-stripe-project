@@ -1,0 +1,9 @@
+payment_method_sk,type,brand,is_digital
+1,bank_transfer,,False
+2,card,amex,False
+3,card,discover,False
+4,card,mastercard,False
+5,card,visa,False
+6,wallet,apple_pay,True
+7,wallet,google_pay,True
+8,wallet,paypal,True

@@ -1,0 +1,12 @@
+country_code,name,region,data_region,gdpr_applies
+FR,France,Europe,EU,True
+DE,Germany,Europe,EU,True
+ES,Spain,Europe,EU,True
+GB,United Kingdom,Europe,EU,True
+US,United States,North America,US,False
+CA,Canada,North America,US,False
+BR,Brazil,South America,US,False
+SG,Singapore,Asia,APAC,False
+JP,Japan,Asia,APAC,False
+AU,Australia,Oceania,APAC,False
+NG,Nigeria,Africa,EU,False

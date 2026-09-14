@@ -1,102 +1,197 @@
 // ============================================================
-// STRIPE — STAR SCHEMA OLAP
+// STRIPE — STAR SCHEMA OLAP (Amazon Redshift)
 // À coller sur https://dbdiagram.io
+//
+// Grain de fact_transactions : 1 ligne = 1 transaction OLTP (grain atomique).
+// Les agrégats (agg_*) sont dérivés par dbt, jamais saisis.
+//
+// Distribution Redshift (voir sql/ddl_olap.sql) :
+//   fact_transactions  DISTKEY(merchant_sk) SORTKEY(date_sk)
+//   dimensions         DISTSTYLE ALL (petites, répliquées sur chaque nœud → jointures locales)
+//   agg_*              DISTKEY(merchant_sk) / SORTKEY(date_sk ou year_month)
 // ============================================================
 
-// --- Table de faits centrale ---
+// ───────────────────────── Table de faits ─────────────────────────
 
 Table fact_transactions {
-  transaction_sk    bigint        [pk, increment]  // surrogate key
-  transaction_id    varchar       [not null]        // natural key (OLTP)
-  date_sk           int           [ref: > dim_date.date_sk]
-  merchant_sk       int           [ref: > dim_merchant.merchant_sk]
-  customer_sk       int           [ref: > dim_customer.customer_sk]
-  geography_sk      int           [ref: > dim_geography.geography_sk]
-  payment_method_sk int           [ref: > dim_payment_method.payment_method_sk]
-  amount            decimal(12,2) [not null]
-  amount_usd        decimal(12,2) [not null]  // normalisé pour comparaisons multi-devises
-  is_fraud          boolean       [default: false]
-  is_refunded       boolean       [default: false]
+  transaction_sk    bigint        [pk, increment]
+  transaction_id    varchar       [not null, unique, note: 'clé naturelle OLTP — idempotence des chargements']
+  date_sk           int           [not null, ref: > dim_date.date_sk]
+  hour_of_day       smallint      [not null, note: 'analyse intra-journalière']
+  merchant_sk       int           [not null, ref: > dim_merchant.merchant_sk]
+  customer_sk       int           [not null, ref: > dim_customer.customer_sk]
+  geography_sk      int           [not null, ref: > dim_geography.geography_sk, note: 'pays de la transaction (géoloc IP)']
+  payment_method_sk int           [not null, ref: > dim_payment_method.payment_method_sk]
+  product_sk        int           [ref: > dim_product.product_sk]
+  currency_sk       int           [not null, ref: > dim_currency.currency_sk]
+  status            varchar       [not null]                  // succeeded, failed
+  amount            decimal(14,2) [not null, note: 'devise d origine']
+  amount_usd        decimal(14,2) [not null, note: 'taux du jour de la transaction']
+  fee_usd           decimal(14,2) [not null, note: 'commission Stripe (2.9 % + 0.30)']
+  net_amount_usd    decimal(14,2) [not null, note: 'amount_usd - fee_usd - refund_amount_usd']
+  refund_amount_usd decimal(14,2) [not null, default: 0]
+  is_refunded       boolean       [not null, default: false]
+  is_disputed       boolean       [not null, default: false]
+  is_fraud_flagged  boolean       [not null, default: false, note: 'fraud_indicators.risk_level >= high']
+  is_subscription   boolean       [not null, default: false]
   anomaly_score     decimal(5,4)
-  loaded_at         timestamp     [not null]  // horodatage ETL
+  risk_level        varchar
+  device_type       varchar
+  loaded_at         timestamp     [not null, note: 'horodatage ETL']
 }
 
-// --- Dimensions ---
+// ───────────────────────── Dimensions ─────────────────────────
 
 Table dim_date {
-  date_sk      int     [pk]
-  full_date    date    [not null, unique]
-  year         int
-  quarter      int     // 1-4
-  month        int     // 1-12
-  month_name   varchar
-  week         int     // 1-53
-  day          int     // 1-31
-  day_of_week  int     // 1=lundi, 7=dimanche
-  is_weekend   boolean
-  is_holiday   boolean
+  date_sk        int     [pk, note: 'YYYYMMDD']
+  full_date      date    [not null, unique]
+  year           int     [not null]
+  quarter        int     [not null]
+  month          int     [not null]
+  month_name     varchar [not null]
+  week_of_year   int     [not null]
+  day            int     [not null]
+  day_of_week    int     [not null, note: '1 = lundi … 7 = dimanche']
+  day_name       varchar [not null]
+  is_weekend     boolean [not null]
+  is_holiday     boolean [not null, default: false]
+  fiscal_year    int
+  fiscal_quarter int
 }
 
 Table dim_merchant {
-  merchant_sk   int     [pk, increment]
-  merchant_id   varchar [not null]  // natural key (OLTP)
+  merchant_sk   int        [pk, increment]
+  merchant_id   varchar    [not null, note: 'clé naturelle']
   name          varchar
   category      varchar
+  mcc           char(4)
   country_code  varchar(2)
   region        varchar
-  scd_start     date    // SCD type 2 : date de début de validité
-  scd_end       date    // SCD type 2 : date de fin (null = actif)
-  is_current    boolean [default: true]
+  status        varchar
+  scd_start     date       [not null, note: 'SCD Type 2 — début de validité']
+  scd_end       date       [note: 'null = version courante']
+  is_current    boolean    [not null, default: true]
+  indexes {
+    (merchant_id, is_current)
+  }
 }
 
 Table dim_customer {
-  customer_sk  int     [pk, increment]
-  customer_id  varchar [not null]  // natural key (OLTP)
-  country_code varchar(2)
-  region       varchar
-  segment      varchar  // low_value, mid_value, high_value
-  scd_start    date
-  scd_end      date
-  is_current   boolean  [default: true]
+  customer_sk        int        [pk, increment]
+  customer_id        varchar    [not null, note: 'clé naturelle — supprimée lors d un effacement RGPD']
+  email_hash         varchar    [note: 'SHA-256 salé — jamais l email en clair dans l OLAP']
+  country_code       varchar(2)
+  region             varchar
+  data_region        varchar(4)
+  segment            varchar    [note: 'low_value / mid_value / high_value — calculé par dbt (déciles de dépense 12 mois)']
+  acquisition_month  date
+  scd_start          date       [not null]
+  scd_end            date
+  is_current         boolean    [not null, default: true]
+  indexes {
+    (customer_id, is_current)
+  }
 }
 
 Table dim_geography {
-  geography_sk int     [pk, increment]
-  country_code varchar(2) [not null]
+  geography_sk int        [pk, increment]
+  country_code varchar(2) [not null, unique]
   country_name varchar
   region       varchar
-  timezone     varchar
+  data_region  varchar(4)
+  gdpr_applies boolean
 }
 
 Table dim_payment_method {
   payment_method_sk int     [pk, increment]
-  type              varchar [not null]  // card, bank_transfer, wallet
-  brand             varchar             // visa, mastercard, amex
-  is_digital        boolean
+  type              varchar [not null]   // card, bank_transfer, wallet
+  brand             varchar              // visa, mastercard, amex, discover
+  is_digital        boolean [not null]
+  indexes {
+    (type, brand) [unique]
+  }
 }
 
-// --- Tables de pré-agrégation ---
+Table dim_product {
+  product_sk       int     [pk, increment]
+  product_id       varchar [not null, unique]
+  merchant_id      varchar
+  name             varchar
+  billing_interval varchar [note: 'null = one-off']
+  unit_price       decimal(14,2)
+  currency_code    varchar(3)
+}
+
+Table dim_currency {
+  currency_sk    int        [pk, increment]
+  currency_code  varchar(3) [not null, unique]
+  name           varchar
+  decimal_places smallint
+}
+
+Table exchange_rates {
+  rate_date      date          [not null]
+  currency_code  varchar(3)    [not null]
+  rate_to_usd    decimal(18,8) [not null]
+  indexes {
+    (rate_date, currency_code) [pk]
+  }
+}
+
+// ───────────────────────── Faits secondaires ─────────────────────────
+
+Table fact_audit_events {
+  audit_sk     bigint  [pk, increment]
+  audit_id     varchar [not null, unique]
+  date_sk      int     [not null, ref: > dim_date.date_sk]
+  event_type   varchar [not null]
+  table_name   varchar
+  user_role    varchar [not null]
+  user_id_hash varchar [not null]
+  is_sensitive boolean [not null, note: 'accès à payment_methods / customers / export']
+  Note: 'Alimentée depuis audit_logs (OLTP) — reporting de conformité PCI-DSS Req 10'
+}
+
+Table ml_churn_predictions {
+  merchant_sk       int           [ref: > dim_merchant.merchant_sk]
+  prediction_date   date
+  churn_probability decimal(5,4)
+  risk_category     varchar
+  model_version     varchar
+  indexes {
+    (merchant_sk, prediction_date) [pk]
+  }
+}
+
+// ───────────────────────── Tables de pré-agrégation (dbt, refresh nocturne) ─────────────────────────
 
 Table agg_daily_revenue {
-  date_sk           int           [ref: > dim_date.date_sk]
-  merchant_sk       int           [ref: > dim_merchant.merchant_sk]
-  currency_code     varchar(3)
-  total_amount      decimal(14,2)
-  total_amount_usd  decimal(14,2)
-  transaction_count int
-  fraud_count       int
-  refund_count      int
+  date_sk            int           [ref: > dim_date.date_sk]
+  merchant_sk        int           [ref: > dim_merchant.merchant_sk]
+  currency_code      varchar(3)
+  transaction_count  int
+  succeeded_count    int
+  failed_count       int
+  total_amount       decimal(16,2)
+  total_amount_usd   decimal(16,2)
+  net_amount_usd     decimal(16,2)
+  refund_count       int
+  dispute_count      int
+  fraud_count        int
   indexes {
-    (date_sk, merchant_sk) [pk]
+    (date_sk, merchant_sk, currency_code) [pk]
   }
 }
 
 Table agg_monthly_fraud {
-  year_month       char(7)  // format YYYY-MM
-  geography_sk     int      [ref: > dim_geography.geography_sk]
-  total_flagged    int
-  total_critical   int
+  year_month        char(7)       [note: 'YYYY-MM']
+  geography_sk      int           [ref: > dim_geography.geography_sk]
+  total_transactions int
+  total_flagged     int
+  total_critical    int
+  total_disputed    int
   avg_anomaly_score decimal(5,4)
+  fraud_rate_pct    decimal(6,3)
   indexes {
     (year_month, geography_sk) [pk]
   }

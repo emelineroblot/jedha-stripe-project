@@ -1,0 +1,10 @@
+currency_sk,currency_code,name,decimal_places
+1,USD,US Dollar,2
+2,EUR,Euro,2
+3,GBP,British Pound,2
+4,CAD,Canadian Dollar,2
+5,BRL,Brazilian Real,2
+6,SGD,Singapore Dollar,2
+7,JPY,Japanese Yen,0
+8,AUD,Australian Dollar,2
+9,NGN,Nigerian Naira,2

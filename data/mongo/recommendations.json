@@ -1,0 +1,1552 @@
+[
+ {
+  "_id": "rec_mer_7e93736e98e64b20_2026-09",
+  "merchant_id": "mer_7e93736e98e64b20",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.87
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.76
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "card",
+    "confidence": 0.81
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_f0b9dff7acae464d_2026-09",
+  "merchant_id": "mer_f0b9dff7acae464d",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.76
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.57
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.69
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_3fa16d366dec4e99_2026-09",
+  "merchant_id": "mer_3fa16d366dec4e99",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.55
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.62
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.79
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_9d3421d554dc438e_2026-09",
+  "merchant_id": "mer_9d3421d554dc438e",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.62
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.77
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.69
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_d4421512fc7a4fc4_2026-09",
+  "merchant_id": "mer_d4421512fc7a4fc4",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.95
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.64
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "card",
+    "confidence": 0.86
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_00d78483913940ef_2026-09",
+  "merchant_id": "mer_00d78483913940ef",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.63
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.59
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "card",
+    "confidence": 0.69
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_ec160387614f4930_2026-09",
+  "merchant_id": "mer_ec160387614f4930",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.58
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.71
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.56
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_3f23ea5c8ee94c93_2026-09",
+  "merchant_id": "mer_3f23ea5c8ee94c93",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.62
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.71
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.79
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_5e545f22936e434e_2026-09",
+  "merchant_id": "mer_5e545f22936e434e",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.95
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.64
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "card",
+    "confidence": 0.71
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_19bd6853312f4552_2026-09",
+  "merchant_id": "mer_19bd6853312f4552",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.88
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.77
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.62
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_8702e6d2745d41d2_2026-09",
+  "merchant_id": "mer_8702e6d2745d41d2",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.56
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.81
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "card",
+    "confidence": 0.93
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_81638688e412411d_2026-09",
+  "merchant_id": "mer_81638688e412411d",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.86
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.81
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.61
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_7a444a3f5b8f4c52_2026-09",
+  "merchant_id": "mer_7a444a3f5b8f4c52",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.87
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.7
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.93
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_f925664d5df34a6d_2026-09",
+  "merchant_id": "mer_f925664d5df34a6d",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.8
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.83
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.75
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_21c4ecea89ab4495_2026-09",
+  "merchant_id": "mer_21c4ecea89ab4495",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.59
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.86
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.71
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_af71e58200234461_2026-09",
+  "merchant_id": "mer_af71e58200234461",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.93
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.91
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.86
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_e0d1a749ad61471c_2026-09",
+  "merchant_id": "mer_e0d1a749ad61471c",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.65
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.7
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.87
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_8895ca858acb4135_2026-09",
+  "merchant_id": "mer_8895ca858acb4135",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.81
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.93
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "card",
+    "confidence": 0.65
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_0c3bb8af99e5490b_2026-09",
+  "merchant_id": "mer_0c3bb8af99e5490b",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.58
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.81
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.94
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_120e7772e09540f6_2026-09",
+  "merchant_id": "mer_120e7772e09540f6",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.88
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.92
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.63
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_1e3cd1d5a0cb4eea_2026-09",
+  "merchant_id": "mer_1e3cd1d5a0cb4eea",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.9
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.63
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.77
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_5f93d07a309c405a_2026-09",
+  "merchant_id": "mer_5f93d07a309c405a",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.81
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.81
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.8
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_9e465d37d8034ac3_2026-09",
+  "merchant_id": "mer_9e465d37d8034ac3",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.88
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.72
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.88
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_344981c0a61c468c_2026-09",
+  "merchant_id": "mer_344981c0a61c468c",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.68
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.56
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.87
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_8769e8b94ae44434_2026-09",
+  "merchant_id": "mer_8769e8b94ae44434",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.7
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.55
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.91
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_f1f70b76f04d455e_2026-09",
+  "merchant_id": "mer_f1f70b76f04d455e",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.65
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.71
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.77
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_c3dbd714778645eb_2026-09",
+  "merchant_id": "mer_c3dbd714778645eb",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.88
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.67
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.72
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_c3d9b388706549af_2026-09",
+  "merchant_id": "mer_c3d9b388706549af",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.83
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.56
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "card",
+    "confidence": 0.86
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_8072b1efa2754374_2026-09",
+  "merchant_id": "mer_8072b1efa2754374",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.68
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.69
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.56
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_712d0b25b5a4449e_2026-09",
+  "merchant_id": "mer_712d0b25b5a4449e",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.76
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.74
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.88
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_286a8b59d38446ad_2026-09",
+  "merchant_id": "mer_286a8b59d38446ad",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.73
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.62
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.85
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_f92f9ed46a0d4590_2026-09",
+  "merchant_id": "mer_f92f9ed46a0d4590",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.57
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.73
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.75
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_bb80e4a76cb5476d_2026-09",
+  "merchant_id": "mer_bb80e4a76cb5476d",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.89
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.68
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.87
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_6be36d157b834cde_2026-09",
+  "merchant_id": "mer_6be36d157b834cde",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.82
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.55
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.92
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_ce91a8b05c5a4f54_2026-09",
+  "merchant_id": "mer_ce91a8b05c5a4f54",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.72
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.77
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.59
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_e48867e28f9b4b8d_2026-09",
+  "merchant_id": "mer_e48867e28f9b4b8d",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.82
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.83
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "card",
+    "confidence": 0.67
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_847f1ee422664fb2_2026-09",
+  "merchant_id": "mer_847f1ee422664fb2",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.56
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.93
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "card",
+    "confidence": 0.67
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_0a4fa70ccc3f4675_2026-09",
+  "merchant_id": "mer_0a4fa70ccc3f4675",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.64
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.61
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.79
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_2aa81315db7b4610_2026-09",
+  "merchant_id": "mer_2aa81315db7b4610",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.82
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.64
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "card",
+    "confidence": 0.85
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_e9d33473c7e54b84_2026-09",
+  "merchant_id": "mer_e9d33473c7e54b84",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.89
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.63
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.84
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_c8dfde11697345b6_2026-09",
+  "merchant_id": "mer_c8dfde11697345b6",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.59
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.81
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.56
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_d45235e868cc4abb_2026-09",
+  "merchant_id": "mer_d45235e868cc4abb",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.71
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.9
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.61
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_80d7fa91a7d14a1b_2026-09",
+  "merchant_id": "mer_80d7fa91a7d14a1b",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.89
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.91
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.69
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_7b89a89bae4a4bde_2026-09",
+  "merchant_id": "mer_7b89a89bae4a4bde",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.57
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.75
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.63
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_772c9525389c4ebc_2026-09",
+  "merchant_id": "mer_772c9525389c4ebc",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.82
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.67
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "card",
+    "confidence": 0.65
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_c626d90d1ca64aa6_2026-09",
+  "merchant_id": "mer_c626d90d1ca64aa6",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.94
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.88
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.58
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_e45e0907a2fa44e2_2026-09",
+  "merchant_id": "mer_e45e0907a2fa44e2",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.68
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.74
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.69
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_550fb7c166684fd6_2026-09",
+  "merchant_id": "mer_550fb7c166684fd6",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.68
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "bank_transfer",
+    "confidence": 0.64
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "wallet",
+    "confidence": 0.83
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_1cbdcefbad454faa_2026-09",
+  "merchant_id": "mer_1cbdcefbad454faa",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "wallet",
+    "confidence": 0.6
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "card",
+    "confidence": 0.77
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "card",
+    "confidence": 0.72
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ },
+ {
+  "_id": "rec_mer_05819d65f1a84a57_2026-09",
+  "merchant_id": "mer_05819d65f1a84a57",
+  "generated_at": {
+   "$date": "2026-09-01T03:00:00Z"
+  },
+  "valid_from": {
+   "$date": "2026-09-01T00:00:00Z"
+  },
+  "valid_until": {
+   "$date": "2026-10-01T00:00:00Z"
+  },
+  "recommendations": [
+   {
+    "segment": "high_value",
+    "suggested_method": "card",
+    "confidence": 0.65
+   },
+   {
+    "segment": "mid_value",
+    "suggested_method": "wallet",
+    "confidence": 0.7
+   },
+   {
+    "segment": "low_value",
+    "suggested_method": "card",
+    "confidence": 0.89
+   }
+  ],
+  "model_version": "personalization-v1.3"
+ }
+]

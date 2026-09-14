@@ -1,0 +1,4360 @@
+[
+ {
+  "_id": "fbk_16182810e5",
+  "customer_id": "cus_6b60e25d3f03469b",
+  "merchant_id": "mer_0c3bb8af99e5490b",
+  "merchant_name": "Adams, Zuniga and Wong",
+  "country_code": "NG",
+  "transaction_id": "ch_f7c2e4e48cc94444",
+  "submitted_at": {
+   "$date": "2026-07-15T20:54:27Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 4
+  },
+  "nps_score": 6,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.92,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_fb336f0dba",
+  "customer_id": "cus_a4778014a0264c77",
+  "merchant_id": "mer_8072b1efa2754374",
+  "merchant_name": "Ross, Robinson and Bright",
+  "country_code": "GB",
+  "transaction_id": "ch_bfa9b627c94747fa",
+  "submitted_at": {
+   "$date": "2026-04-03T00:37:38Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 5
+  },
+  "nps_score": 9,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.56,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_2041835897",
+  "customer_id": "cus_c6690bc22a87455f",
+  "merchant_id": "mer_8072b1efa2754374",
+  "merchant_name": "Ross, Robinson and Bright",
+  "country_code": "US",
+  "transaction_id": "ch_50d5a1e19f5f44e4",
+  "submitted_at": {
+   "$date": "2026-06-06T22:29:22Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 10,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.62,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_c9f034757c",
+  "customer_id": "cus_e8a24a661cdf4f4a",
+  "merchant_id": "mer_0a4fa70ccc3f4675",
+  "merchant_name": "Baker, Mason and White",
+  "country_code": "US",
+  "transaction_id": "ch_4d217c23dfe84e3b",
+  "submitted_at": {
+   "$date": "2026-06-18T19:33:21Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 3,
+   "speed": 4
+  },
+  "nps_score": 4,
+  "text": "Fine, nothing special.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.94,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "confirmation"
+  ]
+ },
+ {
+  "_id": "fbk_fea6363cb2",
+  "customer_id": "cus_165ae15e621349cf",
+  "merchant_id": "mer_3fa16d366dec4e99",
+  "merchant_name": "Mcclain, Miller and Henderson",
+  "country_code": "BR",
+  "transaction_id": "ch_6f7e3e46603b40a3",
+  "submitted_at": {
+   "$date": "2026-04-05T19:12:24Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 2,
+   "speed": 1
+  },
+  "nps_score": 4,
+  "text": "Trop lent, j'ai failli abandonner.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.72,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "support",
+   "declined",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_d5cbe2c174",
+  "customer_id": "cus_3aeea98bbf59431e",
+  "merchant_id": "mer_f1f70b76f04d455e",
+  "merchant_name": "Wilkerson-Day",
+  "country_code": "JP",
+  "transaction_id": "ch_b2a1241b2bf6485f",
+  "submitted_at": {
+   "$date": "2026-06-03T08:37:53Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 4,
+   "speed": 3
+  },
+  "nps_score": 7,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.6,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_ef91968824",
+  "customer_id": "cus_b0118e00fb6c4e85",
+  "merchant_id": "mer_8895ca858acb4135",
+  "merchant_name": "Flowers, Martin and Kelly",
+  "country_code": "NG",
+  "transaction_id": "ch_41329f9c94794cad",
+  "submitted_at": {
+   "$date": "2026-09-07T04:02:33Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 9,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.9,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_4d9ad08887",
+  "customer_id": "cus_c7e47f9ee6294461",
+  "merchant_id": "mer_550fb7c166684fd6",
+  "merchant_name": "Martin, Rose and Obrien",
+  "country_code": "BR",
+  "transaction_id": "ch_3f7bf66516624866",
+  "submitted_at": {
+   "$date": "2026-08-20T10:34:28Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.68,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_3f375bc3b4",
+  "customer_id": "cus_be10998913774061",
+  "merchant_id": "mer_21c4ecea89ab4495",
+  "merchant_name": "Williams and Sons",
+  "country_code": "GB",
+  "transaction_id": "ch_d72d2d85f0b94810",
+  "submitted_at": {
+   "$date": "2026-08-04T11:25:06Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 7,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.69,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_43239a5c8b",
+  "customer_id": "cus_524150d4e18e4ffe",
+  "merchant_id": "mer_5f93d07a309c405a",
+  "merchant_name": "Watts, Robinson and Nguyen",
+  "country_code": "JP",
+  "transaction_id": "ch_f734d87aa8ee4639",
+  "submitted_at": {
+   "$date": "2025-12-30T07:15:57Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.72,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_3f9a829ba6",
+  "customer_id": "cus_c6690bc22a87455f",
+  "merchant_id": "mer_7b89a89bae4a4bde",
+  "merchant_name": "Allen-Allen",
+  "country_code": "US",
+  "transaction_id": "ch_0b3d67a955a0480c",
+  "submitted_at": {
+   "$date": "2026-01-11T21:55:58Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 4
+  },
+  "nps_score": 10,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.64,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "ux",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_e3e77ada28",
+  "customer_id": "cus_e8a24a661cdf4f4a",
+  "merchant_id": "mer_c8dfde11697345b6",
+  "merchant_name": "Ryan PLC",
+  "country_code": "US",
+  "transaction_id": "ch_ab743d3a17504a59",
+  "submitted_at": {
+   "$date": "2026-06-15T13:26:58Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.78,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "checkout",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_e9f1c53ae4",
+  "customer_id": "cus_ce617ae72ae348d8",
+  "merchant_id": "mer_e48867e28f9b4b8d",
+  "merchant_name": "Rodriguez-Graham",
+  "country_code": "FR",
+  "transaction_id": "ch_ada3fcf62f2a4ec5",
+  "submitted_at": {
+   "$date": "2026-05-15T17:27:04Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 8,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.98,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_1669435071",
+  "customer_id": "cus_0752fc8f68d34204",
+  "merchant_id": "mer_e48867e28f9b4b8d",
+  "merchant_name": "Rodriguez-Graham",
+  "country_code": "DE",
+  "transaction_id": "ch_cbbf8b9f9891457e",
+  "submitted_at": {
+   "$date": "2026-05-09T12:05:02Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 1,
+   "ease_of_payment": 2,
+   "speed": 2
+  },
+  "nps_score": 0,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.57,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "declined",
+   "support"
+  ]
+ },
+ {
+  "_id": "fbk_5de9ae7f17",
+  "customer_id": "cus_adcf6870721646e5",
+  "merchant_id": "mer_7b89a89bae4a4bde",
+  "merchant_name": "Allen-Allen",
+  "country_code": "US",
+  "transaction_id": "ch_6eac650772984780",
+  "submitted_at": {
+   "$date": "2026-06-06T22:41:31Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 4
+  },
+  "nps_score": 6,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.96,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_2b1da96953",
+  "customer_id": "cus_7856028452c748fa",
+  "merchant_id": "mer_550fb7c166684fd6",
+  "merchant_name": "Martin, Rose and Obrien",
+  "country_code": "CA",
+  "transaction_id": "ch_e22135dce2424702",
+  "submitted_at": {
+   "$date": "2026-12-03T14:15:28Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 3,
+   "speed": 4
+  },
+  "nps_score": 6,
+  "text": "Correct mais la confirmation met du temps.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.79,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "confirmation"
+  ]
+ },
+ {
+  "_id": "fbk_9a2795caf3",
+  "customer_id": "cus_ad01b17db72e4e04",
+  "merchant_id": "mer_8769e8b94ae44434",
+  "merchant_name": "Walter, Edwards and Rios",
+  "country_code": "BR",
+  "transaction_id": "ch_af6c1c7124874ed3",
+  "submitted_at": {
+   "$date": "2026-02-17T19:02:32Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 3,
+   "speed": 2
+  },
+  "nps_score": 7,
+  "text": "Fine, nothing special.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.97,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_a4cc626fd8",
+  "customer_id": "cus_110a6ff8e89f4650",
+  "merchant_id": "mer_9d3421d554dc438e",
+  "merchant_name": "Davis and Sons",
+  "country_code": "SG",
+  "transaction_id": "ch_82e59bac184847b1",
+  "submitted_at": {
+   "$date": "2025-12-02T11:51:12Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.58,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_db7d7f950d",
+  "customer_id": "cus_aac2be715f3f4697",
+  "merchant_id": "mer_f92f9ed46a0d4590",
+  "merchant_name": "Carlson-Cruz",
+  "country_code": "GB",
+  "transaction_id": "ch_ccfe0784b5a54fbb",
+  "submitted_at": {
+   "$date": "2026-05-30T15:41:54Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.84,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_4d172d2e07",
+  "customer_id": "cus_627dce0eae8d4b39",
+  "merchant_id": "mer_5e545f22936e434e",
+  "merchant_name": "Garcia-James",
+  "country_code": "SG",
+  "transaction_id": "ch_27d5521e154e43f0",
+  "submitted_at": {
+   "$date": "2026-04-08T17:45:14Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 2,
+   "speed": 2
+  },
+  "nps_score": 4,
+  "text": "Correct mais la confirmation met du temps.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.59,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_4f0a14241b",
+  "customer_id": "cus_ca7430bca66a42d6",
+  "merchant_id": "mer_9e465d37d8034ac3",
+  "merchant_name": "Perez Inc",
+  "country_code": "CA",
+  "transaction_id": "ch_853a3e15fb384ece",
+  "submitted_at": {
+   "$date": "2026-08-10T16:25:03Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.64,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_6bfa351a1f",
+  "customer_id": "cus_471ac388583941cd",
+  "merchant_id": "mer_c626d90d1ca64aa6",
+  "merchant_name": "Spence PLC",
+  "country_code": "US",
+  "transaction_id": "ch_566f497b516b4a72",
+  "submitted_at": {
+   "$date": "2025-12-27T08:20:24Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 5
+  },
+  "nps_score": 6,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.79,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_6d83c24591",
+  "customer_id": "cus_f136522fe0be4e3c",
+  "merchant_id": "mer_550fb7c166684fd6",
+  "merchant_name": "Martin, Rose and Obrien",
+  "country_code": "SG",
+  "transaction_id": "ch_cec4a74d5c304f88",
+  "submitted_at": {
+   "$date": "2026-02-17T19:55:25Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 10,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.89,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_162e4c69f4",
+  "customer_id": "cus_7f90e9fcee0a4cc8",
+  "merchant_id": "mer_3fa16d366dec4e99",
+  "merchant_name": "Mcclain, Miller and Henderson",
+  "country_code": "AU",
+  "transaction_id": "ch_4498b6932f4e48a2",
+  "submitted_at": {
+   "$date": "2026-03-06T12:34:54Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 4,
+   "speed": 3
+  },
+  "nps_score": 6,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.65,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_0ff7286369",
+  "customer_id": "cus_bbac8b61aeb4486f",
+  "merchant_id": "mer_1cbdcefbad454faa",
+  "merchant_name": "Hickman Ltd",
+  "country_code": "AU",
+  "transaction_id": "ch_c330615b4fa7423b",
+  "submitted_at": {
+   "$date": "2026-08-14T09:45:14Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 1,
+   "ease_of_payment": 1,
+   "speed": 2
+  },
+  "nps_score": 1,
+  "text": "Trop lent, j'ai failli abandonner.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.58,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "support",
+   "speed",
+   "declined"
+  ]
+ },
+ {
+  "_id": "fbk_6017802c70",
+  "customer_id": "cus_b577f0ee9e114c72",
+  "merchant_id": "mer_f1f70b76f04d455e",
+  "merchant_name": "Wilkerson-Day",
+  "country_code": "BR",
+  "transaction_id": "ch_7ccdf761cc624757",
+  "submitted_at": {
+   "$date": "2026-07-20T18:59:08Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.55,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "ux",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_7858b44de7",
+  "customer_id": "cus_09c10a3f972c477f",
+  "merchant_id": "mer_f1f70b76f04d455e",
+  "merchant_name": "Wilkerson-Day",
+  "country_code": "GB",
+  "transaction_id": "ch_fcdc0e31cff54454",
+  "submitted_at": {
+   "$date": "2025-10-24T17:49:55Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.78,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_8af049d718",
+  "customer_id": "cus_08fe904f6fda4be8",
+  "merchant_id": "mer_d45235e868cc4abb",
+  "merchant_name": "George Group",
+  "country_code": "NG",
+  "transaction_id": "ch_1a75668980544f84",
+  "submitted_at": {
+   "$date": "2026-02-11T09:52:27Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 3
+  },
+  "nps_score": 6,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.71,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "speed",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_fa7f9358de",
+  "customer_id": "cus_e8e5aa29a2c044e8",
+  "merchant_id": "mer_f1f70b76f04d455e",
+  "merchant_name": "Wilkerson-Day",
+  "country_code": "US",
+  "transaction_id": "ch_ba27474871b84227",
+  "submitted_at": {
+   "$date": "2026-06-26T01:11:42Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 4,
+   "speed": 4
+  },
+  "nps_score": 8,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.92,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_fe1f3aceef",
+  "customer_id": "cus_cef939bb7fa5482d",
+  "merchant_id": "mer_21c4ecea89ab4495",
+  "merchant_name": "Williams and Sons",
+  "country_code": "NG",
+  "transaction_id": "ch_5733e75313394a21",
+  "submitted_at": {
+   "$date": "2026-09-09T07:13:41Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 4
+  },
+  "nps_score": 9,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.88,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_880edad784",
+  "customer_id": "cus_4d0a04df22514499",
+  "merchant_id": "mer_7b89a89bae4a4bde",
+  "merchant_name": "Allen-Allen",
+  "country_code": "JP",
+  "transaction_id": "ch_4611f5fc90ab457c",
+  "submitted_at": {
+   "$date": "2026-02-28T19:05:35Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 1,
+   "ease_of_payment": 1,
+   "speed": 1
+  },
+  "nps_score": 0,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.68,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "declined",
+   "checkout",
+   "support"
+  ]
+ },
+ {
+  "_id": "fbk_1cfb3fec22",
+  "customer_id": "cus_bf999a31ec7047ad",
+  "merchant_id": "mer_f0b9dff7acae464d",
+  "merchant_name": "Doyle Ltd",
+  "country_code": "FR",
+  "transaction_id": "ch_dba50b7863fb4891",
+  "submitted_at": {
+   "$date": "2026-03-09T09:27:08Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 9,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.57,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "speed",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_4b36169ba6",
+  "customer_id": "cus_d0229167ebb44d7d",
+  "merchant_id": "mer_f1f70b76f04d455e",
+  "merchant_name": "Wilkerson-Day",
+  "country_code": "JP",
+  "transaction_id": "ch_625ea953bede40c4",
+  "submitted_at": {
+   "$date": "2026-02-20T19:15:47Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.67,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_2bdfcfd87d",
+  "customer_id": "cus_429b0b72f1ed44f8",
+  "merchant_id": "mer_550fb7c166684fd6",
+  "merchant_name": "Martin, Rose and Obrien",
+  "country_code": "NG",
+  "transaction_id": "ch_bd0ed3e3e80b4b64",
+  "submitted_at": {
+   "$date": "2026-08-03T13:11:10Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 2,
+   "speed": 2
+  },
+  "nps_score": 3,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.77,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "declined"
+  ]
+ },
+ {
+  "_id": "fbk_84252660a8",
+  "customer_id": "cus_97c7adec608b445c",
+  "merchant_id": "mer_c8dfde11697345b6",
+  "merchant_name": "Ryan PLC",
+  "country_code": "US",
+  "transaction_id": "ch_388273794dc5476a",
+  "submitted_at": {
+   "$date": "2026-02-07T17:22:28Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 3
+  },
+  "nps_score": 7,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.63,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_b3677dfe82",
+  "customer_id": "cus_726723467b5b49bb",
+  "merchant_id": "mer_f925664d5df34a6d",
+  "merchant_name": "Mcclure, Ward and Lee",
+  "country_code": "GB",
+  "transaction_id": "ch_553d31080aa1434e",
+  "submitted_at": {
+   "$date": "2026-05-12T14:04:57Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 1,
+   "ease_of_payment": 1,
+   "speed": 1
+  },
+  "nps_score": 1,
+  "text": "Trop lent, j'ai failli abandonner.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.98,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "declined",
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_5f0101b9cb",
+  "customer_id": "cus_7856028452c748fa",
+  "merchant_id": "mer_0a4fa70ccc3f4675",
+  "merchant_name": "Baker, Mason and White",
+  "country_code": "CA",
+  "transaction_id": "ch_79c3d23f1e4b4e2f",
+  "submitted_at": {
+   "$date": "2026-08-17T16:36:10Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 2,
+   "speed": 3
+  },
+  "nps_score": 2,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.71,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "declined"
+  ]
+ },
+ {
+  "_id": "fbk_a7b6b9326d",
+  "customer_id": "cus_374de618246e463f",
+  "merchant_id": "mer_e48867e28f9b4b8d",
+  "merchant_name": "Rodriguez-Graham",
+  "country_code": "US",
+  "transaction_id": "ch_5928a66509b4445c",
+  "submitted_at": {
+   "$date": "2025-10-15T14:00:22Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 9,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.97,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_b3ed5c31cb",
+  "customer_id": "cus_b02b38d87eae4ab8",
+  "merchant_id": "mer_c626d90d1ca64aa6",
+  "merchant_name": "Spence PLC",
+  "country_code": "FR",
+  "transaction_id": "ch_8dc75bdfb7454255",
+  "submitted_at": {
+   "$date": "2026-01-13T11:35:45Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 4
+  },
+  "nps_score": 10,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.6,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "speed",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_8641353500",
+  "customer_id": "cus_5e7e5a529a614071",
+  "merchant_id": "mer_7b89a89bae4a4bde",
+  "merchant_name": "Allen-Allen",
+  "country_code": "AU",
+  "transaction_id": "ch_f700d53109d74aa3",
+  "submitted_at": {
+   "$date": "2026-04-10T16:41:41Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 7,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.6,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_a1e4c46e94",
+  "customer_id": "cus_a4af187602744690",
+  "merchant_id": "mer_e9d33473c7e54b84",
+  "merchant_name": "Romero, Gonzalez and Brooks",
+  "country_code": "DE",
+  "transaction_id": "ch_b61a8edb02884bf3",
+  "submitted_at": {
+   "$date": "2026-07-16T20:32:40Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.68,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "checkout",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_583ee4f5b5",
+  "customer_id": "cus_429b0b72f1ed44f8",
+  "merchant_id": "mer_550fb7c166684fd6",
+  "merchant_name": "Martin, Rose and Obrien",
+  "country_code": "NG",
+  "transaction_id": "ch_2ee8484ca32c4971",
+  "submitted_at": {
+   "$date": "2026-09-03T13:11:10Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.67,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_92677eee92",
+  "customer_id": "cus_54bbdd7200a144ad",
+  "merchant_id": "mer_d4421512fc7a4fc4",
+  "merchant_name": "Guzman, Hoffman and Baldwin",
+  "country_code": "SG",
+  "transaction_id": "ch_3c09c7b2295746af",
+  "submitted_at": {
+   "$date": "2026-03-04T10:36:35Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 3,
+   "speed": 3
+  },
+  "nps_score": 3,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.72,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "support",
+   "declined"
+  ]
+ },
+ {
+  "_id": "fbk_2a3476abf3",
+  "customer_id": "cus_f61655b6a81f4afe",
+  "merchant_id": "mer_c626d90d1ca64aa6",
+  "merchant_name": "Spence PLC",
+  "country_code": "SG",
+  "transaction_id": "ch_543381e222e84a46",
+  "submitted_at": {
+   "$date": "2025-11-19T14:15:18Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 6,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.61,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_88f6496b1b",
+  "customer_id": "cus_6c7d78dd00e241ef",
+  "merchant_id": "mer_d45235e868cc4abb",
+  "merchant_name": "George Group",
+  "country_code": "BR",
+  "transaction_id": "ch_dff714031a4d4b81",
+  "submitted_at": {
+   "$date": "2026-02-23T19:12:22Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 5
+  },
+  "nps_score": 9,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.8,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_b4464a555c",
+  "customer_id": "cus_aac2be715f3f4697",
+  "merchant_id": "mer_f1f70b76f04d455e",
+  "merchant_name": "Wilkerson-Day",
+  "country_code": "GB",
+  "transaction_id": "ch_f4053de714cc4ebb",
+  "submitted_at": {
+   "$date": "2026-07-28T11:06:54Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.88,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "checkout",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_42e3e62496",
+  "customer_id": "cus_a4778014a0264c77",
+  "merchant_id": "mer_286a8b59d38446ad",
+  "merchant_name": "Burton Ltd",
+  "country_code": "GB",
+  "transaction_id": "ch_44842b96dde44aa5",
+  "submitted_at": {
+   "$date": "2026-01-03T17:37:12Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.68,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_83d645d371",
+  "customer_id": "cus_1d14fdc5b20d4aff",
+  "merchant_id": "mer_c8dfde11697345b6",
+  "merchant_name": "Ryan PLC",
+  "country_code": "GB",
+  "transaction_id": "ch_d9f8ad6246684fd5",
+  "submitted_at": {
+   "$date": "2026-08-26T15:17:24Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 4
+  },
+  "nps_score": 6,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.57,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_a84c68673b",
+  "customer_id": "cus_0666920453bf4766",
+  "merchant_id": "mer_ec160387614f4930",
+  "merchant_name": "Blake and Sons",
+  "country_code": "AU",
+  "transaction_id": "ch_06e9e242b98a40f9",
+  "submitted_at": {
+   "$date": "2026-06-07T15:42:32Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 3,
+   "speed": 3
+  },
+  "nps_score": 4,
+  "text": "Ça fonctionne, rien de spécial.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.72,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_21a76e4309",
+  "customer_id": "cus_df3d8549e83247a0",
+  "merchant_id": "mer_81638688e412411d",
+  "merchant_name": "Dudley Group",
+  "country_code": "DE",
+  "transaction_id": "ch_f0fdf2ab2aee4877",
+  "submitted_at": {
+   "$date": "2026-04-24T21:09:07Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 6,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.8,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_6cd6db4e95",
+  "customer_id": "cus_0666920453bf4766",
+  "merchant_id": "mer_0a4fa70ccc3f4675",
+  "merchant_name": "Baker, Mason and White",
+  "country_code": "AU",
+  "transaction_id": "ch_c8761d5fed834309",
+  "submitted_at": {
+   "$date": "2025-10-10T19:26:53Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 3,
+   "speed": 2
+  },
+  "nps_score": 7,
+  "text": "Fine, nothing special.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.72,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_ac45f9e8b0",
+  "customer_id": "cus_ab7a77dfb2894628",
+  "merchant_id": "mer_ce91a8b05c5a4f54",
+  "merchant_name": "Dyer, Potter and Mack",
+  "country_code": "SG",
+  "transaction_id": "ch_2b3f79361c6f477b",
+  "submitted_at": {
+   "$date": "2026-06-01T01:13:02Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 3,
+   "speed": 2
+  },
+  "nps_score": 6,
+  "text": "Ça fonctionne, rien de spécial.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.78,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "confirmation"
+  ]
+ },
+ {
+  "_id": "fbk_eb14968728",
+  "customer_id": "cus_b02b38d87eae4ab8",
+  "merchant_id": "mer_2aa81315db7b4610",
+  "merchant_name": "Harrell LLC",
+  "country_code": "FR",
+  "transaction_id": "ch_4896a40bf36f4efb",
+  "submitted_at": {
+   "$date": "2026-03-13T20:57:15Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.67,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_733b63dd09",
+  "customer_id": "cus_a86432579f0b43ed",
+  "merchant_id": "mer_d45235e868cc4abb",
+  "merchant_name": "George Group",
+  "country_code": "SG",
+  "transaction_id": "ch_1dd76c8827194a15",
+  "submitted_at": {
+   "$date": "2026-09-01T19:23:55Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 2,
+   "speed": 3
+  },
+  "nps_score": 4,
+  "text": "Correct mais la confirmation met du temps.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.78,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "confirmation"
+  ]
+ },
+ {
+  "_id": "fbk_3ab1ad32f1",
+  "customer_id": "cus_429b0b72f1ed44f8",
+  "merchant_id": "mer_81638688e412411d",
+  "merchant_name": "Dudley Group",
+  "country_code": "NG",
+  "transaction_id": "ch_bd7f8ae9467148e0",
+  "submitted_at": {
+   "$date": "2026-01-29T20:38:54Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 10,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.9,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_9ed49f4179",
+  "customer_id": "cus_abe95f2ea2c74a88",
+  "merchant_id": "mer_af71e58200234461",
+  "merchant_name": "Galloway-Wyatt",
+  "country_code": "BR",
+  "transaction_id": "ch_a1cc104b963743ad",
+  "submitted_at": {
+   "$date": "2025-10-31T09:45:45Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 2,
+   "speed": 2
+  },
+  "nps_score": 5,
+  "text": "Ça fonctionne, rien de spécial.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.83,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "confirmation"
+  ]
+ },
+ {
+  "_id": "fbk_b1f632b31e",
+  "customer_id": "cus_37ed0e6cebc94497",
+  "merchant_id": "mer_af71e58200234461",
+  "merchant_name": "Galloway-Wyatt",
+  "country_code": "DE",
+  "transaction_id": "ch_12c0b7fc4b254a61",
+  "submitted_at": {
+   "$date": "2026-01-10T10:30:08Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 3,
+   "speed": 4
+  },
+  "nps_score": 5,
+  "text": "Fine, nothing special.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.72,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_b60a655199",
+  "customer_id": "cus_df3d8549e83247a0",
+  "merchant_id": "mer_e9d33473c7e54b84",
+  "merchant_name": "Romero, Gonzalez and Brooks",
+  "country_code": "DE",
+  "transaction_id": "ch_0bd7b05cf7b64c83",
+  "submitted_at": {
+   "$date": "2026-12-28T14:22:22Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 1,
+   "ease_of_payment": 1,
+   "speed": 1
+  },
+  "nps_score": 1,
+  "text": "Payment failed and support never answered.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.82,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_08dd143bde",
+  "customer_id": "cus_6b60e25d3f03469b",
+  "merchant_id": "mer_550fb7c166684fd6",
+  "merchant_name": "Martin, Rose and Obrien",
+  "country_code": "NG",
+  "transaction_id": "ch_db330e5d08c04c8a",
+  "submitted_at": {
+   "$date": "2026-07-26T02:17:18Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 1,
+   "speed": 3
+  },
+  "nps_score": 3,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.56,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_cd8ed76eb6",
+  "customer_id": "cus_6573843d81324d33",
+  "merchant_id": "mer_21c4ecea89ab4495",
+  "merchant_name": "Williams and Sons",
+  "country_code": "SG",
+  "transaction_id": "ch_88f0ffedb7f74684",
+  "submitted_at": {
+   "$date": "2026-09-02T14:20:38Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 7,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.63,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_47d03112bc",
+  "customer_id": "cus_a4af187602744690",
+  "merchant_id": "mer_00d78483913940ef",
+  "merchant_name": "Gardner, Robinson and Lawrence",
+  "country_code": "DE",
+  "transaction_id": "ch_dc5a68436d414b10",
+  "submitted_at": {
+   "$date": "2025-12-19T14:02:29Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 3
+  },
+  "nps_score": 8,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.97,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_b4c9c6e2e3",
+  "customer_id": "cus_df3d8549e83247a0",
+  "merchant_id": "mer_00d78483913940ef",
+  "merchant_name": "Gardner, Robinson and Lawrence",
+  "country_code": "DE",
+  "transaction_id": "ch_d1f2fbdbb4d84f93",
+  "submitted_at": {
+   "$date": "2026-01-04T19:14:16Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.63,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_6539cdb692",
+  "customer_id": "cus_6baab9fd1cc84ee1",
+  "merchant_id": "mer_c626d90d1ca64aa6",
+  "merchant_name": "Spence PLC",
+  "country_code": "AU",
+  "transaction_id": "ch_05dc969c31534d51",
+  "submitted_at": {
+   "$date": "2026-09-10T12:17:15Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 1,
+   "speed": 3
+  },
+  "nps_score": 3,
+  "text": "Payment failed and support never answered.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.65,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "checkout",
+   "support"
+  ]
+ },
+ {
+  "_id": "fbk_8168a1bebc",
+  "customer_id": "cus_4e61786eac674763",
+  "merchant_id": "mer_344981c0a61c468c",
+  "merchant_name": "Morales-Jones",
+  "country_code": "DE",
+  "transaction_id": "ch_86220618b904413e",
+  "submitted_at": {
+   "$date": "2026-08-14T04:50:36Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 1,
+   "speed": 3
+  },
+  "nps_score": 2,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.85,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "declined",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_cf7f80bf91",
+  "customer_id": "cus_8299c8388cd94def",
+  "merchant_id": "mer_c3d9b388706549af",
+  "merchant_name": "Hoffman, Baker and Richards",
+  "country_code": "FR",
+  "transaction_id": "ch_fb1da61d0dc5495b",
+  "submitted_at": {
+   "$date": "2026-05-18T10:45:10Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 3,
+   "speed": 3
+  },
+  "nps_score": 4,
+  "text": "Payment failed and support never answered.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.76,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "support",
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_04a71cb283",
+  "customer_id": "cus_1d14fdc5b20d4aff",
+  "merchant_id": "mer_7a444a3f5b8f4c52",
+  "merchant_name": "Arnold Ltd",
+  "country_code": "GB",
+  "transaction_id": "ch_0c91829eb5af4d2a",
+  "submitted_at": {
+   "$date": "2026-07-01T17:59:19Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 1,
+   "ease_of_payment": 2,
+   "speed": 1
+  },
+  "nps_score": 1,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.67,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "declined",
+   "support"
+  ]
+ },
+ {
+  "_id": "fbk_b0e3b2688d",
+  "customer_id": "cus_6c7d78dd00e241ef",
+  "merchant_id": "mer_8702e6d2745d41d2",
+  "merchant_name": "Blair PLC",
+  "country_code": "BR",
+  "transaction_id": "ch_1810f5b440714718",
+  "submitted_at": {
+   "$date": "2026-09-07T12:07:55Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 3,
+   "speed": 2
+  },
+  "nps_score": 5,
+  "text": "Payment failed and support never answered.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.88,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "support",
+   "speed",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_07933d1ac3",
+  "customer_id": "cus_92a022bd7166420a",
+  "merchant_id": "mer_c3dbd714778645eb",
+  "merchant_name": "Baker and Sons",
+  "country_code": "NG",
+  "transaction_id": "ch_d6f666b79afe46df",
+  "submitted_at": {
+   "$date": "2025-11-21T09:50:16Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 4,
+   "speed": 3
+  },
+  "nps_score": 6,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.68,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_47d3b24b93",
+  "customer_id": "cus_1d14fdc5b20d4aff",
+  "merchant_id": "mer_5f93d07a309c405a",
+  "merchant_name": "Watts, Robinson and Nguyen",
+  "country_code": "GB",
+  "transaction_id": "ch_485a6753a99343f3",
+  "submitted_at": {
+   "$date": "2026-01-21T12:31:39Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.58,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_76d8e42f46",
+  "customer_id": "cus_aac2be715f3f4697",
+  "merchant_id": "mer_bb80e4a76cb5476d",
+  "merchant_name": "Ferrell, Rice and Maddox",
+  "country_code": "GB",
+  "transaction_id": "ch_f09ccb8ee48349a8",
+  "submitted_at": {
+   "$date": "2026-03-27T18:05:27Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 3
+  },
+  "nps_score": 7,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.59,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "speed",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_88d5914003",
+  "customer_id": "cus_c7e47f9ee6294461",
+  "merchant_id": "mer_550fb7c166684fd6",
+  "merchant_name": "Martin, Rose and Obrien",
+  "country_code": "BR",
+  "transaction_id": "ch_f9e1101bcf344c8a",
+  "submitted_at": {
+   "$date": "2026-07-24T10:34:28Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 5
+  },
+  "nps_score": 6,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.61,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_c1934f83e3",
+  "customer_id": "cus_63312f31e71a4470",
+  "merchant_id": "mer_0a4fa70ccc3f4675",
+  "merchant_name": "Baker, Mason and White",
+  "country_code": "BR",
+  "transaction_id": "ch_2ca70b4c53a54225",
+  "submitted_at": {
+   "$date": "2026-01-13T10:45:39Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 3,
+   "speed": 3
+  },
+  "nps_score": 5,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.72,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "declined",
+   "speed",
+   "support"
+  ]
+ },
+ {
+  "_id": "fbk_c4d099a4a7",
+  "customer_id": "cus_7f90e9fcee0a4cc8",
+  "merchant_id": "mer_3f23ea5c8ee94c93",
+  "merchant_name": "Henderson, Ramirez and Lewis",
+  "country_code": "AU",
+  "transaction_id": "ch_780ef362adff4379",
+  "submitted_at": {
+   "$date": "2026-07-18T01:52:49Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 2,
+   "speed": 1
+  },
+  "nps_score": 4,
+  "text": "Payment failed and support never answered.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.62,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "support"
+  ]
+ },
+ {
+  "_id": "fbk_2379a7076b",
+  "customer_id": "cus_ab7a77dfb2894628",
+  "merchant_id": "mer_ce91a8b05c5a4f54",
+  "merchant_name": "Dyer, Potter and Mack",
+  "country_code": "SG",
+  "transaction_id": "ch_62e9e5e455c84277",
+  "submitted_at": {
+   "$date": "2026-03-03T01:13:02Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 9,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.94,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_06a5f27977",
+  "customer_id": "cus_91f1cd1224594833",
+  "merchant_id": "mer_5e545f22936e434e",
+  "merchant_name": "Garcia-James",
+  "country_code": "GB",
+  "transaction_id": "ch_46a93d58813f4886",
+  "submitted_at": {
+   "$date": "2026-03-21T14:02:14Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 3,
+   "speed": 2
+  },
+  "nps_score": 4,
+  "text": "Ça fonctionne, rien de spécial.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.56,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_7a49b22e69",
+  "customer_id": "cus_30f525f938cc46c6",
+  "merchant_id": "mer_bb80e4a76cb5476d",
+  "merchant_name": "Ferrell, Rice and Maddox",
+  "country_code": "US",
+  "transaction_id": "ch_3e1e274c8b134f1c",
+  "submitted_at": {
+   "$date": "2026-07-05T08:02:21Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 9,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.85,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_cbd031c533",
+  "customer_id": "cus_d08e906a1caf4bf0",
+  "merchant_id": "mer_d4421512fc7a4fc4",
+  "merchant_name": "Guzman, Hoffman and Baldwin",
+  "country_code": "SG",
+  "transaction_id": "ch_97511c76269d4482",
+  "submitted_at": {
+   "$date": "2026-02-04T21:19:36Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 3,
+   "speed": 3
+  },
+  "nps_score": 5,
+  "text": "Trop lent, j'ai failli abandonner.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.81,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "support"
+  ]
+ },
+ {
+  "_id": "fbk_8a4bf2bb15",
+  "customer_id": "cus_7856028452c748fa",
+  "merchant_id": "mer_0a4fa70ccc3f4675",
+  "merchant_name": "Baker, Mason and White",
+  "country_code": "CA",
+  "transaction_id": "ch_aa9aa1ce7a914626",
+  "submitted_at": {
+   "$date": "2026-06-14T16:36:10Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 9,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.76,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_b55f95ca91",
+  "customer_id": "cus_4f7c9bab068f474a",
+  "merchant_id": "mer_0a4fa70ccc3f4675",
+  "merchant_name": "Baker, Mason and White",
+  "country_code": "US",
+  "transaction_id": "ch_e6925e06f83e41b3",
+  "submitted_at": {
+   "$date": "2025-12-27T10:29:14Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 8,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.59,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_0433afeaf1",
+  "customer_id": "cus_cf2a6518006c4757",
+  "merchant_id": "mer_0c3bb8af99e5490b",
+  "merchant_name": "Adams, Zuniga and Wong",
+  "country_code": "DE",
+  "transaction_id": "ch_fa461d5c84d44e2a",
+  "submitted_at": {
+   "$date": "2026-02-09T19:03:51Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.63,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_f8eb49e001",
+  "customer_id": "cus_726f93ad51c04eac",
+  "merchant_id": "mer_21c4ecea89ab4495",
+  "merchant_name": "Williams and Sons",
+  "country_code": "US",
+  "transaction_id": "ch_e971a360ed834306",
+  "submitted_at": {
+   "$date": "2025-12-17T15:11:33Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 1,
+   "ease_of_payment": 1,
+   "speed": 1
+  },
+  "nps_score": 2,
+  "text": "Trop lent, j'ai failli abandonner.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.64,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_3e9c3b2563",
+  "customer_id": "cus_3b07579d64b447ab",
+  "merchant_id": "mer_8072b1efa2754374",
+  "merchant_name": "Ross, Robinson and Bright",
+  "country_code": "NG",
+  "transaction_id": "ch_00d25d136a0743b7",
+  "submitted_at": {
+   "$date": "2026-05-11T12:19:44Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 9,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.78,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "ux",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_d6f150f99f",
+  "customer_id": "cus_7856028452c748fa",
+  "merchant_id": "mer_0a4fa70ccc3f4675",
+  "merchant_name": "Baker, Mason and White",
+  "country_code": "CA",
+  "transaction_id": "ch_ca4234262fe141d6",
+  "submitted_at": {
+   "$date": "2026-05-19T16:36:10Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 3,
+   "speed": 2
+  },
+  "nps_score": 2,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.68,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "support",
+   "declined"
+  ]
+ },
+ {
+  "_id": "fbk_9a89408ce5",
+  "customer_id": "cus_374de618246e463f",
+  "merchant_id": "mer_ce91a8b05c5a4f54",
+  "merchant_name": "Dyer, Potter and Mack",
+  "country_code": "US",
+  "transaction_id": "ch_0203a1ff3d58461c",
+  "submitted_at": {
+   "$date": "2026-07-02T19:33:46Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.78,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_c3c22326a2",
+  "customer_id": "cus_6b60e25d3f03469b",
+  "merchant_id": "mer_550fb7c166684fd6",
+  "merchant_name": "Martin, Rose and Obrien",
+  "country_code": "NG",
+  "transaction_id": "ch_bfd7f28eb46d431a",
+  "submitted_at": {
+   "$date": "2026-06-23T02:17:18Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.76,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_27c8b530b5",
+  "customer_id": "cus_30b8509393044c36",
+  "merchant_id": "mer_c3d9b388706549af",
+  "merchant_name": "Hoffman, Baker and Richards",
+  "country_code": "DE",
+  "transaction_id": "ch_63eaa3d16b854a1d",
+  "submitted_at": {
+   "$date": "2026-07-02T20:00:15Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.58,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_dabd55b195",
+  "customer_id": "cus_c6690bc22a87455f",
+  "merchant_id": "mer_c3dbd714778645eb",
+  "merchant_name": "Baker and Sons",
+  "country_code": "US",
+  "transaction_id": "ch_06680faaf2684201",
+  "submitted_at": {
+   "$date": "2026-03-09T07:10:33Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 4
+  },
+  "nps_score": 9,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.93,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_0d7bee4ab5",
+  "customer_id": "cus_cb716eae4974440f",
+  "merchant_id": "mer_21c4ecea89ab4495",
+  "merchant_name": "Williams and Sons",
+  "country_code": "GB",
+  "transaction_id": "ch_939a81744bde4426",
+  "submitted_at": {
+   "$date": "2025-11-10T19:31:13Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 4,
+   "speed": 4
+  },
+  "nps_score": 7,
+  "text": "Ça fonctionne, rien de spécial.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.71,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "confirmation",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_47a835c95f",
+  "customer_id": "cus_37ed0e6cebc94497",
+  "merchant_id": "mer_ec160387614f4930",
+  "merchant_name": "Blake and Sons",
+  "country_code": "DE",
+  "transaction_id": "ch_f96fd40244554e53",
+  "submitted_at": {
+   "$date": "2026-07-17T08:32:40Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 1,
+   "ease_of_payment": 2,
+   "speed": 2
+  },
+  "nps_score": 1,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.68,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "declined"
+  ]
+ },
+ {
+  "_id": "fbk_83f1d90eac",
+  "customer_id": "cus_6573843d81324d33",
+  "merchant_id": "mer_21c4ecea89ab4495",
+  "merchant_name": "Williams and Sons",
+  "country_code": "SG",
+  "transaction_id": "ch_f49342b473ae46de",
+  "submitted_at": {
+   "$date": "2026-06-04T14:20:38Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.58,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_62b3adbd58",
+  "customer_id": "cus_6baab9fd1cc84ee1",
+  "merchant_id": "mer_00d78483913940ef",
+  "merchant_name": "Gardner, Robinson and Lawrence",
+  "country_code": "AU",
+  "transaction_id": "ch_5a514fbc4b7149b8",
+  "submitted_at": {
+   "$date": "2026-07-20T11:11:24Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 10,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.64,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_7f3999d473",
+  "customer_id": "cus_075e13c39ca24572",
+  "merchant_id": "mer_ec160387614f4930",
+  "merchant_name": "Blake and Sons",
+  "country_code": "US",
+  "transaction_id": "ch_03470c7defef421f",
+  "submitted_at": {
+   "$date": "2026-05-14T12:04:52Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 3
+  },
+  "nps_score": 7,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.9,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_411e7c1b66",
+  "customer_id": "cus_4e61786eac674763",
+  "merchant_id": "mer_550fb7c166684fd6",
+  "merchant_name": "Martin, Rose and Obrien",
+  "country_code": "DE",
+  "transaction_id": "ch_c97b7c8a9ba34503",
+  "submitted_at": {
+   "$date": "2026-05-09T18:19:03Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 4,
+   "speed": 3
+  },
+  "nps_score": 9,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.88,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_06ddb6185d",
+  "customer_id": "cus_acd83f2cb9bf4a9e",
+  "merchant_id": "mer_c626d90d1ca64aa6",
+  "merchant_name": "Spence PLC",
+  "country_code": "CA",
+  "transaction_id": "ch_0a4d28753e3249ca",
+  "submitted_at": {
+   "$date": "2026-02-11T06:29:56Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 6,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.62,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "speed",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_002b5f88ff",
+  "customer_id": "cus_5e7e5a529a614071",
+  "merchant_id": "mer_80d7fa91a7d14a1b",
+  "merchant_name": "Rodriguez LLC",
+  "country_code": "AU",
+  "transaction_id": "ch_3673ddc8ae814ebc",
+  "submitted_at": {
+   "$date": "2026-07-11T18:07:35Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.83,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_2de72cf329",
+  "customer_id": "cus_a4778014a0264c77",
+  "merchant_id": "mer_8072b1efa2754374",
+  "merchant_name": "Ross, Robinson and Bright",
+  "country_code": "GB",
+  "transaction_id": "ch_d7286be95bd24c04",
+  "submitted_at": {
+   "$date": "2026-08-31T00:37:38Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.67,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_755b32e9f7",
+  "customer_id": "cus_0752fc8f68d34204",
+  "merchant_id": "mer_00d78483913940ef",
+  "merchant_name": "Gardner, Robinson and Lawrence",
+  "country_code": "DE",
+  "transaction_id": "ch_ba5a5bb7114f4d64",
+  "submitted_at": {
+   "$date": "2025-11-21T12:15:52Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 1,
+   "speed": 3
+  },
+  "nps_score": 3,
+  "text": "Trop lent, j'ai failli abandonner.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.57,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "declined"
+  ]
+ },
+ {
+  "_id": "fbk_bc75aa7a92",
+  "customer_id": "cus_a4af187602744690",
+  "merchant_id": "mer_0c3bb8af99e5490b",
+  "merchant_name": "Adams, Zuniga and Wong",
+  "country_code": "DE",
+  "transaction_id": "ch_e0eecc7b6c65442f",
+  "submitted_at": {
+   "$date": "2026-01-21T23:08:19Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 2,
+   "speed": 1
+  },
+  "nps_score": 5,
+  "text": "Trop lent, j'ai failli abandonner.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.89,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "declined"
+  ]
+ },
+ {
+  "_id": "fbk_137bddd1bc",
+  "customer_id": "cus_b02b38d87eae4ab8",
+  "merchant_id": "mer_2aa81315db7b4610",
+  "merchant_name": "Harrell LLC",
+  "country_code": "FR",
+  "transaction_id": "ch_fd606ec4178b4645",
+  "submitted_at": {
+   "$date": "2025-12-15T20:57:15Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 4,
+   "speed": 4
+  },
+  "nps_score": 4,
+  "text": "Correct mais la confirmation met du temps.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.66,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "confirmation"
+  ]
+ },
+ {
+  "_id": "fbk_e358fd8714",
+  "customer_id": "cus_bf999a31ec7047ad",
+  "merchant_id": "mer_e48867e28f9b4b8d",
+  "merchant_name": "Rodriguez-Graham",
+  "country_code": "FR",
+  "transaction_id": "ch_19c106d7587a4749",
+  "submitted_at": {
+   "$date": "2026-07-03T21:01:55Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 2,
+   "speed": 3
+  },
+  "nps_score": 7,
+  "text": "Correct mais la confirmation met du temps.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.93,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "confirmation",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_9d2d268689",
+  "customer_id": "cus_45249fe957224a64",
+  "merchant_id": "mer_344981c0a61c468c",
+  "merchant_name": "Morales-Jones",
+  "country_code": "GB",
+  "transaction_id": "ch_678af0a6df9849df",
+  "submitted_at": {
+   "$date": "2026-07-15T16:19:07Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.77,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_9052b081aa",
+  "customer_id": "cus_d5a571555aeb41e0",
+  "merchant_id": "mer_ce91a8b05c5a4f54",
+  "merchant_name": "Dyer, Potter and Mack",
+  "country_code": "GB",
+  "transaction_id": "ch_87a1b5f5622f4491",
+  "submitted_at": {
+   "$date": "2026-03-01T22:58:44Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 4,
+   "speed": 2
+  },
+  "nps_score": 5,
+  "text": "Ça fonctionne, rien de spécial.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.82,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "confirmation"
+  ]
+ },
+ {
+  "_id": "fbk_4f4b90b4e9",
+  "customer_id": "cus_2e26a5ea81104955",
+  "merchant_id": "mer_ce91a8b05c5a4f54",
+  "merchant_name": "Dyer, Potter and Mack",
+  "country_code": "DE",
+  "transaction_id": "ch_e2706a4cfbdd4762",
+  "submitted_at": {
+   "$date": "2026-04-19T02:11:16Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.76,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_043a0ae762",
+  "customer_id": "cus_4552d23c536e4fa7",
+  "merchant_id": "mer_9d3421d554dc438e",
+  "merchant_name": "Davis and Sons",
+  "country_code": "CA",
+  "transaction_id": "ch_fedaf098925a42cc",
+  "submitted_at": {
+   "$date": "2026-05-24T23:02:54Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 1,
+   "ease_of_payment": 1,
+   "speed": 1
+  },
+  "nps_score": 0,
+  "text": "Trop lent, j'ai failli abandonner.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.94,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "support"
+  ]
+ },
+ {
+  "_id": "fbk_e18acb70a6",
+  "customer_id": "cus_92a022bd7166420a",
+  "merchant_id": "mer_81638688e412411d",
+  "merchant_name": "Dudley Group",
+  "country_code": "NG",
+  "transaction_id": "ch_ca8c0e7822a54448",
+  "submitted_at": {
+   "$date": "2025-11-15T00:51:04Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 2,
+   "speed": 3
+  },
+  "nps_score": 5,
+  "text": "Trop lent, j'ai failli abandonner.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.97,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "declined",
+   "checkout",
+   "speed",
+   "support"
+  ]
+ },
+ {
+  "_id": "fbk_cc73d52d02",
+  "customer_id": "cus_e8e5aa29a2c044e8",
+  "merchant_id": "mer_f1f70b76f04d455e",
+  "merchant_name": "Wilkerson-Day",
+  "country_code": "US",
+  "transaction_id": "ch_e765bd170651497a",
+  "submitted_at": {
+   "$date": "2026-01-28T01:11:42Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 7,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.64,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_8c4b8be5e1",
+  "customer_id": "cus_f917757428ad4410",
+  "merchant_id": "mer_0c3bb8af99e5490b",
+  "merchant_name": "Adams, Zuniga and Wong",
+  "country_code": "BR",
+  "transaction_id": "ch_b9a4bd97bcdb4cbc",
+  "submitted_at": {
+   "$date": "2025-10-30T09:24:01Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 9,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.63,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_d8074b85f3",
+  "customer_id": "cus_ee8d8fd09cdf4af6",
+  "merchant_id": "mer_e45e0907a2fa44e2",
+  "merchant_name": "Anderson Group",
+  "country_code": "ES",
+  "transaction_id": "ch_2542cd400a924710",
+  "submitted_at": {
+   "$date": "2026-08-22T07:52:57Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 7,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.71,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_85dec95184",
+  "customer_id": "cus_be10998913774061",
+  "merchant_id": "mer_21c4ecea89ab4495",
+  "merchant_name": "Williams and Sons",
+  "country_code": "GB",
+  "transaction_id": "ch_c5a7aeb7de024974",
+  "submitted_at": {
+   "$date": "2026-04-10T11:25:06Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 4
+  },
+  "nps_score": 7,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.72,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_203faf3585",
+  "customer_id": "cus_ee8d8fd09cdf4af6",
+  "merchant_id": "mer_8895ca858acb4135",
+  "merchant_name": "Flowers, Martin and Kelly",
+  "country_code": "ES",
+  "transaction_id": "ch_f420e24c270a4575",
+  "submitted_at": {
+   "$date": "2025-10-22T08:18:39Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 3
+  },
+  "nps_score": 6,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.69,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_c057949630",
+  "customer_id": "cus_ee8d8fd09cdf4af6",
+  "merchant_id": "mer_8895ca858acb4135",
+  "merchant_name": "Flowers, Martin and Kelly",
+  "country_code": "ES",
+  "transaction_id": "ch_0b909899bf9e429a",
+  "submitted_at": {
+   "$date": "2025-11-22T08:18:39Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 3
+  },
+  "nps_score": 6,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.89,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_0fd5254c90",
+  "customer_id": "cus_6c7d78dd00e241ef",
+  "merchant_id": "mer_f92f9ed46a0d4590",
+  "merchant_name": "Carlson-Cruz",
+  "country_code": "BR",
+  "transaction_id": "ch_d7b21c7e29e94e81",
+  "submitted_at": {
+   "$date": "2026-06-08T08:33:52Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.79,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_2a038c38cd",
+  "customer_id": "cus_536a48a99b3a4d60",
+  "merchant_id": "mer_ec160387614f4930",
+  "merchant_name": "Blake and Sons",
+  "country_code": "CA",
+  "transaction_id": "ch_1b6ebecb4a414ffc",
+  "submitted_at": {
+   "$date": "2026-04-03T13:56:15Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 1,
+   "ease_of_payment": 2,
+   "speed": 1
+  },
+  "nps_score": 1,
+  "text": "Trop lent, j'ai failli abandonner.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.6,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "support",
+   "speed",
+   "declined"
+  ]
+ },
+ {
+  "_id": "fbk_85793b315b",
+  "customer_id": "cus_e8a24a661cdf4f4a",
+  "merchant_id": "mer_7e93736e98e64b20",
+  "merchant_name": "Rodriguez, Figueroa and Sanchez",
+  "country_code": "US",
+  "transaction_id": "ch_4f6aef38029f4890",
+  "submitted_at": {
+   "$date": "2026-06-06T04:27:32Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 8,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.94,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_a7dcc53f7e",
+  "customer_id": "cus_e8a24a661cdf4f4a",
+  "merchant_id": "mer_712d0b25b5a4449e",
+  "merchant_name": "Snyder, Campos and Callahan",
+  "country_code": "US",
+  "transaction_id": "ch_24070d841ed44e60",
+  "submitted_at": {
+   "$date": "2026-08-27T10:13:46Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 3
+  },
+  "nps_score": 9,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.75,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_898fc997b6",
+  "customer_id": "cus_49c7d289b12b496e",
+  "merchant_id": "mer_8895ca858acb4135",
+  "merchant_name": "Flowers, Martin and Kelly",
+  "country_code": "FR",
+  "transaction_id": "ch_0e4503cd41124b21",
+  "submitted_at": {
+   "$date": "2026-03-14T10:47:25Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 3,
+   "speed": 2
+  },
+  "nps_score": 5,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.55,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "declined"
+  ]
+ },
+ {
+  "_id": "fbk_e059f856d4",
+  "customer_id": "cus_e5d56c095e6a45de",
+  "merchant_id": "mer_0c3bb8af99e5490b",
+  "merchant_name": "Adams, Zuniga and Wong",
+  "country_code": "FR",
+  "transaction_id": "ch_48375870cc704562",
+  "submitted_at": {
+   "$date": "2025-12-08T09:41:05Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 3
+  },
+  "nps_score": 7,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.92,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_4bb7200327",
+  "customer_id": "cus_b02b38d87eae4ab8",
+  "merchant_id": "mer_05819d65f1a84a57",
+  "merchant_name": "Harris, Collins and Carney",
+  "country_code": "FR",
+  "transaction_id": "ch_73cba1c9fc804b9b",
+  "submitted_at": {
+   "$date": "2026-07-13T00:13:43Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 2,
+   "speed": 4
+  },
+  "nps_score": 4,
+  "text": "Correct mais la confirmation met du temps.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.87,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "confirmation"
+  ]
+ },
+ {
+  "_id": "fbk_752fd2d825",
+  "customer_id": "cus_e5d56c095e6a45de",
+  "merchant_id": "mer_ce91a8b05c5a4f54",
+  "merchant_name": "Dyer, Potter and Mack",
+  "country_code": "FR",
+  "transaction_id": "ch_5083087b434d4686",
+  "submitted_at": {
+   "$date": "2026-09-13T20:22:44Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 2,
+   "speed": 1
+  },
+  "nps_score": 5,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.71,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "support",
+   "speed",
+   "checkout",
+   "declined"
+  ]
+ },
+ {
+  "_id": "fbk_89631518c7",
+  "customer_id": "cus_b7d3a38a24844780",
+  "merchant_id": "mer_712d0b25b5a4449e",
+  "merchant_name": "Snyder, Campos and Callahan",
+  "country_code": "US",
+  "transaction_id": "ch_d65cb0c678644305",
+  "submitted_at": {
+   "$date": "2026-05-06T18:21:20Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 9,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.92,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_598f82d7ce",
+  "customer_id": "cus_b02b38d87eae4ab8",
+  "merchant_id": "mer_f1f70b76f04d455e",
+  "merchant_name": "Wilkerson-Day",
+  "country_code": "FR",
+  "transaction_id": "ch_00f66fdf5c794631",
+  "submitted_at": {
+   "$date": "2025-12-22T16:16:39Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 10,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.62,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_c62a3929cf",
+  "customer_id": "cus_81c2912c069649da",
+  "merchant_id": "mer_80d7fa91a7d14a1b",
+  "merchant_name": "Rodriguez LLC",
+  "country_code": "GB",
+  "transaction_id": "ch_45f0495531614bfc",
+  "submitted_at": {
+   "$date": "2026-02-04T20:48:20Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 7,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.63,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_fcca27ce73",
+  "customer_id": "cus_6b60e25d3f03469b",
+  "merchant_id": "mer_550fb7c166684fd6",
+  "merchant_name": "Martin, Rose and Obrien",
+  "country_code": "NG",
+  "transaction_id": "ch_6f7b5b131a504753",
+  "submitted_at": {
+   "$date": "2026-08-24T02:17:18Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 1,
+   "ease_of_payment": 2,
+   "speed": 2
+  },
+  "nps_score": 0,
+  "text": "Trop lent, j'ai failli abandonner.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.56,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "support",
+   "declined"
+  ]
+ },
+ {
+  "_id": "fbk_3240c8e613",
+  "customer_id": "cus_6baab9fd1cc84ee1",
+  "merchant_id": "mer_3fa16d366dec4e99",
+  "merchant_name": "Mcclain, Miller and Henderson",
+  "country_code": "AU",
+  "transaction_id": "ch_9b61f5ac0a0b4b05",
+  "submitted_at": {
+   "$date": "2025-12-17T21:14:13Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 6,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.94,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_ac0756768f",
+  "customer_id": "cus_ef759b86c7ae4896",
+  "merchant_id": "mer_344981c0a61c468c",
+  "merchant_name": "Morales-Jones",
+  "country_code": "CA",
+  "transaction_id": "ch_08c6ecf4c7784a04",
+  "submitted_at": {
+   "$date": "2026-06-16T06:45:17Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 1,
+   "ease_of_payment": 1,
+   "speed": 1
+  },
+  "nps_score": 0,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.77,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_b58e866d99",
+  "customer_id": "cus_a86432579f0b43ed",
+  "merchant_id": "mer_f0b9dff7acae464d",
+  "merchant_name": "Doyle Ltd",
+  "country_code": "SG",
+  "transaction_id": "ch_310395f9dfac48bb",
+  "submitted_at": {
+   "$date": "2026-01-17T12:26:50Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 4,
+   "speed": 4
+  },
+  "nps_score": 8,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.75,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_a045f1e4d3",
+  "customer_id": "cus_10e578176cb4494f",
+  "merchant_id": "mer_0c3bb8af99e5490b",
+  "merchant_name": "Adams, Zuniga and Wong",
+  "country_code": "GB",
+  "transaction_id": "ch_2c950bb21e9848bd",
+  "submitted_at": {
+   "$date": "2026-03-11T15:24:35Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 2,
+   "speed": 3
+  },
+  "nps_score": 7,
+  "text": "Ça fonctionne, rien de spécial.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.81,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_b52fa17431",
+  "customer_id": "cus_e8a24a661cdf4f4a",
+  "merchant_id": "mer_7e93736e98e64b20",
+  "merchant_name": "Rodriguez, Figueroa and Sanchez",
+  "country_code": "US",
+  "transaction_id": "ch_0473f04703b3407e",
+  "submitted_at": {
+   "$date": "2026-05-10T04:27:32Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 4
+  },
+  "nps_score": 9,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.97,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "speed",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_ad28680161",
+  "customer_id": "cus_54ecff2484bd45a3",
+  "merchant_id": "mer_847f1ee422664fb2",
+  "merchant_name": "Smith-Bowen",
+  "country_code": "ES",
+  "transaction_id": "ch_f1bab6dc65c447e7",
+  "submitted_at": {
+   "$date": "2026-02-06T04:43:42Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 4
+  },
+  "nps_score": 8,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.85,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "ux",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_105c70b55f",
+  "customer_id": "cus_bea71bb23aeb43ab",
+  "merchant_id": "mer_344981c0a61c468c",
+  "merchant_name": "Morales-Jones",
+  "country_code": "BR",
+  "transaction_id": "ch_bb834c82406749a5",
+  "submitted_at": {
+   "$date": "2026-04-22T09:27:14Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 2,
+   "speed": 2
+  },
+  "nps_score": 4,
+  "text": "Trop lent, j'ai failli abandonner.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.92,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "support"
+  ]
+ },
+ {
+  "_id": "fbk_cb34aab501",
+  "customer_id": "cus_a86432579f0b43ed",
+  "merchant_id": "mer_80d7fa91a7d14a1b",
+  "merchant_name": "Rodriguez LLC",
+  "country_code": "SG",
+  "transaction_id": "ch_e1e0ee83305d4a1d",
+  "submitted_at": {
+   "$date": "2026-07-11T20:39:40Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 1,
+   "speed": 3
+  },
+  "nps_score": 3,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.78,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "declined"
+  ]
+ },
+ {
+  "_id": "fbk_7ca67450fc",
+  "customer_id": "cus_7b412d80d30b419a",
+  "merchant_id": "mer_19bd6853312f4552",
+  "merchant_name": "Abbott-Munoz",
+  "country_code": "SG",
+  "transaction_id": "ch_cfa7347bb88e4266",
+  "submitted_at": {
+   "$date": "2026-03-20T21:35:25Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 3,
+   "speed": 2
+  },
+  "nps_score": 4,
+  "text": "Fine, nothing special.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.88,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "confirmation",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_ba9e24d9c3",
+  "customer_id": "cus_96526bae526a406a",
+  "merchant_id": "mer_ec160387614f4930",
+  "merchant_name": "Blake and Sons",
+  "country_code": "US",
+  "transaction_id": "ch_646f9e18be2e4168",
+  "submitted_at": {
+   "$date": "2026-09-01T11:01:05Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 3
+  },
+  "nps_score": 6,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.85,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_e63e5fff7c",
+  "customer_id": "cus_91f1cd1224594833",
+  "merchant_id": "mer_21c4ecea89ab4495",
+  "merchant_name": "Williams and Sons",
+  "country_code": "GB",
+  "transaction_id": "ch_dcf801b5c3484281",
+  "submitted_at": {
+   "$date": "2026-06-17T18:35:24Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 3,
+   "ease_of_payment": 2,
+   "speed": 3
+  },
+  "nps_score": 5,
+  "text": "Ça fonctionne, rien de spécial.",
+  "language": "fr",
+  "sentiment": {
+   "label": "neutral",
+   "score": 0.59,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "confirmation"
+  ]
+ },
+ {
+  "_id": "fbk_ff1a0cf9e0",
+  "customer_id": "cus_74e5d98a070e415c",
+  "merchant_id": "mer_8072b1efa2754374",
+  "merchant_name": "Ross, Robinson and Bright",
+  "country_code": "JP",
+  "transaction_id": "ch_c92831629eca4adc",
+  "submitted_at": {
+   "$date": "2026-05-19T10:12:05Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 9,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.79,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "ux",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_21b3b2a445",
+  "customer_id": "cus_fbd62976f7d1401e",
+  "merchant_id": "mer_81638688e412411d",
+  "merchant_name": "Dudley Group",
+  "country_code": "JP",
+  "transaction_id": "ch_0e0b721be14b4e75",
+  "submitted_at": {
+   "$date": "2025-09-29T18:30:18Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 9,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.85,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_30ed15aa50",
+  "customer_id": "cus_3b07579d64b447ab",
+  "merchant_id": "mer_8072b1efa2754374",
+  "merchant_name": "Ross, Robinson and Bright",
+  "country_code": "NG",
+  "transaction_id": "ch_f041823c402b48b9",
+  "submitted_at": {
+   "$date": "2026-03-14T12:19:44Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 5
+  },
+  "nps_score": 6,
+  "text": "Smooth payment, great experience.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.87,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_02a3e0334a",
+  "customer_id": "cus_bf999a31ec7047ad",
+  "merchant_id": "mer_286a8b59d38446ad",
+  "merchant_name": "Burton Ltd",
+  "country_code": "FR",
+  "transaction_id": "ch_8dfae619afbf4c8c",
+  "submitted_at": {
+   "$date": "2026-07-26T22:34:38Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 9,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.72,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_6d9d7b8c75",
+  "customer_id": "cus_7856028452c748fa",
+  "merchant_id": "mer_8895ca858acb4135",
+  "merchant_name": "Flowers, Martin and Kelly",
+  "country_code": "CA",
+  "transaction_id": "ch_efc1aafef8354dd8",
+  "submitted_at": {
+   "$date": "2025-10-28T23:25:50Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 3,
+   "speed": 2
+  },
+  "nps_score": 2,
+  "text": "Trop lent, j'ai failli abandonner.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.92,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "support",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_daf19dcfe2",
+  "customer_id": "cus_0ba224562d684aa8",
+  "merchant_id": "mer_8769e8b94ae44434",
+  "merchant_name": "Walter, Edwards and Rios",
+  "country_code": "JP",
+  "transaction_id": "ch_4a8836e9e33d4d8e",
+  "submitted_at": {
+   "$date": "2026-02-28T17:17:01Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 8,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.57,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_e3f6c369a3",
+  "customer_id": "cus_4552d23c536e4fa7",
+  "merchant_id": "mer_f0b9dff7acae464d",
+  "merchant_name": "Doyle Ltd",
+  "country_code": "CA",
+  "transaction_id": "ch_995e2dbf22e44711",
+  "submitted_at": {
+   "$date": "2026-07-08T07:30:14Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 9,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.81,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "speed",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_0b6ea9ce58",
+  "customer_id": "cus_429b0b72f1ed44f8",
+  "merchant_id": "mer_550fb7c166684fd6",
+  "merchant_name": "Martin, Rose and Obrien",
+  "country_code": "NG",
+  "transaction_id": "ch_579d893414f04cc2",
+  "submitted_at": {
+   "$date": "2026-05-08T13:11:10Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 3,
+   "speed": 2
+  },
+  "nps_score": 3,
+  "text": "Payment failed and support never answered.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.73,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_fb732bae36",
+  "customer_id": "cus_bf999a31ec7047ad",
+  "merchant_id": "mer_ec160387614f4930",
+  "merchant_name": "Blake and Sons",
+  "country_code": "FR",
+  "transaction_id": "ch_22cbc377622a4bdb",
+  "submitted_at": {
+   "$date": "2025-11-16T13:57:39Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.9,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "checkout"
+  ]
+ },
+ {
+  "_id": "fbk_81c771c153",
+  "customer_id": "cus_7856028452c748fa",
+  "merchant_id": "mer_9e465d37d8034ac3",
+  "merchant_name": "Perez Inc",
+  "country_code": "CA",
+  "transaction_id": "ch_5591482809c24f99",
+  "submitted_at": {
+   "$date": "2026-01-26T17:12:12Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 3,
+   "speed": 5
+  },
+  "nps_score": 7,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.95,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "ux",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_4b48634300",
+  "customer_id": "cus_cef939bb7fa5482d",
+  "merchant_id": "mer_120e7772e09540f6",
+  "merchant_name": "Reid, Ferguson and Sanchez",
+  "country_code": "NG",
+  "transaction_id": "ch_8f2eff8bf1e8493a",
+  "submitted_at": {
+   "$date": "2026-05-14T06:15:31Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 1,
+   "ease_of_payment": 1,
+   "speed": 1
+  },
+  "nps_score": 3,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.8,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_5ac943132b",
+  "customer_id": "cus_c6690bc22a87455f",
+  "merchant_id": "mer_8072b1efa2754374",
+  "merchant_name": "Ross, Robinson and Bright",
+  "country_code": "US",
+  "transaction_id": "ch_b1b230d27182433d",
+  "submitted_at": {
+   "$date": "2026-04-08T22:29:22Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 4,
+   "ease_of_payment": 5,
+   "speed": 3
+  },
+  "nps_score": 7,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.83,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed"
+  ]
+ },
+ {
+  "_id": "fbk_51d028ae03",
+  "customer_id": "cus_34e88b0df4d14d24",
+  "merchant_id": "mer_ce91a8b05c5a4f54",
+  "merchant_name": "Dyer, Potter and Mack",
+  "country_code": "GB",
+  "transaction_id": "ch_a0a1fe64e48f4faf",
+  "submitted_at": {
+   "$date": "2026-05-22T15:43:39Z"
+  },
+  "channel": "email_survey",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 4,
+   "speed": 5
+  },
+  "nps_score": 8,
+  "text": "Checkout très simple, merci.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.68,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_c90ba2d63d",
+  "customer_id": "cus_b8d8f94f1a30407b",
+  "merchant_id": "mer_f1f70b76f04d455e",
+  "merchant_name": "Wilkerson-Day",
+  "country_code": "NG",
+  "transaction_id": "ch_8b53a966ae824547",
+  "submitted_at": {
+   "$date": "2026-09-02T11:12:46Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 2,
+   "speed": 2
+  },
+  "nps_score": 5,
+  "text": "Paiement refusé deux fois sans explication.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.74,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "checkout",
+   "speed",
+   "declined",
+   "support"
+  ]
+ },
+ {
+  "_id": "fbk_146fcaeb44",
+  "customer_id": "cus_df3d8549e83247a0",
+  "merchant_id": "mer_e9d33473c7e54b84",
+  "merchant_name": "Romero, Gonzalez and Brooks",
+  "country_code": "DE",
+  "transaction_id": "ch_ba6a7517fb6b4de0",
+  "submitted_at": {
+   "$date": "2025-12-29T14:22:22Z"
+  },
+  "channel": "support_ticket",
+  "scores": {
+   "overall": 5,
+   "ease_of_payment": 5,
+   "speed": 4
+  },
+  "nps_score": 10,
+  "text": "Paiement rapide et sans friction.",
+  "language": "fr",
+  "sentiment": {
+   "label": "positive",
+   "score": 0.95,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "speed",
+   "checkout",
+   "ux"
+  ]
+ },
+ {
+  "_id": "fbk_1acce940b7",
+  "customer_id": "cus_805a63974adc4c55",
+  "merchant_id": "mer_05819d65f1a84a57",
+  "merchant_name": "Harris, Collins and Carney",
+  "country_code": "DE",
+  "transaction_id": "ch_9f58e0d69e3b4daf",
+  "submitted_at": {
+   "$date": "2026-05-31T10:35:14Z"
+  },
+  "channel": "in_app",
+  "scores": {
+   "overall": 2,
+   "ease_of_payment": 2,
+   "speed": 3
+  },
+  "nps_score": 3,
+  "text": "Payment failed and support never answered.",
+  "language": "fr",
+  "sentiment": {
+   "label": "negative",
+   "score": 0.58,
+   "model_version": "sentiment-v1.2"
+  },
+  "tags": [
+   "support",
+   "speed"
+  ]
+ }
+]

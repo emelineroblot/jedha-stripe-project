@@ -1,0 +1,10 @@
+# Génération de données + construction OLAP
+faker>=30.0
+pandas>=2.2
+numpy>=1.26
+
+# Démo ML (ml/train_fraud_demo.py)
+scikit-learn>=1.5
+xgboost>=2.1
+shap>=0.46
+matplotlib>=3.9

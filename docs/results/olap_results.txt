@@ -1,0 +1,540 @@
+SELECT
+    d.year,
+    d.month,
+    g.country_name,
+    pm.type                                        AS payment_type,
+    COUNT(*)                                       AS transaction_count,
+    ROUND(SUM(f.amount_usd), 2)                    AS revenue_usd,
+    ROUND(SUM(f.net_amount_usd), 2)                AS net_revenue_usd,
+    ROUND(AVG(f.amount_usd), 2)                    AS avg_ticket_usd,
+    ROUND(SUM(SUM(f.amount_usd)) OVER (
+        PARTITION BY d.year, g.country_name, pm.type
+        ORDER BY d.month
+        ROWS UNBOUNDED PRECEDING
+    ), 2)                                          AS cumulative_revenue_usd
+FROM fact_transactions f
+JOIN dim_date           d  ON d.date_sk            = f.date_sk
+JOIN dim_geography      g  ON g.geography_sk       = f.geography_sk
+JOIN dim_payment_method pm ON pm.payment_method_sk = f.payment_method_sk
+WHERE f.status = 'succeeded'
+  AND f.is_fraud_flagged = false
+  AND g.country_code IN ('US', 'FR', 'GB')
+GROUP BY d.year, d.month, g.country_name, pm.type
+ORDER BY g.country_name, pm.type, d.year, d.month;
+ year | month |  country_name  | payment_type  | transaction_count | revenue_usd | net_revenue_usd | avg_ticket_usd | cumulative_revenue_usd 
+------+-------+----------------+---------------+-------------------+-------------+-----------------+----------------+------------------------
+ 2025 |    11 | France         | bank_transfer |                 2 |      130.01 |          125.64 |          65.01 |                 130.01
+ 2025 |    12 | France         | bank_transfer |                 1 |      203.91 |          197.70 |         203.91 |                 333.92
+ 2026 |     2 | France         | bank_transfer |                 1 |       16.77 |           15.98 |          16.77 |                  16.77
+ 2026 |     3 | France         | bank_transfer |                 2 |       89.66 |           86.46 |          44.83 |                 106.43
+ 2026 |     4 | France         | bank_transfer |                 3 |      390.17 |          377.95 |         130.06 |                 496.60
+ 2026 |     5 | France         | bank_transfer |                 2 |      192.80 |          186.61 |          96.40 |                 689.40
+ 2026 |     6 | France         | bank_transfer |                 2 |      124.76 |          120.55 |          62.38 |                 814.16
+ 2026 |     7 | France         | bank_transfer |                 6 |      400.60 |          387.19 |          66.77 |                1214.76
+ 2026 |     8 | France         | bank_transfer |                 2 |      111.56 |          107.73 |          55.78 |                1326.32
+ 2026 |     9 | France         | bank_transfer |                 1 |       23.20 |           22.23 |          23.20 |                1349.52
+ 2027 |     4 | France         | bank_transfer |                 1 |      149.64 |          145.00 |         149.64 |                 149.64
+ 2025 |     9 | France         | card          |                 2 |      153.02 |          147.99 |          76.51 |                 153.02
+ 2025 |    11 | France         | card          |                 3 |      285.92 |          218.46 |          95.31 |                 438.94
+ 2025 |    12 | France         | card          |                 7 |      734.19 |          574.95 |         104.88 |                1173.13
+ 2026 |     1 | France         | card          |                 3 |      294.94 |          285.49 |          98.31 |                 294.94
+ 2026 |     2 | France         | card          |                 5 |      511.67 |          388.78 |         102.33 |                 806.61
+ 2026 |     3 | France         | card          |                 4 |      217.87 |          210.35 |          54.47 |                1024.48
+ 2026 |     4 | France         | card          |                 5 |      308.55 |          298.10 |          61.71 |                1333.03
+ 2026 |     5 | France         | card          |                 8 |      851.94 |          824.83 |         106.49 |                2184.97
+ 2026 |     6 | France         | card          |                 7 |      479.04 |          435.51 |          68.43 |                2664.01
+ 2026 |     7 | France         | card          |                 5 |      303.52 |          293.22 |          60.70 |                2967.53
+ 2026 |     8 | France         | card          |                 4 |      283.12 |          273.71 |          70.78 |                3250.65
+ 2026 |     9 | France         | card          |                 2 |      135.67 |          131.14 |          67.84 |                3386.32
+ 2025 |    10 | France         | wallet        |                 1 |       95.26 |           92.20 |          95.26 |                  95.26
+ 2025 |    12 | France         | wallet        |                 2 |       88.27 |           85.11 |          44.14 |                 183.53
+ 2026 |     2 | France         | wallet        |                 1 |      110.87 |          107.35 |         110.87 |                 110.87
+ 2026 |     5 | France         | wallet        |                 2 |      205.70 |          199.14 |         102.85 |                 316.57
+ 2026 |     7 | France         | wallet        |                 1 |       67.25 |           65.00 |          67.25 |                 383.82
+ 2025 |    10 | United Kingdom | bank_transfer |                 1 |      174.42 |          169.06 |         174.42 |                 174.42
+ 2025 |    11 | United Kingdom | bank_transfer |                 1 |       56.37 |           54.44 |          56.37 |                 230.79
+ 2025 |    12 | United Kingdom | bank_transfer |                 3 |      230.50 |          222.91 |          76.83 |                 461.29
+ 2026 |     1 | United Kingdom | bank_transfer |                 2 |       58.43 |           56.13 |          29.22 |                  58.43
+ 2026 |     2 | United Kingdom | bank_transfer |                 3 |      193.90 |          187.38 |          64.63 |                 252.33
+ 2026 |     3 | United Kingdom | bank_transfer |                 5 |      438.71 |          295.20 |          87.74 |                 691.04
+ 2026 |     4 | United Kingdom | bank_transfer |                 4 |      183.77 |          177.24 |          45.94 |                 874.81
+ 2026 |     5 | United Kingdom | bank_transfer |                 5 |      421.26 |          407.54 |          84.25 |                1296.07
+ 2026 |     6 | United Kingdom | bank_transfer |                 2 |      119.65 |          115.58 |          59.83 |                1415.72
+ 2026 |     7 | United Kingdom | bank_transfer |                 1 |       28.62 |           27.49 |          28.62 |                1444.34
+ 2026 |     8 | United Kingdom | bank_transfer |                 2 |       62.37 |           59.97 |          31.19 |                1506.71
+ 2025 |     9 | United Kingdom | card          |                 4 |      313.55 |          303.27 |          78.39 |                 313.55
+ 2025 |    10 | United Kingdom | card          |                 3 |      243.06 |          235.11 |          81.02 |                 556.61
+ 2025 |    11 | United Kingdom | card          |                 6 |      403.96 |          390.45 |          67.33 |                 960.57
+ 2025 |    12 | United Kingdom | card          |                 2 |      107.52 |           82.75 |          53.76 |                1068.09
+ 2026 |     1 | United Kingdom | card          |                 2 |      211.00 |          204.28 |         105.50 |                 211.00
+ 2026 |     2 | United Kingdom | card          |                 4 |      223.54 |          215.86 |          55.89 |                 434.54
+ 2026 |     3 | United Kingdom | card          |                 6 |      384.87 |          371.91 |          64.15 |                 819.41
+ 2026 |     4 | United Kingdom | card          |                 1 |       82.41 |           79.72 |          82.41 |                 901.82
+ 2026 |     5 | United Kingdom | card          |                 6 |      535.77 |          518.43 |          89.30 |                1437.59
+ 2026 |     6 | United Kingdom | card          |                10 |      586.58 |          566.56 |          58.66 |                2024.17
+ 2026 |     7 | United Kingdom | card          |                10 |      750.79 |          726.02 |          75.08 |                2774.96
+ 2026 |     8 | United Kingdom | card          |                 3 |      135.82 |          130.98 |          45.27 |                2910.78
+ 2026 |     9 | United Kingdom | card          |                 3 |      266.01 |          173.41 |          88.67 |                3176.79
+ 2025 |     9 | United Kingdom | wallet        |                 1 |      125.79 |          121.84 |         125.79 |                 125.79
+ 2025 |    10 | United Kingdom | wallet        |                 2 |      160.46 |          155.21 |          80.23 |                 286.25
+ 2026 |     2 | United Kingdom | wallet        |                 1 |       47.04 |           10.10 |          47.04 |                  47.04
+ 2026 |     4 | United Kingdom | wallet        |                 1 |       93.63 |           90.61 |          93.63 |                 140.67
+ 2026 |     5 | United Kingdom | wallet        |                 3 |      231.21 |          223.61 |          77.07 |                 371.88
+ 2026 |     6 | United Kingdom | wallet        |                 1 |       69.69 |           67.37 |          69.69 |                 441.57
+ 2025 |     9 | United States  | bank_transfer |                 2 |      135.83 |          131.29 |          67.92 |                 135.83
+ 2025 |    10 | United States  | bank_transfer |                 1 |       84.36 |           81.61 |          84.36 |                 220.19
+ 2025 |    11 | United States  | bank_transfer |                 4 |      480.38 |          465.25 |         120.10 |                 700.57
+ 2025 |    12 | United States  | bank_transfer |                 2 |      184.90 |          178.94 |          92.45 |                 885.47
+ 2026 |     1 | United States  | bank_transfer |                 1 |       33.46 |           32.19 |          33.46 |                  33.46
+ 2026 |     3 | United States  | bank_transfer |                 1 |      165.81 |          160.70 |         165.81 |                 199.27
+ 2026 |     5 | United States  | bank_transfer |                 1 |       22.83 |           21.87 |          22.83 |                 222.10
+ 2026 |     6 | United States  | bank_transfer |                 1 |       34.43 |            7.30 |          34.43 |                 256.53
+ 2026 |     7 | United States  | bank_transfer |                 3 |      181.14 |          174.99 |          60.38 |                 437.67
+ 2025 |     9 | United States  | card          |                 5 |      345.11 |          333.60 |          69.02 |                 345.11
+ 2025 |    10 | United States  | card          |                 4 |      318.26 |          307.82 |          79.57 |                 663.37
+ 2025 |    11 | United States  | card          |                 4 |      246.65 |          238.29 |          61.66 |                 910.02
+ 2025 |    12 | United States  | card          |                10 |      750.40 |          462.66 |          75.04 |                1660.42
+ 2026 |     1 | United States  | card          |                 7 |      366.26 |          353.55 |          52.32 |                 366.26
+ 2026 |     2 | United States  | card          |                10 |      535.05 |          516.53 |          53.51 |                 901.31
+ 2026 |     3 | United States  | card          |                 7 |      491.18 |          338.56 |          70.17 |                1392.49
+ 2026 |     4 | United States  | card          |                 8 |      748.56 |          724.45 |          93.57 |                2141.05
+ 2026 |     5 | United States  | card          |                13 |     1153.34 |         1116.00 |          88.72 |                3294.39
+ 2026 |     6 | United States  | card          |                 9 |      795.34 |          769.58 |          88.37 |                4089.73
+ 2026 |     7 | United States  | card          |                12 |      728.07 |          580.64 |          60.67 |                4817.80
+ 2026 |     8 | United States  | card          |                10 |      772.87 |          747.45 |          77.29 |                5590.67
+ 2026 |     9 | United States  | card          |                 4 |      401.90 |          389.05 |         100.48 |                5992.57
+ 2025 |    11 | United States  | wallet        |                 1 |       22.17 |           21.23 |          22.17 |                  22.17
+ 2026 |     5 | United States  | wallet        |                 2 |      168.98 |          163.48 |          84.49 |                 168.98
+ 2026 |     7 | United States  | wallet        |                 1 |       88.24 |           85.38 |          88.24 |                 257.22
+(83 rows)
+
+WITH customer_spending AS (
+    SELECT
+        f.customer_sk,
+        c.region,
+        c.segment,
+        SUM(f.amount_usd)  AS total_spent_usd,
+        COUNT(*)           AS transaction_count
+    FROM fact_transactions f
+    JOIN dim_customer c ON c.customer_sk = f.customer_sk AND c.is_current = true
+    WHERE f.status = 'succeeded'
+      AND f.is_fraud_flagged = false
+    GROUP BY f.customer_sk, c.region, c.segment
+),
+deciles AS (
+    SELECT *, NTILE(10) OVER (ORDER BY total_spent_usd) AS spending_decile
+    FROM customer_spending
+)
+SELECT
+    spending_decile,
+    COUNT(*)                                   AS customer_count,
+    ROUND(AVG(total_spent_usd), 2)             AS avg_spent_usd,
+    ROUND(MIN(total_spent_usd), 2)             AS min_spent_usd,
+    ROUND(MAX(total_spent_usd), 2)             AS max_spent_usd,
+    ROUND(SUM(total_spent_usd), 2)             AS decile_revenue_usd,
+    ROUND(SUM(total_spent_usd) * 100.0 / SUM(SUM(total_spent_usd)) OVER (), 2) AS pct_total_revenue,
+    MIN(segment)                               AS segment_label
+FROM deciles
+GROUP BY spending_decile
+ORDER BY spending_decile;
+ spending_decile | customer_count | avg_spent_usd | min_spent_usd | max_spent_usd | decile_revenue_usd | pct_total_revenue | segment_label 
+-----------------+----------------+---------------+---------------+---------------+--------------------+-------------------+---------------
+               1 |             20 |         70.67 |         16.06 |         99.34 |            1413.34 |              0.77 | low_value
+               2 |             20 |        133.85 |        109.50 |        160.86 |            2676.91 |              1.45 | low_value
+               3 |             20 |        191.30 |        164.57 |        214.02 |            3825.98 |              2.08 | low_value
+               4 |             20 |        233.41 |        215.66 |        261.45 |            4668.27 |              2.53 | low_value
+               5 |             19 |        298.97 |        269.82 |        331.62 |            5680.34 |              3.08 | high_value
+               6 |             19 |        353.90 |        335.54 |        376.10 |            6724.11 |              3.65 | mid_value
+               7 |             19 |        415.25 |        376.76 |        453.81 |            7889.79 |              4.28 | mid_value
+               8 |             19 |        507.38 |        458.11 |        552.48 |            9640.27 |              5.23 | high_value
+               9 |             19 |        618.97 |        555.49 |        720.58 |           11760.44 |              6.38 | high_value
+              10 |             19 |       6845.97 |        744.51 |      61977.25 |          130073.39 |             70.56 | high_value
+(10 rows)
+
+WITH quarterly AS (
+    SELECT
+        d.year,
+        d.quarter,
+        g.region,
+        COUNT(*)                                                    AS total_transactions,
+        SUM(CASE WHEN f.is_fraud_flagged THEN 1 ELSE 0 END)         AS fraud_count,
+        SUM(CASE WHEN f.is_disputed THEN 1 ELSE 0 END)              AS dispute_count,
+        AVG(f.anomaly_score)                                        AS avg_anomaly_score
+    FROM fact_transactions f
+    JOIN dim_date      d ON d.date_sk      = f.date_sk
+    JOIN dim_geography g ON g.geography_sk = f.geography_sk
+    GROUP BY d.year, d.quarter, g.region
+)
+SELECT
+    year,
+    quarter,
+    region,
+    total_transactions,
+    fraud_count,
+    dispute_count,
+    ROUND(fraud_count * 100.0 / NULLIF(total_transactions, 0), 2)                    AS fraud_rate_pct,
+    ROUND(LAG(fraud_count * 100.0 / NULLIF(total_transactions, 0))
+          OVER (PARTITION BY region ORDER BY year, quarter), 2)                      AS prev_quarter_fraud_rate,
+    ROUND(fraud_count * 100.0 / NULLIF(total_transactions, 0)
+          - LAG(fraud_count * 100.0 / NULLIF(total_transactions, 0))
+            OVER (PARTITION BY region ORDER BY year, quarter), 2)                    AS fraud_rate_delta,
+    ROUND(avg_anomaly_score, 4)                                                      AS avg_anomaly_score
+FROM quarterly
+ORDER BY region, year, quarter;
+ year | quarter |    region     | total_transactions | fraud_count | dispute_count | fraud_rate_pct | prev_quarter_fraud_rate | fraud_rate_delta | avg_anomaly_score 
+------+---------+---------------+--------------------+-------------+---------------+----------------+-------------------------+------------------+-------------------
+ 2025 |       3 | Africa        |                  3 |           0 |             0 |           0.00 |                         |                  |            0.4958
+ 2025 |       4 | Africa        |                 21 |           0 |             2 |           0.00 |                    0.00 |             0.00 |                  
+ 2026 |       1 | Africa        |                 23 |           0 |             0 |           0.00 |                    0.00 |             0.00 |                  
+ 2026 |       2 | Africa        |                 25 |           0 |             1 |           0.00 |                    0.00 |             0.00 |            0.4815
+ 2026 |       3 | Africa        |                 34 |           0 |             1 |           0.00 |                    0.00 |             0.00 |            0.3778
+ 2026 |       4 | Africa        |                  1 |           0 |             0 |           0.00 |                    0.00 |             0.00 |            0.4197
+ 2025 |       3 | Asia          |                 10 |           0 |             0 |           0.00 |                         |                  |            0.3398
+ 2025 |       4 | Asia          |                 38 |           2 |             4 |           5.26 |                    0.00 |             5.26 |            0.6187
+ 2026 |       1 | Asia          |                 36 |           0 |             2 |           0.00 |                    5.26 |            -5.26 |            0.3890
+ 2026 |       2 | Asia          |                 42 |           0 |             1 |           0.00 |                    0.00 |             0.00 |            0.4040
+ 2026 |       3 | Asia          |                 47 |           2 |             1 |           4.26 |                    0.00 |             4.26 |            0.5798
+ 2027 |       2 | Asia          |                  1 |           0 |             0 |           0.00 |                    4.26 |            -4.26 |                  
+ 2025 |       3 | Europe        |                 13 |           0 |             1 |           0.00 |                         |                  |                  
+ 2025 |       4 | Europe        |                 75 |           2 |             7 |           2.67 |                    0.00 |             2.67 |            0.5427
+ 2026 |       1 | Europe        |                 71 |           2 |             2 |           2.82 |                    2.67 |             0.15 |            0.5211
+ 2026 |       2 | Europe        |                104 |           0 |             8 |           0.00 |                    2.82 |            -2.82 |            0.3769
+ 2026 |       3 | Europe        |                 84 |           1 |             1 |           1.19 |                    0.00 |             1.19 |            0.5434
+ 2027 |       2 | Europe        |                  1 |           0 |             0 |           0.00 |                    1.19 |            -1.19 |                  
+ 2025 |       3 | North America |                 11 |           0 |             3 |           0.00 |                         |                  |            0.4698
+ 2025 |       4 | North America |                 53 |           1 |             2 |           1.89 |                    0.00 |             1.89 |            0.8268
+ 2026 |       1 | North America |                 50 |           0 |             1 |           0.00 |                    1.89 |            -1.89 |            0.4043
+ 2026 |       2 | North America |                 53 |           0 |             2 |           0.00 |                    0.00 |             0.00 |            0.3644
+ 2026 |       3 | North America |                 53 |           1 |             4 |           1.89 |                    0.00 |             1.89 |            0.6940
+ 2026 |       4 | North America |                  1 |           0 |             0 |           0.00 |                    1.89 |            -1.89 |                  
+ 2025 |       3 | Oceania       |                  2 |           0 |             0 |           0.00 |                         |                  |                  
+ 2025 |       4 | Oceania       |                 13 |           1 |             1 |           7.69 |                    0.00 |             7.69 |            0.4596
+ 2026 |       1 | Oceania       |                 17 |           1 |             1 |           5.88 |                    7.69 |            -1.81 |            0.9245
+ 2026 |       2 | Oceania       |                 21 |           1 |             1 |           4.76 |                    5.88 |            -1.12 |            0.4364
+ 2026 |       3 | Oceania       |                 18 |           0 |             0 |           0.00 |                    4.76 |            -4.76 |            0.3716
+ 2027 |       3 | Oceania       |                  1 |           0 |             0 |           0.00 |                    0.00 |             0.00 |                  
+ 2025 |       3 | South America |                  2 |           0 |             0 |           0.00 |                         |                  |                  
+ 2025 |       4 | South America |                 38 |           0 |             1 |           0.00 |                    0.00 |             0.00 |            0.5800
+ 2026 |       1 | South America |                 19 |           0 |             2 |           0.00 |                    0.00 |             0.00 |            0.3608
+ 2026 |       2 | South America |                 27 |           0 |             1 |           0.00 |                    0.00 |             0.00 |            0.4076
+ 2026 |       3 | South America |                 28 |           2 |             2 |           7.14 |                    0.00 |             7.14 |            0.8847
+ 2027 |       2 | South America |                  1 |           0 |             0 |           0.00 |                    7.14 |            -7.14 |                  
+(36 rows)
+
+SELECT
+    g.region,
+    pm.type                                                          AS payment_type,
+    pm.is_digital,
+    COUNT(*)                                                         AS transaction_count,
+    ROUND(SUM(CASE WHEN f.status = 'succeeded' THEN f.amount_usd ELSE 0 END), 2) AS volume_usd,
+    ROUND(SUM(CASE WHEN f.status = 'failed'    THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2)       AS failure_rate_pct,
+    ROUND(SUM(CASE WHEN f.is_refunded          THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2)       AS refund_rate_pct,
+    ROUND(SUM(CASE WHEN f.is_fraud_flagged     THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2)       AS fraud_rate_pct,
+    ROUND(SUM(CASE WHEN f.is_disputed          THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2)       AS dispute_rate_pct
+FROM fact_transactions f
+JOIN dim_geography      g  ON g.geography_sk       = f.geography_sk
+JOIN dim_payment_method pm ON pm.payment_method_sk = f.payment_method_sk
+GROUP BY g.region, pm.type, pm.is_digital
+ORDER BY g.region, volume_usd DESC;
+    region     | payment_type  | is_digital | transaction_count | volume_usd | failure_rate_pct | refund_rate_pct | fraud_rate_pct | dispute_rate_pct 
+---------------+---------------+------------+-------------------+------------+------------------+-----------------+----------------+------------------
+ Africa        | card          | f          |                82 |    5195.14 |             6.10 |            2.44 |           0.00 |             3.66
+ Africa        | wallet        | t          |                18 |     757.56 |             0.00 |            0.00 |           0.00 |             5.56
+ Africa        | bank_transfer | f          |                 7 |     414.91 |            28.57 |           28.57 |           0.00 |             0.00
+ Asia          | card          | f          |               152 |   10076.73 |             7.24 |            5.26 |           2.63 |             3.95
+ Asia          | wallet        | t          |                12 |     933.20 |             0.00 |            0.00 |           0.00 |             8.33
+ Asia          | bank_transfer | f          |                10 |     636.48 |             0.00 |           10.00 |           0.00 |            10.00
+ Europe        | card          | f          |               262 |   19840.07 |             7.63 |            4.20 |           1.53 |             5.34
+ Europe        | bank_transfer | f          |                59 |    4071.87 |             6.78 |            1.69 |           0.00 |             3.39
+ Europe        | wallet        | t          |                27 |    1661.55 |            14.81 |            3.70 |           3.70 |            11.11
+ North America | wallet        | t          |                27 |   62519.90 |             3.70 |            0.00 |           0.00 |             0.00
+ North America | card          | f          |               173 |   11727.67 |             6.36 |            2.89 |           1.16 |             5.78
+ North America | bank_transfer | f          |                21 |    1688.41 |             9.52 |            4.76 |           0.00 |             9.52
+ Oceania       | card          | f          |                45 |    3906.37 |             8.89 |            2.22 |           6.67 |             0.00
+ Oceania       | wallet        | t          |                21 |    2409.71 |             4.76 |            4.76 |           0.00 |            14.29
+ Oceania       | bank_transfer | f          |                 6 |     533.09 |            16.67 |            0.00 |           0.00 |             0.00
+ South America | card          | f          |                98 |   57384.66 |             7.14 |            1.02 |           2.04 |             6.12
+ South America | wallet        | t          |                11 |    1159.18 |             0.00 |            0.00 |           0.00 |             0.00
+ South America | bank_transfer | f          |                 6 |     364.57 |             0.00 |           16.67 |           0.00 |             0.00
+(18 rows)
+
+WITH merchant_cohorts AS (
+    SELECT f.merchant_sk, MIN(d.year * 100 + d.month) AS cohort_ym
+    FROM fact_transactions f
+    JOIN dim_date d ON d.date_sk = f.date_sk
+    WHERE f.status = 'succeeded'
+    GROUP BY f.merchant_sk
+),
+monthly_activity AS (
+    SELECT DISTINCT f.merchant_sk, d.year * 100 + d.month AS activity_ym
+    FROM fact_transactions f
+    JOIN dim_date d ON d.date_sk = f.date_sk
+    WHERE f.status = 'succeeded'
+),
+cohort_retention AS (
+    SELECT
+        mc.cohort_ym,
+        (ma.activity_ym / 100 - mc.cohort_ym / 100) * 12
+          + (ma.activity_ym % 100 - mc.cohort_ym % 100)        AS months_since_acquisition,
+        COUNT(DISTINCT ma.merchant_sk)                          AS active_merchants
+    FROM merchant_cohorts mc
+    JOIN monthly_activity ma ON ma.merchant_sk = mc.merchant_sk
+    GROUP BY mc.cohort_ym,
+        (ma.activity_ym / 100 - mc.cohort_ym / 100) * 12 + (ma.activity_ym % 100 - mc.cohort_ym % 100)
+)
+SELECT
+    cohort_ym                                                              AS cohort_month,
+    months_since_acquisition,
+    active_merchants,
+    FIRST_VALUE(active_merchants) OVER (PARTITION BY cohort_ym ORDER BY months_since_acquisition
+                                        ROWS UNBOUNDED PRECEDING)          AS cohort_size,
+    ROUND(active_merchants * 100.0
+          / FIRST_VALUE(active_merchants) OVER (PARTITION BY cohort_ym ORDER BY months_since_acquisition
+                                                ROWS UNBOUNDED PRECEDING), 1) AS retention_rate_pct
+FROM cohort_retention
+WHERE months_since_acquisition <= 6
+ORDER BY cohort_ym, months_since_acquisition;
+ cohort_month | months_since_acquisition | active_merchants | cohort_size | retention_rate_pct 
+--------------+--------------------------+------------------+-------------+--------------------
+       202509 |                        0 |               27 |          27 |              100.0
+       202509 |                        1 |               17 |          27 |               63.0
+       202509 |                        2 |               20 |          27 |               74.1
+       202509 |                        3 |               19 |          27 |               70.4
+       202509 |                        4 |               19 |          27 |               70.4
+       202509 |                        5 |               20 |          27 |               74.1
+       202509 |                        6 |               16 |          27 |               59.3
+       202510 |                        0 |               19 |          19 |              100.0
+       202510 |                        1 |               16 |          19 |               84.2
+       202510 |                        2 |               18 |          19 |               94.7
+       202510 |                        3 |               15 |          19 |               78.9
+       202510 |                        4 |               13 |          19 |               68.4
+       202510 |                        5 |               12 |          19 |               63.2
+       202510 |                        6 |               14 |          19 |               73.7
+       202511 |                        0 |                1 |           1 |              100.0
+       202511 |                        1 |                1 |           1 |              100.0
+       202511 |                        2 |                1 |           1 |              100.0
+       202511 |                        4 |                1 |           1 |              100.0
+       202511 |                        5 |                1 |           1 |              100.0
+       202511 |                        6 |                1 |           1 |              100.0
+       202512 |                        0 |                3 |           3 |              100.0
+       202512 |                        1 |                2 |           3 |               66.7
+       202512 |                        2 |                2 |           3 |               66.7
+       202512 |                        3 |                1 |           3 |               33.3
+       202512 |                        4 |                1 |           3 |               33.3
+       202512 |                        5 |                2 |           3 |               66.7
+       202512 |                        6 |                2 |           3 |               66.7
+       202601 |                        0 |                2 |           2 |              100.0
+       202601 |                        2 |                1 |           2 |               50.0
+       202601 |                        3 |                1 |           2 |               50.0
+       202601 |                        4 |                1 |           2 |               50.0
+       202601 |                        5 |                1 |           2 |               50.0
+       202601 |                        6 |                1 |           2 |               50.0
+       202605 |                        0 |                1 |           1 |              100.0
+       202605 |                        1 |                1 |           1 |              100.0
+       202605 |                        3 |                1 |           1 |              100.0
+(36 rows)
+
+WITH daily AS (
+    SELECT
+        d.full_date,
+        d.day_name,
+        d.is_weekend,
+        SUM(a.total_amount_usd)   AS revenue_usd,
+        SUM(a.succeeded_count)    AS succeeded,
+        SUM(a.failed_count)       AS failed
+    FROM agg_daily_revenue a
+    JOIN dim_date d ON d.date_sk = a.date_sk
+    WHERE d.full_date >= CURRENT_DATE - 60
+    GROUP BY d.full_date, d.day_name, d.is_weekend
+)
+SELECT
+    full_date,
+    day_name,
+    is_weekend,
+    revenue_usd,
+    ROUND(AVG(revenue_usd) OVER (ORDER BY full_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW), 2)  AS revenue_ma7_usd,
+    ROUND((revenue_usd - LAG(revenue_usd, 7) OVER (ORDER BY full_date)) * 100.0
+          / NULLIF(LAG(revenue_usd, 7) OVER (ORDER BY full_date), 0), 1)                             AS wow_change_pct,
+    succeeded,
+    failed
+FROM daily
+ORDER BY full_date DESC
+LIMIT 21;
+ full_date  | day_name  | is_weekend | revenue_usd | revenue_ma7_usd | wow_change_pct | succeeded | failed 
+------------+-----------+------------+-------------+-----------------+----------------+-----------+--------
+ 2027-07-16 | Friday    | f          |      118.04 |        15978.28 |           15.7 |         1 |      0
+ 2027-06-26 | Saturday  | t          |    50799.43 |        15975.99 |        23232.5 |         1 |      0
+ 2027-05-21 | Friday    | f          |        3.73 |         8750.04 |          -97.4 |         1 |      0
+ 2027-04-07 | Wednesday | f          |      149.64 |         8769.75 |           33.5 |         1 |      0
+ 2026-12-26 | Saturday  | t          |      108.14 |         8764.38 |           -2.3 |         1 |      0
+ 2026-12-02 | Wednesday | f          |    60586.26 |         8764.74 |        29788.1 |         1 |      0
+ 2026-09-14 | Monday    | f          |       82.74 |          138.52 |          -66.8 |         1 |      0
+ 2026-09-12 | Saturday  | t          |      102.02 |          162.27 |          -60.1 |         1 |      0
+ 2026-09-11 | Friday    | f          |      217.72 |          184.24 |          -30.0 |         4 |      2
+ 2026-09-10 | Thursday  | f          |      141.74 |          197.56 |          -72.9 |         2 |      0
+ 2026-09-09 | Wednesday | f          |      112.05 |          252.04 |          -45.4 |         1 |      0
+ 2026-09-08 | Tuesday   | f          |      110.63 |          265.34 |          -45.1 |         3 |      2
+ 2026-09-07 | Monday    | f          |      202.71 |          278.32 |          -27.3 |         1 |      0
+ 2026-09-06 | Sunday    | t          |      249.02 |          289.21 |            2.2 |         2 |      0
+ 2026-09-05 | Saturday  | t          |      255.81 |          288.43 |          -14.9 |         5 |      0
+ 2026-09-04 | Friday    | f          |      310.98 |          294.83 |          833.0 |         4 |      0
+ 2026-09-03 | Thursday  | f          |      523.05 |          255.17 |          464.9 |         4 |      1
+ 2026-09-02 | Wednesday | f          |      205.19 |          193.67 |          140.9 |         4 |      0
+ 2026-09-01 | Tuesday   | f          |      201.49 |          176.53 |          -51.9 |         3 |      0
+ 2026-08-31 | Monday    | f          |      278.95 |          207.58 |            3.8 |         6 |      1
+ 2026-08-30 | Sunday    | t          |      243.56 |          206.11 |          119.1 |         4 |      0
+(21 rows)
+
+SELECT
+    m.name                                                              AS merchant_name,
+    p.name                                                              AS product_name,
+    COALESCE(p.billing_interval, 'one-off')                             AS billing,
+    COUNT(*)                                                            AS sales,
+    ROUND(SUM(f.amount_usd), 2)                                         AS gross_usd,
+    ROUND(SUM(f.net_amount_usd), 2)                                     AS net_usd,
+    ROUND(SUM(CASE WHEN f.is_refunded THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 1) AS refund_rate_pct,
+    ROUND(SUM(CASE WHEN f.is_disputed THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 1) AS dispute_rate_pct
+FROM fact_transactions f
+JOIN dim_product  p ON p.product_sk  = f.product_sk
+JOIN dim_merchant m ON m.merchant_sk = f.merchant_sk
+WHERE f.status = 'succeeded'
+GROUP BY m.name, p.name, p.billing_interval
+ORDER BY net_usd DESC
+LIMIT 15;
+          merchant_name          |  product_name   | billing | sales | gross_usd | net_usd  | refund_rate_pct | dispute_rate_pct 
+---------------------------------+-----------------+---------+-------+-----------+----------+-----------------+------------------
+ Martin, Rose and Obrien         | Team plan       | year    |    10 |  60948.06 | 59177.57 |             0.0 |             10.0
+ Perez Inc                       | Season pass     | year    |     7 |  51000.10 | 49519.00 |             0.0 |              0.0
+ Harrell LLC                     | Season pass     | month   |    22 |   2277.97 |  2205.30 |             0.0 |              9.1
+ Baker, Mason and White          | Season pass     | month   |    27 |   2193.51 |  2121.77 |             0.0 |              7.4
+ Watts, Robinson and Nguyen      | Monthly plan    | month   |    18 |   1458.20 |  1369.71 |             5.6 |              0.0
+ Rodriguez, Figueroa and Sanchez | Team plan       | month   |    11 |   1499.08 |  1316.05 |             9.1 |              9.1
+ Hickman Ltd                     | Enterprise plan | year    |     7 |   1238.36 |  1200.35 |             0.0 |              0.0
+ Ross, Robinson and Bright       | Monthly plan    | month   |    38 |   1229.75 |  1158.86 |             2.6 |              7.9
+ Wilkerson-Day                   | Monthly plan    | month   |    39 |   1097.15 |  1005.04 |             5.1 |              5.1
+ Rodriguez, Figueroa and Sanchez | Pro plan        | year    |     6 |   1019.76 |   988.38 |             0.0 |              0.0
+ Dyer, Potter and Mack           | Starter plan    | month   |    16 |   1019.68 |   985.28 |             0.0 |              0.0
+ Adams, Zuniga and Wong          | Family menu     | one-off |     7 |    961.95 |   796.10 |            14.3 |              0.0
+ Garcia-James                    | Season pass     | year    |     5 |    791.53 |   767.08 |             0.0 |             20.0
+ Abbott-Munoz                    | Skin bundle     | one-off |     5 |    881.10 |   765.95 |            20.0 |              0.0
+ Baker and Sons                  | Featured slot   | one-off |     5 |    790.30 |   765.89 |             0.0 |              0.0
+(15 rows)
+
+SELECT
+    d.year,
+    d.month,
+    a.user_role,
+    COUNT(*)                                                                    AS total_events,
+    SUM(CASE WHEN a.is_sensitive THEN 1 ELSE 0 END)                             AS sensitive_events,
+    SUM(CASE WHEN a.event_type = 'EXPORT'       THEN 1 ELSE 0 END)              AS exports,
+    SUM(CASE WHEN a.event_type = 'ERASURE'      THEN 1 ELSE 0 END)              AS gdpr_erasures,
+    SUM(CASE WHEN a.event_type = 'LOGIN_FAILED' THEN 1 ELSE 0 END)              AS failed_logins,
+    COUNT(DISTINCT a.user_id_hash)                                              AS distinct_users
+FROM fact_audit_events a
+JOIN dim_date d ON d.date_sk = a.date_sk
+WHERE d.full_date >= CURRENT_DATE - 90
+GROUP BY d.year, d.month, a.user_role
+ORDER BY d.year DESC, d.month DESC, sensitive_events DESC;
+ year | month |   user_role   | total_events | sensitive_events | exports | gdpr_erasures | failed_logins | distinct_users 
+------+-------+---------------+--------------+------------------+---------+---------------+---------------+----------------
+ 2026 |     9 | service       |            3 |                2 |       0 |             2 |             0 |              1
+ 2026 |     9 | analyst       |            2 |                1 |       0 |             0 |             0 |              1
+ 2026 |     9 | admin         |            2 |                0 |       0 |             0 |             0 |              1
+ 2026 |     9 | compliance    |            1 |                0 |       0 |             0 |             0 |              1
+ 2026 |     9 | data_engineer |            1 |                0 |       0 |             0 |             0 |              1
+ 2026 |     8 | analyst       |            8 |                2 |       2 |             0 |             2 |              1
+ 2026 |     8 | data_engineer |            7 |                2 |       0 |             0 |             1 |              1
+ 2026 |     8 | service       |            3 |                1 |       0 |             0 |             0 |              1
+ 2026 |     8 | compliance    |            3 |                0 |       0 |             0 |             0 |              1
+ 2026 |     8 | admin         |            3 |                0 |       0 |             0 |             0 |              1
+ 2026 |     8 | readonly      |            2 |                0 |       0 |             0 |             1 |              1
+ 2026 |     7 | readonly      |            7 |                5 |       1 |             0 |             2 |              1
+ 2026 |     7 | admin         |            4 |                2 |       1 |             0 |             0 |              1
+ 2026 |     7 | compliance    |            5 |                2 |       0 |             1 |             0 |              1
+ 2026 |     7 | data_engineer |            4 |                1 |       1 |             0 |             0 |              1
+ 2026 |     7 | service       |            6 |                1 |       0 |             0 |             1 |              1
+ 2026 |     7 | analyst       |            1 |                0 |       0 |             0 |             0 |              1
+ 2026 |     6 | analyst       |            4 |                3 |       0 |             0 |             0 |              1
+ 2026 |     6 | data_engineer |            2 |                1 |       0 |             0 |             0 |              1
+ 2026 |     6 | service       |            2 |                1 |       0 |             0 |             0 |              1
+ 2026 |     6 | admin         |            2 |                0 |       0 |             0 |             0 |              1
+ 2026 |     6 | readonly      |            1 |                0 |       0 |             0 |             0 |              1
+(22 rows)
+
+SELECT
+    hist.category                                    AS category_at_transaction_time,
+    curr.category                                    AS category_current,
+    COUNT(*)                                         AS transactions,
+    ROUND(SUM(f.amount_usd), 2)                      AS revenue_usd
+FROM fact_transactions f
+JOIN dim_merchant hist ON hist.merchant_sk = f.merchant_sk                       -- version historique
+JOIN dim_merchant curr ON curr.merchant_id = hist.merchant_id AND curr.is_current = true  -- version courante
+WHERE f.status = 'succeeded'
+  AND hist.category <> curr.category
+GROUP BY hist.category, curr.category
+ORDER BY revenue_usd DESC;
+ category_at_transaction_time | category_current | transactions | revenue_usd 
+------------------------------+------------------+--------------+-------------
+ e-commerce                   | education        |            3 |      483.01
+ e-commerce                   | gaming           |            6 |      213.85
+ retail                       | e-commerce       |            1 |      130.65
+(3 rows)
+
+EXPLAIN (COSTS OFF)
+SELECT d.year, d.month, SUM(a.total_amount_usd)
+FROM agg_daily_revenue a JOIN dim_date d ON d.date_sk = a.date_sk
+GROUP BY d.year, d.month;
+                 QUERY PLAN                  
+---------------------------------------------
+ HashAggregate
+   Group Key: d.year, d.month
+   ->  Hash Join
+         Hash Cond: (a.date_sk = d.date_sk)
+         ->  Seq Scan on agg_daily_revenue a
+         ->  Hash
+               ->  Seq Scan on dim_date d
+(7 rows)
+
+EXPLAIN (COSTS OFF)
+SELECT d.year, d.month, SUM(f.amount_usd)
+FROM fact_transactions f JOIN dim_date d ON d.date_sk = f.date_sk
+WHERE f.status = 'succeeded'
+GROUP BY d.year, d.month;
+                         QUERY PLAN                         
+------------------------------------------------------------
+ HashAggregate
+   Group Key: d.year, d.month
+   ->  Hash Join
+         Hash Cond: (f.date_sk = d.date_sk)
+         ->  Seq Scan on fact_transactions f
+               Filter: ((status)::text = 'succeeded'::text)
+         ->  Hash
+               ->  Seq Scan on dim_date d
+(8 rows)
+
+SELECT year, month, SUM(revenue_usd) AS revenue_usd
+FROM mv_monthly_revenue_by_country
+GROUP BY year, month
+ORDER BY year, month;
+ year | month | revenue_usd 
+------+-------+-------------
+ 2025 |     9 |     2903.24
+ 2025 |    10 |     6112.49
+ 2025 |    11 |     6373.33
+ 2025 |    12 |     6326.87
+ 2026 |     1 |     5630.91
+ 2026 |     2 |     5974.71
+ 2026 |     3 |     4802.22
+ 2026 |     4 |     5161.04
+ 2026 |     5 |     7757.70
+ 2026 |     6 |     5719.11
+ 2026 |     7 |     7947.03
+ 2026 |     8 |     6092.03
+ 2026 |     9 |     2715.15
+ 2026 |    12 |    60694.40
+ 2027 |     4 |      149.64
+ 2027 |     5 |        3.73
+ 2027 |     6 |    50799.43
+ 2027 |     7 |      118.04
+(18 rows)
+

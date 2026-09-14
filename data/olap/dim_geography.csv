@@ -1,0 +1,12 @@
+geography_sk,country_code,country_name,region,data_region,gdpr_applies
+1,FR,France,Europe,EU,True
+2,DE,Germany,Europe,EU,True
+3,ES,Spain,Europe,EU,True
+4,GB,United Kingdom,Europe,EU,True
+5,US,United States,North America,US,False
+6,CA,Canada,North America,US,False
+7,BR,Brazil,South America,US,False
+8,SG,Singapore,Asia,APAC,False
+9,JP,Japan,Asia,APAC,False
+10,AU,Australia,Oceania,APAC,False
+11,NG,Nigeria,Africa,EU,False

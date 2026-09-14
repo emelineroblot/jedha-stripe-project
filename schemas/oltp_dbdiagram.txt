@@ -1,80 +1,205 @@
 // ============================================================
-// STRIPE — ERD OLTP (schéma normalisé 3NF)
+// STRIPE — ERD OLTP (PostgreSQL, schéma normalisé 3NF)
 // À coller sur https://dbdiagram.io
+//
+// Conventions :
+//   - IDs préfixés façon Stripe (mer_, cus_, pm_, ch_, re_, dp_, sub_, prod_)
+//   - Colonnes PII marquées [note: 'PII'] → pseudonymisées avant l'OLAP
+//   - Montants en decimal(14,2) ; currencies.decimal_places gère JPY (0)
+//   - Statuts contraints par CHECK (voir sql/ddl_oltp.sql)
 // ============================================================
 
-// --- Tables de référence ---
+// ───────────────────────── Données de référence ─────────────────────────
 
 Table countries {
-  country_code varchar(2) [pk]
-  name         varchar    [not null]
-  region       varchar
+  country_code   varchar(2)  [pk]
+  name           varchar     [not null]
+  region         varchar     [not null]              // Europe, North America, ...
+  data_region    varchar(4)  [not null, note: 'EU / US / APAC — résidence des données']
+  gdpr_applies   boolean     [not null, default: false]
 }
 
 Table currencies {
-  currency_code varchar(3) [pk]
-  name          varchar    [not null]
-  symbol        varchar(5)
+  currency_code  varchar(3)  [pk]
+  name           varchar     [not null]
+  symbol         varchar(5)
+  decimal_places smallint    [not null, default: 2, note: 'JPY = 0']
 }
 
-// --- Entités métier ---
-
-Table customers {
-  customer_id  varchar    [pk]
-  email        varchar    [not null, unique]
-  country_code varchar(2) [ref: > countries.country_code]
-  created_at   timestamp  [not null]
+Table exchange_rates {
+  rate_date      date        [not null]
+  currency_code  varchar(3)  [not null, ref: > currencies.currency_code]
+  rate_to_usd    decimal(18,8) [not null, note: '1 unité de devise = rate_to_usd USD']
+  source         varchar     [default: 'ECB']
+  indexes {
+    (rate_date, currency_code) [pk]
+  }
 }
+
+// ───────────────────────── Entités métier ─────────────────────────
 
 Table merchants {
-  merchant_id  varchar    [pk]
-  name         varchar    [not null]
-  country_code varchar(2) [ref: > countries.country_code]
-  category     varchar
-  created_at   timestamp  [not null]
+  merchant_id    varchar     [pk]
+  name           varchar     [not null]
+  country_code   varchar(2)  [not null, ref: > countries.country_code]
+  category       varchar     [not null]              // e-commerce, saas, ...
+  mcc            char(4)     [note: 'Merchant Category Code ISO 18245']
+  status         varchar     [not null, default: 'active']  // active, restricted, closed
+  created_at     timestamptz [not null]
+  updated_at     timestamptz [not null, note: 'requis pour CDC / dbt incrémental']
+  indexes {
+    country_code
+    category
+  }
+}
+
+Table customers {
+  customer_id    varchar     [pk]
+  email          varchar     [not null, unique, note: 'PII — hash SHA-256 salé dans l OLAP']
+  country_code   varchar(2)  [not null, ref: > countries.country_code]
+  created_at     timestamptz [not null]
+  updated_at     timestamptz [not null]
+  deleted_at     timestamptz [note: 'soft delete — droit à l oubli RGPD art. 17']
+  indexes {
+    country_code
+  }
 }
 
 Table payment_methods {
-  payment_method_id varchar  [pk]
-  customer_id       varchar  [ref: > customers.customer_id]
-  type              varchar  [not null]  // card, bank_transfer, wallet
-  brand             varchar              // visa, mastercard, amex
-  last4             char(4)
-  is_default        boolean  [default: false]
-  created_at        timestamp [not null]
+  payment_method_id varchar   [pk]
+  customer_id       varchar   [not null, ref: > customers.customer_id]
+  type              varchar   [not null]             // card, bank_transfer, wallet
+  brand             varchar                          // visa, mastercard, amex, discover
+  last4             char(4)   [note: 'seuls chiffres affichables (PCI-DSS Req 3.4)']
+  token             varchar   [not null, unique, note: 'référence opaque vers le vault PCI — jamais le PAN']
+  fingerprint       varchar   [note: 'hash de la carte : détecte la même carte sur plusieurs comptes']
+  exp_month         smallint
+  exp_year          smallint
+  is_default        boolean   [not null, default: false]
+  created_at        timestamptz [not null]
+  indexes {
+    customer_id
+    fingerprint
+  }
 }
 
-// --- Table centrale ---
+Table products {
+  product_id     varchar     [pk]
+  merchant_id    varchar     [not null, ref: > merchants.merchant_id]
+  name           varchar     [not null]
+  unit_price     decimal(14,2) [not null]
+  currency_code  varchar(3)  [not null, ref: > currencies.currency_code]
+  billing_interval varchar   [note: 'null = achat unique ; month / year = abonnement']
+  active         boolean     [not null, default: true]
+  created_at     timestamptz [not null]
+  indexes {
+    merchant_id
+  }
+}
+
+Table subscriptions {
+  subscription_id      varchar     [pk]
+  customer_id          varchar     [not null, ref: > customers.customer_id]
+  merchant_id          varchar     [not null, ref: > merchants.merchant_id]
+  product_id           varchar     [not null, ref: > products.product_id]
+  status               varchar     [not null]        // active, past_due, canceled
+  current_period_start date        [not null]
+  current_period_end   date        [not null]
+  canceled_at          timestamptz
+  created_at           timestamptz [not null]
+  updated_at           timestamptz [not null]
+  indexes {
+    (merchant_id, status)
+    customer_id
+  }
+}
+
+// ───────────────────────── Table centrale ─────────────────────────
 
 Table transactions {
   transaction_id    varchar       [pk]
-  merchant_id       varchar       [ref: > merchants.merchant_id]
-  customer_id       varchar       [ref: > customers.customer_id]
-  payment_method_id varchar       [ref: > payment_methods.payment_method_id]
-  amount            decimal(12,2) [not null]
-  currency_code     varchar(3)    [ref: > currencies.currency_code]
-  status            varchar       [not null]  // successful, failed, refunded, chargeback
-  ip_address        varchar
-  device_type       varchar       // mobile, desktop, tablet
-  created_at        timestamp     [not null]
+  merchant_id       varchar       [not null, ref: > merchants.merchant_id]
+  customer_id       varchar       [not null, ref: > customers.customer_id]
+  payment_method_id varchar       [not null, ref: > payment_methods.payment_method_id]
+  product_id        varchar       [ref: > products.product_id]
+  subscription_id   varchar       [ref: > subscriptions.subscription_id, note: 'null = paiement ponctuel']
+  amount            decimal(14,2) [not null]
+  currency_code     varchar(3)    [not null, ref: > currencies.currency_code]
+  status            varchar       [not null]           // succeeded, failed
+  failure_reason    varchar                            // insufficient_funds, card_declined, ...
+  ip_address        inet          [note: 'PII — tronquée /24 dans l OLAP']
+  geo_country_code  varchar(2)    [ref: > countries.country_code, note: 'géoloc IP (MaxMind) à l ingestion']
+  geo_city          varchar
+  device_type       varchar                            // mobile, desktop, tablet
+  idempotency_key   varchar       [unique, note: 'rejeu API sans double débit']
+  created_at        timestamptz   [not null, note: 'clé de partitionnement RANGE mensuel']
+  updated_at        timestamptz   [not null]
+  indexes {
+    (merchant_id, created_at)
+    (customer_id, created_at)
+    (customer_id, merchant_id, amount, created_at) [note: 'détection de doublons < 5 min']
+    subscription_id
+    (status, created_at) [note: 'index partiel WHERE status = failed']
+  }
 }
 
-// --- Tables liées aux transactions ---
-
-Table fraud_indicators {
-  fraud_id       varchar      [pk]
-  transaction_id varchar      [ref: > transactions.transaction_id]
-  anomaly_score  decimal(5,4)
-  risk_level     varchar      // low, medium, high, critical
-  flagged_at     timestamp    [not null]
-  model_version  varchar
-}
+// ───────────────────────── Tables liées aux transactions ─────────────────────────
 
 Table refunds {
   refund_id      varchar       [pk]
-  transaction_id varchar       [ref: > transactions.transaction_id]
-  amount         decimal(12,2) [not null]
-  reason         varchar
-  status         varchar       // pending, processed, rejected
-  created_at     timestamp     [not null]
+  transaction_id varchar       [not null, ref: > transactions.transaction_id]
+  amount         decimal(14,2) [not null, note: 'remboursement partiel possible : plusieurs refunds par transaction']
+  reason         varchar                              // requested_by_customer, duplicate, fraudulent
+  status         varchar       [not null]             // pending, succeeded, failed
+  created_at     timestamptz   [not null]
+  indexes {
+    transaction_id
+  }
+}
+
+Table disputes {
+  dispute_id       varchar       [pk]
+  transaction_id   varchar       [not null, ref: > transactions.transaction_id]
+  amount           decimal(14,2) [not null]
+  reason           varchar       [not null]           // fraudulent, product_not_received, duplicate, ...
+  status           varchar       [not null]           // needs_response, under_review, won, lost
+  evidence_due_by  date
+  opened_at        timestamptz   [not null, note: 'arrive 20-90 j après la transaction (label delay ML)']
+  resolved_at      timestamptz
+  indexes {
+    transaction_id
+    (status, opened_at)
+  }
+}
+
+Table fraud_indicators {
+  fraud_id       varchar      [pk]
+  transaction_id varchar      [not null, unique, ref: - transactions.transaction_id]
+  anomaly_score  decimal(5,4) [not null, note: '0.0000 – 1.0000']
+  risk_level     varchar      [not null]              // low, medium, high, critical
+  action_taken   varchar      [not null]              // allow, challenge_3ds, review, block
+  model_version  varchar      [not null]
+  flagged_at     timestamptz  [not null]
+  indexes {
+    (risk_level, flagged_at)
+  }
+}
+
+// ───────────────────────── Audit (append-only) ─────────────────────────
+
+Table audit_logs {
+  audit_id     varchar     [pk]
+  event_type   varchar     [not null]                 // SELECT, INSERT, UPDATE, DELETE, LOGIN, EXPORT, ERASURE
+  table_name   varchar
+  record_id    varchar
+  user_id      varchar     [not null]
+  user_role    varchar     [not null]
+  ip_address   inet
+  query_hash   varchar
+  created_at   timestamptz [not null]
+  Note: 'Aucun rôle n a UPDATE/DELETE. Répliquée vers S3 Object Lock.'
+  indexes {
+    (table_name, created_at)
+    (user_id, created_at)
+  }
 }

@@ -14,7 +14,7 @@
 | **Sécurité** | Conformité par construction | KMS, chiffrement colonne / champ, RBAC, audit à 3 couches immuable, résidence des données | Contrôles automatisés dans le pipeline ; rapports = sortie des contrôles |
 
 **Ce que ce dépôt démontre concrètement.**
-- 3 modèles de données complets (ERD 13 tables, star schema 12 tables, 6 collections) avec DDL exécutables.
+- 3 modèles de données complets (ERD 13 tables, star schema 13 tables, 6 collections) avec DDL exécutables.
 - ~1 000 transactions synthétiques réalistes (fraude corrélée à des signaux, label delay, abonnements, litiges) et le star schema construit depuis l'OLTP.
 - **30 requêtes SQL et NoSQL exécutées** sur une stack Docker (PostgreSQL + MongoDB), résultats archivés : revenue, fraude, segmentation, conformité, produit, SLA.
 - Code de pipeline : connecteur Debezium, modèles dbt (staging → marts, snapshot SCD2, tests), DAGs Airflow (agrégats quotidiens, droit à l'oubli).

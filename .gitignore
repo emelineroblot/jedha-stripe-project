@@ -19,3 +19,9 @@ memory/
 # OS
 .DS_Store
 Thumbs.db
+
+# Docs de preparation soutenance (internes)
+docs/journal-session.md
+docs/livrables-soutenances.md
+docs/soutenance.md
+docs/attendus-theoriques.md

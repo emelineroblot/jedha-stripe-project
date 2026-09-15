@@ -268,7 +268,7 @@ Coût assumé : chaque index ralentit les `INSERT` (~5-10 % par index). Les 6 in
 | **Réplica cross-région** asynchrone | Sinistre régional | RPO < 5 min, RTO < 30 min, test de bascule trimestriel |
 | **PgBouncer** en `transaction pooling` | Absorber les pics de connexions | Survit au failover (reconnexion transparente) |
 
-Runbook de failover : détection (3 healthchecks ratés en 10 s) → promotion du standby → mise à jour DNS → l'ancien primaire est reconstruit en standby (`pg_rewind`) → Debezium reprend depuis son LSN sur le nouveau primaire (le slot est répliqué avec PostgreSQL 16 `sync_replication_slots`).
+Runbook de failover : détection (3 healthchecks ratés en 10 s) → promotion du standby → mise à jour DNS → l'ancien primaire est reconstruit en standby (`pg_rewind`) → Debezium reprend depuis son LSN sur le nouveau primaire (slot de réplication synchronisé sur le standby : natif en PostgreSQL 17 via `sync_replication_slots`, extension `pg_failover_slots` en 16).
 
 ---
 

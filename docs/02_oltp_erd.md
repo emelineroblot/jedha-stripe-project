@@ -2,13 +2,17 @@
 
 > Livrable 2 : *ERD for OLTP System* — schéma normalisé, intégrité transactionnelle, performance, réplication et failover.
 
-- Code dbdiagram.io : [`schemas/oltp_dbdiagram.txt`](../schemas/oltp_dbdiagram.txt) (à coller sur https://dbdiagram.io)
+- Code dbdiagram.io : [`schemas/oltp_dbdiagram.txt`](../schemas/oltp_dbdiagram.txt) (à coller sur https://dbdiagram.io) — export : [`schemas/exports/oltp_dbdiagram.png`](../schemas/exports/oltp_dbdiagram.png)
 - DDL exécutable : [`sql/ddl_oltp.sql`](../sql/ddl_oltp.sql)
 - Démo : `bash scripts/demo.sh` → base `stripe_oltp`
 
 ---
 
 ## 1. Diagramme entité-relation
+
+![ERD OLTP — export dbdiagram.io](../schemas/exports/oltp_dbdiagram.png)
+
+Version Mermaid (rendu GitHub) :
 
 ```mermaid
 erDiagram

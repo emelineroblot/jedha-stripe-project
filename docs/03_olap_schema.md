@@ -2,13 +2,17 @@
 
 > Livrable 3 : *Schema Design for OLAP System* — star schema, stratégie de jointures et sous-requêtes, time-series, pré-agrégations / vues matérialisées / tables de synthèse.
 
-- Code dbdiagram.io : [`schemas/olap_dbdiagram.txt`](../schemas/olap_dbdiagram.txt)
+- Code dbdiagram.io : [`schemas/olap_dbdiagram.txt`](../schemas/olap_dbdiagram.txt) — export : [`schemas/exports/olap_dbdiagram.png`](../schemas/exports/olap_dbdiagram.png)
 - DDL exécutable (PostgreSQL local, annoté Redshift) : [`sql/ddl_olap.sql`](../sql/ddl_olap.sql)
 - Construction depuis l'OLTP (simulation dbt) : [`build_olap.py`](../build_olap.py)
 
 ---
 
 ## 1. Diagramme
+
+![Star schema OLAP — export dbdiagram.io](../schemas/exports/olap_dbdiagram.png)
+
+Version Mermaid (rendu GitHub) :
 
 ```mermaid
 erDiagram

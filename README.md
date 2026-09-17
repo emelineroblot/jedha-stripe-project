@@ -25,8 +25,8 @@ flowchart LR
 |---|---|---|---|
 | — | Synthèse exécutive | [docs/00_executive_summary.md](docs/00_executive_summary.md) | |
 | 1 | Diagramme d'architecture global | [docs/01_architecture.md](docs/01_architecture.md) | flux, choix technologiques, fil rouge |
-| 2 | ERD OLTP | [docs/02_oltp_erd.md](docs/02_oltp_erd.md) | [`schemas/oltp_dbdiagram.txt`](schemas/oltp_dbdiagram.txt) · [`sql/ddl_oltp.sql`](sql/ddl_oltp.sql) |
-| 3 | Schéma OLAP | [docs/03_olap_schema.md](docs/03_olap_schema.md) | [`schemas/olap_dbdiagram.txt`](schemas/olap_dbdiagram.txt) · [`sql/ddl_olap.sql`](sql/ddl_olap.sql) · [`build_olap.py`](build_olap.py) |
+| 2 | ERD OLTP | [docs/02_oltp_erd.md](docs/02_oltp_erd.md) | [`schemas/oltp_dbdiagram.txt`](schemas/oltp_dbdiagram.txt) · [PNG](schemas/exports/oltp_dbdiagram.png) · [`sql/ddl_oltp.sql`](sql/ddl_oltp.sql) |
+| 3 | Schéma OLAP | [docs/03_olap_schema.md](docs/03_olap_schema.md) | [`schemas/olap_dbdiagram.txt`](schemas/olap_dbdiagram.txt) · [PNG](schemas/exports/olap_dbdiagram.png) · [`sql/ddl_olap.sql`](sql/ddl_olap.sql) · [`build_olap.py`](build_olap.py) |
 | 4 | Modèle NoSQL | [docs/04_nosql_model.md](docs/04_nosql_model.md) | [`schemas/nosql_schema.json`](schemas/nosql_schema.json) · [`scripts/mongo_init.js`](scripts/mongo_init.js) |
 | 5 | Architecture du pipeline | [docs/05_pipeline.md](docs/05_pipeline.md) | [`pipeline/`](pipeline/) (Debezium, dbt, Airflow) |
 | 6 | Sécurité & conformité | [docs/06_security_compliance.md](docs/06_security_compliance.md) | DDL (audit, vues), DAG d'effacement, tests dbt |
@@ -35,7 +35,7 @@ flowchart LR
 | — | Données synthétiques | [docs/09_data_generation.md](docs/09_data_generation.md) | [`generate_data.py`](generate_data.py) · [`data/`](data/) |
 | — | Glossaire | [docs/glossaire.md](docs/glossaire.md) | |
 
-Les diagrammes sont en Mermaid (rendu natif GitHub) ; les schémas dbdiagram.io se collent tels quels sur https://dbdiagram.io.
+Les diagrammes sont en Mermaid (rendu natif GitHub) ; les ERD sont aussi exportés en PNG dans `schemas/exports/`, et les schémas dbdiagram.io se collent tels quels sur https://dbdiagram.io.
 
 ---
 
@@ -88,7 +88,7 @@ docker compose -f docker/dev/docker-compose.yml down -v
 ```
 ├── README.md
 ├── docs/                      ← livrables 00 → 09, glossaire, results/
-├── schemas/                   ← dbdiagram.io (OLTP, OLAP) + JSON (NoSQL)
+├── schemas/                   ← dbdiagram.io (OLTP, OLAP) + JSON (NoSQL) + exports/ (PNG)
 ├── sql/                       ← DDL et chargement OLTP / OLAP
 ├── queries/                   ← 10 requêtes OLTP, 10 OLAP, 10 NoSQL
 ├── pipeline/

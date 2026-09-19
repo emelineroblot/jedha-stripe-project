@@ -14,7 +14,7 @@ export MSYS_NO_PATHCONV=1   # Git Bash (Windows) : ne pas convertir /sql/... en 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 ROOT_NATIVE="$(cygpath -w "$ROOT" 2>/dev/null || echo "$ROOT")"   # chemin Windows natif sous Git Bash
 COMPOSE="docker compose -f $ROOT_NATIVE/docker/dev/docker-compose.yml"
-PG="docker exec -i stripe-postgres psql -U stripe -v ON_ERROR_STOP=1 -q"
+PG="docker exec -i -w /data stripe-postgres psql -U stripe -v ON_ERROR_STOP=1 -q"
 MONGO="docker exec -i stripe-mongo mongosh --quiet"
 RESULTS="$ROOT/docs/results"
 mkdir -p "$RESULTS"

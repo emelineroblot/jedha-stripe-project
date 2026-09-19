@@ -143,8 +143,9 @@ with DAG(
     init_databases = BashOperator(
         task_id="init_databases",
         bash_command=(
-            f"{PSQL} -d postgres -c \"SELECT 'CREATE DATABASE stripe_oltp' WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'stripe_oltp')\\gexec\" && "
-            f"{PSQL} -d postgres -c \"SELECT 'CREATE DATABASE stripe_olap' WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'stripe_olap')\\gexec\""
+            "for db in stripe_oltp stripe_olap; do "
+            f"if [ \"$({PSQL} -d postgres -tAc \"SELECT 1 FROM pg_database WHERE datname = '$db'\")\" = \"1\" ]; "
+            f"then echo \"$db existe\"; else {PSQL} -d postgres -c \"CREATE DATABASE $db\" && echo \"$db créée\"; fi; done"
         ),
     )
 

@@ -17,9 +17,9 @@ variable "repo_ref" {
 }
 
 variable "ec2_instance_type" {
-  description = "Airflow + MongoDB : 4 Go de RAM minimum"
+  description = "Airflow + MongoDB : 4 Go de RAM minimum (compte free plan : type éligible free tier obligatoire)"
   type        = string
-  default     = "t3.medium"
+  default     = "m7i-flex.large"   # éligible free tier, 8 Go
 }
 
 variable "rds_instance_class" {

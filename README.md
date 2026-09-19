@@ -24,6 +24,7 @@ flowchart LR
 | # | Livrable de l'énoncé | Document | Artefacts |
 |---|---|---|---|
 | — | Synthèse exécutive | [docs/00_executive_summary.md](docs/00_executive_summary.md) | |
+| — | Support de soutenance (5 slides) | [docs/deck/stripe-architecture-soutenance.pdf](docs/deck/stripe-architecture-soutenance.pdf) | [`.pptx`](docs/deck/stripe-architecture-soutenance.pptx) · [`build/generate_deck.py`](build/generate_deck.py) |
 | 1 | Diagramme d'architecture global | [docs/01_architecture.md](docs/01_architecture.md) | flux, choix technologiques, fil rouge |
 | 2 | ERD OLTP | [docs/02_oltp_erd.md](docs/02_oltp_erd.md) | [`schemas/oltp_dbdiagram.txt`](schemas/oltp_dbdiagram.txt) · [PNG](schemas/exports/oltp_dbdiagram.png) · [`sql/ddl_oltp.sql`](sql/ddl_oltp.sql) |
 | 3 | Schéma OLAP | [docs/03_olap_schema.md](docs/03_olap_schema.md) | [`schemas/olap_dbdiagram.txt`](schemas/olap_dbdiagram.txt) · [PNG](schemas/exports/olap_dbdiagram.png) · [`sql/ddl_olap.sql`](sql/ddl_olap.sql) · [`build_olap.py`](build_olap.py) |

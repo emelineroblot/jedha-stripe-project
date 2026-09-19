@@ -12,7 +12,7 @@
 
 ```mermaid
 flowchart LR
-    subgraph OP["Poste opérateur (IP unique autorisée)"]
+    subgraph OP["Poste opérateur (toute IP — clé SSH, mots de passe)"]
         TF[terraform apply]
         UI[Airflow UI :8080]
         PSQL[psql / mongosh]
@@ -36,7 +36,7 @@ flowchart LR
     IAM -.-> AF
     UI --> AF
     PSQL --> RDS
-    PSQL --> MG
+    PSQL -. "via SSH" .-> MG
 ```
 
 | Brique | Cible de conception ([01](01_architecture.md)) | Déployé | Écart |

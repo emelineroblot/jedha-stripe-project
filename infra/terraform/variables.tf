@@ -34,7 +34,7 @@ variable "rds_multi_az" {
 }
 
 variable "operator_cidr" {
-  description = "CIDR autorisé (SSH, Airflow, psql, mongosh). Vide = IP publique courante détectée automatiquement"
+  description = "CIDR autorisé pour SSH (clé), Airflow (mot de passe) et RDS (mot de passe). Ouvert par défaut : IP opérateur variable"
   type        = string
-  default     = ""
+  default     = "0.0.0.0/0"
 }

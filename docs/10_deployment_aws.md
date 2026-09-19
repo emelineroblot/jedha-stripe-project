@@ -49,7 +49,7 @@ flowchart LR
 | Orchestration | Airflow | **Airflow 2.10** (LocalExecutor), DAG quotidien 02:00 UTC + déclenchement manuel | dbt non déployé (modèles fournis dans `pipeline/dbt/`, `build_olap.py` joue leur rôle) |
 | IaC | Terraform | **Terraform 1.9** — 19 ressources | — |
 | Secrets | Secrets Manager | Mot de passe RDS et admin Airflow générés par Terraform, écrits dans un `.env` sur l'instance (`chmod 600`), jamais dans le dépôt | Secrets Manager en cible |
-| Accès | VPC privé, bastion | Security groups restreints à **l'IP publique de l'opérateur** (SSH, Airflow, psql, mongosh) ; RDS accessible depuis l'EC2 et cette IP seulement | — |
+| Accès | VPC privé, bastion | SSH (clé ED25519 générée), Airflow (mot de passe généré) et RDS (mot de passe 24 car., chiffré) ouverts — l'IP de l'opérateur varie ; `operator_cidr` permet de restreindre. **MongoDB n'est pas exposé** (pas d'authentification) : accès via SSH | — |
 
 ---
 
@@ -127,7 +127,7 @@ Redshift Serverless ajouterait ~3 $/h pendant les requêtes (pause automatique s
 - Aucune clé AWS dans le code ni sur l'instance : l'accès S3 passe par le **rôle d'instance** (IMDSv2, `hop_limit = 2` pour les conteneurs).
 - Mots de passe RDS et Airflow **générés** par Terraform (`random_password`), stockés dans l'état Terraform (local, gitignoré) et dans `.env` sur l'instance.
 - Clé SSH générée par Terraform, écrite dans `infra/terraform/keys/` (gitignoré).
-- Security groups : tout est fermé sauf l'IP de l'opérateur (détectée à l'`apply`, ou `operator_cidr`) ; RDS accepte en plus le SG de l'EC2.
+- Security groups : SSH, Airflow (8080) et RDS (5432) ouverts par défaut (`operator_cidr = 0.0.0.0/0`, l'IP de l'opérateur change) — chacun protégé par clé ou mot de passe généré ; **MongoDB (27017) n'est pas exposé** : `mongosh` via SSH sur l'instance. Restreindre avec `operator_cidr = "x.x.x.x/32"` si l'IP est stable.
 - Chiffrement at-rest : RDS, volume EC2, S3 (AES-256) ; versioning S3 activé.
 - Le bucket bloque tout accès public.
 
@@ -140,4 +140,4 @@ Redshift Serverless ajouterait ~3 $/h pendant les requêtes (pause automatique s
 3. Le log de `quality_checks` : 10 contrôles, dont la cohérence OLTP ↔ OLAP ↔ NoSQL.
 4. Le log de `summary`.
 5. Console AWS : RDS (instance `stripe-pipeline-postgres`), S3 (`runs/<date>/results/olap_results.txt`).
-6. Depuis le poste : une requête `psql` sur RDS (OLAP Q9, SCD2) et `mongosh` sur l'EC2 (NoSQL Q6).
+6. Depuis le poste : une requête `psql` sur RDS (OLAP Q9, SCD2) ; via SSH sur l'EC2 : `mongosh` (NoSQL Q6).

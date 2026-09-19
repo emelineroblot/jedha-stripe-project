@@ -16,7 +16,6 @@ terraform {
     aws    = { source = "hashicorp/aws", version = "~> 5.70" }
     random = { source = "hashicorp/random", version = "~> 3.6" }
     tls    = { source = "hashicorp/tls", version = "~> 4.0" }
-    http   = { source = "hashicorp/http", version = "~> 3.4" }
     local  = { source = "hashicorp/local", version = "~> 2.5" }
   }
 }
@@ -43,13 +42,10 @@ data "aws_subnets" "default" {
   }
 }
 
-# IP publique de l'opérateur : seul accès autorisé à SSH, Airflow et psql
-data "http" "my_ip" {
-  url = "https://checkip.amazonaws.com"
-}
-
+# Accès opérateur : par défaut ouvert (IP publique variable) — SSH par clé, Airflow et RDS par mot de passe.
+# Restreindre avec operator_cidr = "x.x.x.x/32" si l'IP est stable.
 locals {
-  my_cidr = var.operator_cidr != "" ? var.operator_cidr : "${chomp(data.http.my_ip.response_body)}/32"
+  my_cidr = var.operator_cidr
   name    = "stripe-pipeline"
 }
 
@@ -72,13 +68,7 @@ resource "aws_security_group" "ec2" {
     protocol    = "tcp"
     cidr_blocks = [local.my_cidr]
   }
-  ingress {
-    description = "MongoDB operateur (mongosh depuis le poste)"
-    from_port   = 27017
-    to_port     = 27017
-    protocol    = "tcp"
-    cidr_blocks = [local.my_cidr]
-  }
+  # MongoDB n'est PAS exposé (pas d'authentification) : accès via SSH ou tunnel (ssh -L 27017:localhost:27017)
   egress {
     from_port   = 0
     to_port     = 0
@@ -183,7 +173,7 @@ resource "aws_db_instance" "postgres" {
   parameter_group_name   = aws_db_parameter_group.pg16.name
   db_subnet_group_name   = aws_db_subnet_group.rds.name
   vpc_security_group_ids = [aws_security_group.rds.id]
-  publicly_accessible    = true # restreint à l'IP opérateur + SG EC2
+  publicly_accessible    = true # protégé par mot de passe généré (24 car.) + SG
   multi_az               = var.rds_multi_az
   backup_retention_period = 1
   skip_final_snapshot    = true

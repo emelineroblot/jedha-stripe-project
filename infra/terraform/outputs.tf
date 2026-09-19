@@ -26,7 +26,7 @@ output "psql_olap" {
 }
 
 output "mongosh" {
-  value = "mongosh \"mongodb://${aws_instance.airflow.public_ip}:27017/stripe_nosql?directConnection=true\""
+  value = "ssh -i infra/terraform/keys/stripe-pipeline.pem ubuntu@${aws_instance.airflow.public_ip} 'cd /opt/stripe/deploy/airflow && sudo docker compose exec airflow-scheduler mongosh \"$MONGO_URI\" stripe_nosql'"
 }
 
 output "s3_bucket" {

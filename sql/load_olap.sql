@@ -1,22 +1,22 @@
 -- ============================================================
 -- Chargement du star schema (data/olap/*.csv produits par build_olap.py)
--- En production : Kafka Connect → S3 → COPY Redshift, puis dbt.
+-- \copy côté client, à exécuter depuis le dossier data/. Cible de conception : S3 → COPY Redshift, puis dbt.
 -- ============================================================
 
 \set ON_ERROR_STOP on
 
-COPY dim_date           FROM '/data/olap/dim_date.csv'           CSV HEADER;
-COPY dim_geography      FROM '/data/olap/dim_geography.csv'      CSV HEADER;
-COPY dim_currency       FROM '/data/olap/dim_currency.csv'       CSV HEADER;
-COPY dim_payment_method FROM '/data/olap/dim_payment_method.csv' CSV HEADER;
-COPY dim_product        FROM '/data/olap/dim_product.csv'        CSV HEADER;
-COPY dim_merchant       FROM '/data/olap/dim_merchant.csv'       CSV HEADER;
-COPY dim_customer       FROM '/data/olap/dim_customer.csv'       CSV HEADER;
-COPY exchange_rates     FROM '/data/olap/exchange_rates.csv'     CSV HEADER;
-COPY fact_transactions  FROM '/data/olap/fact_transactions.csv'  CSV HEADER;
-COPY fact_audit_events  FROM '/data/olap/fact_audit_events.csv'  CSV HEADER;
-COPY agg_daily_revenue  FROM '/data/olap/agg_daily_revenue.csv'  CSV HEADER;
-COPY agg_monthly_fraud  FROM '/data/olap/agg_monthly_fraud.csv'  CSV HEADER;
+\copy dim_date FROM 'olap/dim_date.csv' CSV HEADER
+\copy dim_geography FROM 'olap/dim_geography.csv' CSV HEADER
+\copy dim_currency FROM 'olap/dim_currency.csv' CSV HEADER
+\copy dim_payment_method FROM 'olap/dim_payment_method.csv' CSV HEADER
+\copy dim_product FROM 'olap/dim_product.csv' CSV HEADER
+\copy dim_merchant FROM 'olap/dim_merchant.csv' CSV HEADER
+\copy dim_customer FROM 'olap/dim_customer.csv' CSV HEADER
+\copy exchange_rates FROM 'olap/exchange_rates.csv' CSV HEADER
+\copy fact_transactions FROM 'olap/fact_transactions.csv' CSV HEADER
+\copy fact_audit_events FROM 'olap/fact_audit_events.csv' CSV HEADER
+\copy agg_daily_revenue FROM 'olap/agg_daily_revenue.csv' CSV HEADER
+\copy agg_monthly_fraud FROM 'olap/agg_monthly_fraud.csv' CSV HEADER
 
 REFRESH MATERIALIZED VIEW mv_monthly_revenue_by_country;
 ANALYZE;

@@ -1,0 +1,91 @@
+# Airflow (LocalExecutor) + MongoDB 7 replica set — hôte EC2 de production
+# Les secrets viennent de ./.env (écrit par cloud-init, jamais versionné).
+#   docker compose build && docker compose up -d
+#   http://<ip>:8080  (admin / $AIRFLOW_ADMIN_PASSWORD)
+
+x-airflow-common: &airflow-common
+  build: .
+  image: stripe-airflow:2.10.5
+  env_file: .env
+  environment:
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-db/airflow
+    AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "false"
+    AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: "30"
+    PROJECT_DIR: /opt/airflow/project
+    RESULTS_DIR: /opt/airflow/results
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./logs:/opt/airflow/logs
+    - ./results:/opt/airflow/results
+    - ../..:/opt/airflow/project        # le dépôt cloné : scripts, sql, queries, data
+  depends_on:
+    airflow-db:
+      condition: service_healthy
+
+services:
+  airflow-db:                             # base de métadonnées Airflow (pas une base métier)
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - airflow-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow"]
+      interval: 5s
+      retries: 20
+
+  mongo:                                  # NoSQL de production (équivalent managé : Atlas M0 sur AWS)
+    image: mongo:7
+    command: ["--replSet", "rs0", "--bind_ip_all"]
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.runCommand({ ping: 1 }).ok"]
+      interval: 5s
+      retries: 20
+
+  airflow-init:
+    <<: *airflow-common
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        airflow db migrate
+        airflow users create --username admin --password "$${AIRFLOW_ADMIN_PASSWORD}" \
+          --firstname Emeline --lastname Roblot --role Admin --email admin@example.com || true
+    restart: "no"
+
+  airflow-webserver:
+    <<: *airflow-common
+    command: webserver
+    ports:
+      - "8080:8080"
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      retries: 5
+
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+      mongo:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  airflow-db:
+  mongo-data:

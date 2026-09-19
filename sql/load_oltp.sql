@@ -1,24 +1,24 @@
 -- ============================================================
 -- Chargement des CSV synthétiques dans l'OLTP (PostgreSQL)
--- /data est monté depuis ./data dans docker/dev/docker-compose.yml
--- Ordre = dépendances de clés étrangères
+-- \copy (côté client) : fonctionne en local (docker exec -w /data) comme vers RDS.
+-- À exécuter depuis le dossier data/ (chemins relatifs). Ordre = dépendances de clés étrangères
 -- ============================================================
 
 \set ON_ERROR_STOP on
 
-COPY countries        FROM '/data/countries.csv'        CSV HEADER;
-COPY currencies       FROM '/data/currencies.csv'       CSV HEADER;
-COPY exchange_rates   FROM '/data/exchange_rates.csv'   CSV HEADER;
-COPY merchants        FROM '/data/merchants.csv'        CSV HEADER;
-COPY customers        FROM '/data/customers.csv'        CSV HEADER;
-COPY payment_methods  FROM '/data/payment_methods.csv'  CSV HEADER;
-COPY products         FROM '/data/products.csv'         CSV HEADER;
-COPY subscriptions    FROM '/data/subscriptions.csv'    CSV HEADER;
-COPY transactions     FROM '/data/transactions.csv'     CSV HEADER;
-COPY refunds          FROM '/data/refunds.csv'          CSV HEADER;
-COPY disputes         FROM '/data/disputes.csv'         CSV HEADER;
-COPY fraud_indicators FROM '/data/fraud_indicators.csv' CSV HEADER;
-COPY audit_logs       FROM '/data/audit_logs.csv'       CSV HEADER;
+\copy countries FROM 'countries.csv' CSV HEADER
+\copy currencies FROM 'currencies.csv' CSV HEADER
+\copy exchange_rates FROM 'exchange_rates.csv' CSV HEADER
+\copy merchants FROM 'merchants.csv' CSV HEADER
+\copy customers FROM 'customers.csv' CSV HEADER
+\copy payment_methods FROM 'payment_methods.csv' CSV HEADER
+\copy products FROM 'products.csv' CSV HEADER
+\copy subscriptions FROM 'subscriptions.csv' CSV HEADER
+\copy transactions FROM 'transactions.csv' CSV HEADER
+\copy refunds FROM 'refunds.csv' CSV HEADER
+\copy disputes FROM 'disputes.csv' CSV HEADER
+\copy fraud_indicators FROM 'fraud_indicators.csv' CSV HEADER
+\copy audit_logs FROM 'audit_logs.csv' CSV HEADER
 
 ANALYZE;
 

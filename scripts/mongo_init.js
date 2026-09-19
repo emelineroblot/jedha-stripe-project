@@ -6,12 +6,14 @@
 // ============================================================
 
 // Replica set mono-nœud : nécessaire pour les transactions multi-documents et les change streams
+// Hôte annoncé aux clients : localhost en démo locale, "mongo:27017" depuis Airflow (variable MONGO_RS_HOST)
+const rsHost = (typeof process !== "undefined" && process.env && process.env.MONGO_RS_HOST) || "localhost:27017";
 try {
   rs.status();
 } catch (e) {
-  rs.initiate({ _id: "rs0", members: [{ _id: 0, host: "localhost:27017" }] });
-  sleep(2000);
+  rs.initiate({ _id: "rs0", members: [{ _id: 0, host: rsHost }] });
 }
+for (let i = 0; i < 60 && !db.hello().isWritablePrimary; i++) sleep(500);   // attendre l'élection
 
 const dbn = db.getSiblingDB("stripe_nosql");
 dbn.dropDatabase();

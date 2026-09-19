@@ -33,6 +33,7 @@ flowchart LR
 | 7 | Intégration ML | [docs/07_ml_integration.md](docs/07_ml_integration.md) | [`ml/train_fraud_demo.py`](ml/train_fraud_demo.py) |
 | 8 | Requêtes SQL & NoSQL | [docs/08_queries.md](docs/08_queries.md) | [`queries/`](queries/) · résultats dans [`docs/results/`](docs/results/) |
 | — | Données synthétiques | [docs/09_data_generation.md](docs/09_data_generation.md) | [`generate_data.py`](generate_data.py) · [`data/`](data/) |
+| — | **Déploiement en production (AWS)** | [docs/10_deployment_aws.md](docs/10_deployment_aws.md) | [`infra/terraform/`](infra/terraform/) · [`deploy/airflow/`](deploy/airflow/) |
 | — | Glossaire | [docs/glossaire.md](docs/glossaire.md) | |
 
 Les diagrammes sont en Mermaid (rendu natif GitHub) ; les ERD sont aussi exportés en PNG dans `schemas/exports/`, et les schémas dbdiagram.io se collent tels quels sur https://dbdiagram.io.
@@ -55,7 +56,19 @@ Les diagrammes sont en Mermaid (rendu natif GitHub) ; les ERD sont aussi export�
 
 ---
 
-## Lancer la démo
+## Production AWS
+
+Le pipeline est déployé sur AWS (eu-north-1) par Terraform : RDS PostgreSQL 16 (OLTP + OLAP), EC2 avec Airflow et MongoDB 7, S3 pour le staging et l'archivage des runs. Le DAG `stripe_pipeline` enchaîne génération → chargement OLTP / OLAP / NoSQL → 10 contrôles de cohérence inter-systèmes → 30 requêtes → modèle ML → archivage S3, chaque jour à 02:00 UTC — en ≈ 25 s.
+
+```bash
+bash infra/terraform/tf.sh init && bash infra/terraform/tf.sh apply   # ≈ 15 min
+bash infra/terraform/tf.sh output                                     # URL Airflow, endpoint RDS, bucket
+bash infra/terraform/tf.sh destroy                                    # après usage (≈ 3 $/jour)
+```
+
+Détails, écarts avec la cible de conception (Redshift → PostgreSQL) et sécurité : [docs/10_deployment_aws.md](docs/10_deployment_aws.md).
+
+## Lancer la démo locale
 
 Prérequis : Docker Desktop, Python 3.11+.
 
@@ -94,7 +107,9 @@ docker compose -f docker/dev/docker-compose.yml down -v
 ├── pipeline/
 │   ├── kafka/                 ← connecteur Debezium
 │   ├── dbt/                   ← modèles staging / intermediate / marts, snapshot SCD2, tests
-│   └── dags/                  ← Airflow : agrégats quotidiens, droit à l'oubli
+│   └── dags/                  ← Airflow (conception) : agrégats quotidiens, droit à l'oubli
+├── infra/terraform/           ← production AWS : RDS, S3, EC2, IAM, security groups (tf.sh)
+├── deploy/airflow/            ← image Airflow, compose (Airflow + MongoDB), DAG stripe_pipeline déployé
 ├── ml/                        ← démo XGBoost + SHAP + MLflow
 ├── scripts/                   ← demo.sh, mongo_init.js
 ├── docker/dev/                ← docker-compose (PostgreSQL + MongoDB)
